@@ -1,0 +1,46 @@
+Programs | Class Room Assignment-4
+
+1)WAP to print day name as per day number
+2)WAP to print month name as per month number
+3)WAP to check whether entered character is vowel or not
+4)WAP to create a menu and perform all arithmetic operations with integer case and with special symbols
+5)WAP to create a menu and find out area of circle, square, rectangle and trapezium 
+6)WAP to create a menu of 5 items regarding spare parts of a vehicle and take individually the units and price of each part and then find out the total cost. 
+7)WAP to enter source, destination,date, day and time and creates a menu for reservation where user needs to select vehicle type then selects no. Of seats for males, females and children and also calculate the fare according to senior citizen criteria. Note : No bookings will be considered for Saturday and Sunday 
+8)WAP to create a medical equipment menu for retailer and whole seller where retailers sees only 5 medicines and purchase of medicine units is not more than 5 whereas wholesaler sees list of 10 medicines and purchase of units is not more than 100 , prices of medicine would be in double.
+9)WAP showing the concept of Banking management system.Key Points to be included : 
+a)User needs to enter some basic details(like mail-Id, password, full name and age).
+b)Shows menu displaying the options of opening:
+i.Joint account
+1.Details of spouse
+2.Age of spouse
+3.Minimum amount to be deposited 5000/-
+ii.Saving account
+1.Nominee name
+2.Nominee age
+3.Minimum amount to be deposited 2000/-
+iii.Child account
+1.Child Name
+2.Guardian/Father’s age
+3.Minimum amount to be deposited 1000/-
+C)Shows menu displaying the options of (Asks for password to perform the operation): 
+i.Deposit
+1.Joint Account
+2.Saving Account
+3.Child Account
+ii.Withdraw
+1.Joint Account
+2.Saving Account
+3.Child Account
+D)Display details of :
+a)Account Holder
+b)Transaction performed
+c)Deactivate Account
+Note: Every time you need to clear the screen after performing specific menu option
+Menu will be colorful
+Password Not shown on the screen while writing
+
+10)WAP to manage complete student report
+11)WAP to manage Child vaccination 
+12)WAP to handle rental system(Home, Vehicle etc)
+13)WAP to create JMB MENU CARD

@@ -1,0 +1,40 @@
+Programs | Class Room Assignment-1
+
+1) WAP to find out average of 5 numbers
+2) WAP to find out simple interest
+3) WAP to convert temp from f to c
+4) WAP to convert temp from c to f
+5) WAP to swap two numbers using third variable
+6) WAP to swap two numbers without using third variable
+  (arithmetic operator | bitwise operator)  
+7) WAP to find out volume of cylinder
+8) WAP to find out compound interest
+9) WAP to find out area of triangle 
+   (by herons formula)
+10) Perform all arithmetic operations
+11) Perform all relational operations
+12) Program to convert uppercase to lowercase 
+13) Program to convert lowercase to uppercase   
+14) Program to find out total and percentage by getting marks of 5 subjects
+15) Program to check whether entered character is in uppercase or not using conditional operator 
+16) Program to check whether entered character is in lowercase or not using conditional operator 
+17) Program to check whether entered character is an alphabet or not using conditional operator 
+18) Program to check whether entered character is in uppercase or not using conditional operator and if yes, then convert it into lowercase
+19) Program to check whether entered character is in lowercase or not using conditional operator and if yes, then convert it into uppercase
+20) Program to get marks of 5 subjects from user and checks whether percentage lies in between 75 and 100 or not
+21) Program to find out greater number between two numbers using conditional operator
+22) Program to find out greater number among three numbers using conditional operator
+23) Program to find out whether entered number is even or odd using conditional operator
+24) check if both numbers are equals or not, if not then find out the greatest  number
+25) Program to convert persons height from inches to cm
+26) Program to convert meter to feet
+27) Program to convert feet to meter
+28) Program to convert mm to inches
+29) Program to print greatest number among 4 numbers
+30) Program to find out compound interest if principal is greater than or equals to 500 otherwise find out simple interest using conditional operator
+31. Program to convert days into years, weeks and days.
+32. Program to find maximum and minimum of two numbers without using loop and any condition.
+33. program to print sum of two integers without +
+34. Program to check whether entered year is a leap year or not
+35. Program to multiply a number by 2 without using x sign
+     ex : input 4 output 8

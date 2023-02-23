@@ -1,0 +1,88 @@
+Programs | Class Room Assignment-3
+
+1)Program to print characters of all the ASCII values from 91 to 96
+2) Program to check whether entered character is in uppercase or not  
+3) Program to check whether entered character is in lowercase or not  
+4) Program to check whether entered character is an alphabet or not
+5) Program to check whether entered character is a digit or not
+6) Program to check whether entered character is a $ or @ by its ascii value
+7) Program to check whether entered character is in uppercase or not and if yes, then convert it into lowercase
+8) Program to check whether entered character is in lowercase or not and if yes, then convert it into uppercase
+9) Program to check whether entered character is a digit or not and if yes, then replace it by *
+10) check if both numbers are equals or not, if not then find out the greatest number
+11) Program to find out whether entered number is even or odd
+12) Program to find out whether entered number is +ive or -ive
+13) Program to check whether entered number is divisible by 75 or not
+14) Program to check whether first number is divisible by second or not
+15) Program to find out whether entered number lies in between 50 and 100 or not
+16) Program to find out greater number among three numbers and test for all possible equalities
+17) Program to check whether entered character falls in the category of special symbol or not
+18) Program to check whether entered year is a leap year or not using nested if else
+19) Program to take nationality as ‘I’ or ‘i’ for Indian from user, and if it is an Indian the take age from it and checks whether he or she is eligible to vote or not.
+20) Program to get marks of 5 subjects from user and find out its grade using nested if else
+Per>=75 && per<=100 Grade A
+Per>=60 && per<75 Grade B
+Per>=50 && per<60 Grade C
+Per>=33 && per<50 Grade D
+else Fail
+Do Same with else if ladder.
+21) Program to find out compound interest if principal is greater than or equals to 500 otherwise find out simple interest
+22) The project basically gives the user the option to ask if he is renting a car [Y or N]:
+if Y is inputed, then it ask about "C” for Compact or “F” for Full-size,
+if the user selects compact the project displays that the user has selected compact and
+if the code displays fullsize the project displays that the user has selected fullsize.
+Then it asks the user if they have a coupon or not by “Y” or “N” if the users answer Y for the coupon the price is 7% off on 456.56 for compact car.
+If the user answers N the price is a normal 456.56. The fullsize normal price is 460.50 and the price with a coupon is 7% off on 460.50.
+
+23. A cashier has some amount of money(e.g. 4526).Write a program to calculate out how many currency of Rs.1000,Rs.500,Rs100, Rs50, Rs20, Rs10, Rs5, Rs2, Rs1 required.
+24. Write a program that accepts three digit number and find out the sum of all the individual digits
+25. Write a program that accepts four digit number and find out the sum of all the individual digits
+26. Write a program that accepts five digit number and find out the sum of all the individual digits
+27. Write a program that accepts 6 digit number and find out the sum of first and last digit
+28. Write a program that accepts 5 digit number and replace first and last digit.Ex : 45872 o/p: 25874
+29. Write a program to calculate gross salary and net salary. Accept basic salary from user,
+TA(Travel Allowance) i.e 10% of basic salary, PF(Provident Fund) i.e 7.8% of basic , DA(Dearness Allowance) is 500, gs=basic+da+ta; ns=gs-pf;
+30. WAP to reverse 5 digit number
+31. WAP to interchange second and last second digit of a 5 digit number
+Ex: 23123 O/p: 22133
+32. WAP to round off 2 digit number
+33. WAP to round off 3 digit number
+34. WAP to count number of even and odd digits in a 5 digit number
+35. WAP to find out the sum of individual digits of a 4 digit number and if sum is more than 9 then again find out the sum of digits.   
+36. WAP to accept 4 digit number and find out the greatest and smallest digit from it.
+37. Write a program for generating electricity Bill. Accept last month unit and current monthunit from user, then calculate and print bill amount according to following condition
+For units
+0-100 charges 2 rs/unit
+101-200 charges 3rs/unit
+201-300 4rs/unit
+>300 charges 5rs/unit
+38.Write a program to enter three subject marks (out of 100). Check if student is pass or Fail,only if he/she scores greater than 75 in each subject and the average of all three subject marks should also be greater than 80.
+39.Find the result of following (accept values for variables used in right side of expression)
+a. y=x-2 +3*x-7 (print value of y)
+b. y=x++ + ++x (print value of x and y)
+c. z= x++ - --y - --x + x++ (print value of x ,y and z)
+d. z = x && y || !(x||y) (print value of Z)
+40. WAP to program to take 6 digit number from user and checks whether it is palindrome or not
+41. WAP to program to take 3 digit number from user and checks whether it is armstrong or not
+42. WAP to round off all the numbers which lies in between 1 to 4 digit numbers.
+43. WAP showing the concept of quadratic equation
+44.These rates apply to the Lincoln & Holland tunnels, the George Washington, Bayonne & Goethals bridges, and the Outerbridge Crossing. Write Java code to determine the amount of money you pay at the toll depending on:
+
+Vehicle Type
+The number of axels
+EZPass Off Peak Hours
+EZPass Peak Hours
+EZPass
+Cash
+
+Peak Hours:
+Weekdays: 6-10 a.m., 4-8 p.m.
+Sat. & Sun.: 11 a.m.-9 p.m.
+
+Off-Peak Hours : 
+All Other Times
+
+Overnight Hours for Trucks:	
+Sundays-Thursdays, 10 p.m. until 6 a.m. the following morning
+
+

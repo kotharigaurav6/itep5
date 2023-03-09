@@ -1,0 +1,32 @@
+Programs | Class Room Assignment-10
+
+1)WAP to set marks of 5 subjects manually and print it by indexing, for loop, while loop, do while loop and for each loop separately.
+2)WAP to set the characters of “Hello Andrew” in an array manually and print it by indexing, for loop, while loop, do while loop and for each loop separately.
+3)WAP to take marks of 7 subjects from a user and print it.
+4)WAP to take n number of elements of an array and find out the sum of first and last element of an array. 
+5)WAP to take n number of elements of an array from user and find out the sum of all the elements.
+6)WAP to take n number of elements of an array from user and find out the average of all the elements.
+7)WAP to take n number of elements of an array from user and find out the sum of even indexing elements.
+8)WAP to take n number of elements of an array from user and find out the sum of odd indexing elements.
+9)WAP to take n number of elements of an array from user and find out the sum of even elements.
+10)WAP to take n number of elements of an array from user and find out the sum of odd elements.
+11)WAP to print even and odd indexing elements separately.
+12)WAP to count no. Of even and odd elements
+13)WAP to count no. Of elements which are greater than or equals to 50
+14)WAP to count no. Of elements which lies in between 50 and 100
+15)WAP to count no. Of elements which are the multiple of 10.
+16)WAP to reverse all the elements of an array
+17)WAP to reverse individual elements of an array
+18)WAP to insert an element at specific index in an array
+19)WAP to remove an element from a specific index
+20)WAP to merge two arrays
+21)WAP to check whether entered array is a palindrome or not
+22)WAP showing the concept of Selection sort (Ascending order | Descending order)
+23)WAP showing the concept of Bubble sort  (Ascending order | Descending order)
+24)WAP to find out the largest element from an array
+25)WAP to find out the smallest element from an array
+26)WAP to find out the second largest element from an array
+27)WAP to find out the second smallest element from an array
+28)WAP to find out the frequency of number 25 from an array
+29)WAP to find out the frequency of all the elements of an array
+30)WAP to find out the element which have highest frequency.

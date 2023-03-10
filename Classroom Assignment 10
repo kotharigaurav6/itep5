@@ -32,3 +32,55 @@ Programs | Class Room Assignment-10
 30)WAP to find out the element which have highest frequency.
 31)WAP to search an element from an array using Linear search
 32)WAP to search an element from an array using Binary search
+33)WAP to merge two arrays and arrange them in ascending order
+34)WAP showing the concept of Insertion sort
+35)WAP showing the concept of merge sort
+36)WAP showing the concept of quick sort
+37)Java Program to Find Maximum Difference Between Two Elements in an Array
+Description : 
+Enter size of array and then enter all the elements of that array. Now we check for all possible difference between two elements and then select the elements whose difference is largest one.
+
+38)Java Program to Print Next Greater Element in Array
+Problem Description
+Given an array, print the Next Greater Element (NGE) for every element. The Next greater Element for an element x is the first greater element on the right side of x in the array. Elements for which no greater element exist, consider next greater element as -1.
+Example:
+For the input array [6, 4, 5, 7], the next greater elements for each element are as follows.
+6—->7
+4—->5
+5—->7
+7—->-1
+
+39)Java Program to Remove Duplicate Elements from Array
+Problem Description
+Given a sorted array of integers, remove the duplicates of the elements from the array.
+Example:
+Array = [1 2 2 3 3 4]
+Output
+Array = [1 2 3 4]
+
+40) Java Program to Cyclically Permute the Elements of an Array
+Problem Description
+Given an array of integers, cyclically permute its elements, that is, shift each array element to the left by one index. The first value will go into the last index.
+Example:
+Array: [1,2,3,4,5]
+Output: [2,3,4,5,1]
+
+41) Java Program to Sort Names in an Alphabetical Order
+42) Java Program to Split an Array from Specified Position
+43) Java Program to Move All Zeros to the Start of an Array
+Problem Description
+Given an array of integers, shift all the zeroes present in it to the beginning.
+Example:
+Array = [1 0 2 3 0 4]
+Output
+Array = [0 0 1 2 3 4]
+
+44) Java Program to Find Union and Intersection of Two Arrays
+Problem Description
+Given two arrays of integers, find and print the union and intersection of the arrays.
+Example:
+Array: [1,2,3,4,5]
+Array1: [5,3,6,7,9]
+Output:
+Union = [1,2,3,4,5,6,7,9]
+Intersection = [3,5]

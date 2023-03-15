@@ -137,6 +137,100 @@ n3 = 8; C = {3, 4, 15, 20, 30, 70, 80, 120}
 Output: 20 80
 Explanation: 20 and 80 are the only
 common elements in A, B and C.
+54)Count pair with given sum.
+Given an array of N integers, and an integer K, find the number of pairs of elements in the array whose sum is equal to K.
 
+Example 1:
+Input:
+N = 4, K = 6
+arr[] = {1,5,7,1}
+Output: 2
+Explanation: 
+arr[0] + arr[1] = 1 + 5 = 6 
+and arr[1] + arr[3] = 5 + 1 = 6.
+
+Example 2:
+Input:
+N = 4, X = 2
+arr[] = {1, 1, 1, 1}
+Output: 6
+Explanation:
+Each 1 will produce sum 2 with any 1.
+
+55) Find the first non-repeating element in a given array arr of N integers.
+Note: Array consists of only positive and negative integers and not zero.
+Example 1:
+Input : arr[] = {-1, 2, -1, 3, 2}
+Output : 3
+Explanation:
+-1 and 2 are repeating whereas 3 is 
+the only number occuring once.
+Hence, the output is 3.
+
+Example 2:
+Input : arr[] = {1, 1, 1}
+Output : 0
+
+56)  Java program to find nearest lesser and greater element in array
+Given an array of N elements and we have to find nearest lesser and nearest greater element using Java program.
+Example:
+    Input:
+    Enter the number of elements for the arrray : 3  
+ 
+    Enter the elements for array_1.. 
+    array_1[0] : 1   
+    array_1[1] : 2   
+    array_1[2] : 3   
+ 
+    Enter the number : 2 
+ 
+    Output:
+    Element lesser than 2 is : 1 
+    Element greater than 2 is : 3
+
+57) Given two arrays of integers A and B of sizes M and N respectively. Write a Write a java program, which will produce a third array named C. such that the following sequence is followed. 
+All even numbers of A from left to right are copied into C from left to right. 
+All odd numbers of A from left to right are copied into C from right to left. 
+All even numbers of B from left to right are copied into C from left to right. 
+All old numbers of B from left to right are copied into C from right to left.
+
+58) Max Sum in configuration
+
+Given an array(0-based indexing), you have to find the max sum of i*A[i] where A[i] is the element at index i in the array.The only operation allowed is to rotate(clock-wise or counter clock-wise) the array any number of times.
+Example 1:
+Input:
+N = 4
+A[] = {8,3,1,2}
+Output: 29
+Explanation: Above the configuration
+possible by rotating elements are
+3 1 2 8 here sum is 3*0+1*1+2*2+8*3 = 29
+1 2 8 3 here sum is 1*0+2*1+8*2+3*3 = 27
+2 8 3 1 here sum is 2*0+8*1+3*2+1*3 = 17
+8 3 1 2 here sum is 8*0+3*1+1*2+2*3 = 11
+Here the max sum is 29
+
+59)WAP to find out the sum of all the elements of 2D array
+60)WAP to find out the sum of specific row entered by the user
+61)WAP to find out the sum of specific column entered by the user
+62)WAP to find out the sum of LR diagonal elements
+63)WAP to count even and odd elements in a 2D array
+64)WAP to find out the sum of all the elements whose sum of indexes is odd
+65)WAP to find out the sum of RL diagonal elements
+66)WAP to find out the sum of LR and RL diagonal elements ignoring the repeated center term
+67)WAP to find out the sum of all the boundary elements.
+68)WAP to transpose 2D array
+69)WAP to check whether entered 2D array is a unit or Identity matrix or not
+70)WAP to check whether entered array is upper triangular matrix or not
+71)WAP to check whether entered array is lower triangular matrix or not
+72)WAP to add two 2D array
+73)WAP to subtract two 2D array
+74)WAP to multiply two 2D array
+75)WAP showing the concept of jagged array without taking inputs from user
+76)WAP showing the concept of jagged array by taking inputs from user
+77)WAP showing the concept of multidimensional array
+
+
+ 
 
 

@@ -87,3 +87,5 @@ else Fail
 41)WAP to check whether entered array is a palindrome or not
 42)WAP showing the concept of Selection sort (Ascending order | Descending order)
 43)Addition and Multiplication of two 2d array
+44) WAP to find out the sum of n natural numbers using recursion
+45) WAP to find out a^b using recursion

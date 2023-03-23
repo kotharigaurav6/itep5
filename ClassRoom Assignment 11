@@ -21,3 +21,69 @@ Solve the following topics programs by function
 4) Patterns Programs
 5) Array Programs
 
+13) WAP to find out average of 5 numbers
+14) WAP to find out simple interest
+15) WAP to convert temp from f to c
+16)Check if both numbers are equals or not, if not then find out the greatest number
+17)Program to find out greater number between two numbers using conditional operator
+18) Program to find out greater number among three numbers using conditional operator
+19)Program to check whether entered year is a leap year or not
+20)Program to check whether entered year is a leap year or not using nested if else
+21)Program to get marks of 5 subjects from user and find out its grade using nested if else
+Per>=75 && per<=100 Grade A
+Per>=60 && per<75 Grade B
+Per>=50 && per<60 Grade C
+Per>=33 && per<50 Grade D
+else Fail
+22)Program to find out compound interest if principal is greater than or equals to 500 otherwise find out simple interest
+23) WAP showing the concept of Banking management system.Key Points to be included : 
+    a)User needs to enter some basic details(like mail-Id, password, full name and age).
+    b)Shows menu displaying the options of opening:
+        i.Joint account
+            1.Details of spouse
+            2.Age of spouse
+            3.Minimum amount to be deposited 5000/-
+        ii.Saving account
+            1.Nominee name
+            2.Nominee age
+            3.Minimum amount to be deposited 2000/-
+        iii.Child account
+            1.Child Name
+            2.Guardian/Father’s age
+            3.Minimum amount to be deposited 1000/-
+      C)Shows menu displaying the options of (Asks for password to perform the operation): 
+            i.Deposit
+                1.Joint Account
+                2.Saving Account
+                3.Child Account
+            ii.Withdraw
+                1.Joint Account
+                2.Saving Account
+                3.Child Account
+      D)Display details of :
+            a)Account Holder
+            b)Transaction performed
+            c)Deactivate Account
+                Note: Every time you need to clear the screen after performing specific menu option
+                Menu will be colorful
+                Password Not shown on the screen while writing
+24)WAP to find out the sum of N natural number.
+25)WAP to print table of a number.
+26)WAP to find out the factorial of a number.
+27)WAP to find out the factors of a number.
+28)WAP to check whether entered number is prime or not.
+29)WAP to print Fibonacci series.
+30)WAP to print N even numbers.
+31)1+11+111+1111+11111+…. 
+32)9	99	999	9999	  99999 …….
+33)A	b	C	d	E	f	G	h	…… n terms 
+34)WAP to print Alphabets in reversing order.
+35)WAP to check whether entered number is perfect or not
+36)WAP to reverse all the elements of an array
+37)WAP to reverse individual elements of an array
+38)WAP to insert an element at specific index in an array
+39)WAP to remove an element from a specific index
+40)WAP to merge two arrays
+41)WAP to check whether entered array is a palindrome or not
+42)WAP showing the concept of Selection sort (Ascending order | Descending order)
+43)Addition and Multiplication of two 2d array

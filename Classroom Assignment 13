@@ -1,0 +1,75 @@
+Programs | Class Room Assignment-13
+
+1.Write a program that lets the user perform arithmetic operations on two numbers. Your program must be menu driven, allowing the user to select the operation (+, -, *, or /) and input the numbers. Furthermore, your program must consist of following functions:
+a). Function showChoice: This function shows the options to the user and explains how to enter data. b). Function add: This function accepts two number as arguments and returns sum.
+c). Function subtract: This function accepts two number as arguments and returns their difference. d). Function mulitiply: This function accepts two number as arguments and returns product.
+e). Function divide: This function accepts two number as arguments and returns quotient.
+
+2.Create a class to calculate addition of two numbers (data member) using following member functions. Create members function
+1.init - to input numbers from user
+2.add - to calculate and display result
+
+3.Create a class to calculate factorial with one data member to store the number and another to store factorial value. Create members function
+1.init - to input number from user
+2.fact - to calculate factorial
+3.display- to display answer
+
+4.Write a program to define a class Student with the following specification
+Private members of class student
+admno	integer
+sname	string 
+eng, math, science		float
+total	float
+ctotal() (a Function to calculate eng + math + science with float return type.)
+
+Public member function of class student
+takeData() (a Function to accept values for admno, sname, eng, science and invoke ctotal() to calculate total.)
+showData() (a Function to display all the data members on the screen.)
+
+5.Write a program to Define a class TEST in java with following description: Private Members
+TestCode of type integer 
+Description of type string
+Candidates of type integer (total candidates appearing) 
+CenterReqd (number of centers required) of type integer
+
+A member function calcCenter() to calculate and return the number of centers.(Students per center is not more than 50).
+
+Public Members
+-A function schedule() to allow user to enter values for TestCode, Description, Candidates & call function calcCenter() to calculate the number of Centres
+-A function displayTest() to allow user to view the content of of a Test
+
+6.Create a class account with data members (accno, name, balance). Create function members
+a)getdata() to accept member data from user
+b)deposit(float money) to deposit money in account
+c)withdraw(float money) to withdraw money from account 
+d)display() to show account info
+
+7.Store six user’s account information using class created in above problem and calculate
+-total money deposited in all accounts
+-list all account number with balance greater than 1000
+
+8.Write a program to calculate the area of a rectangle, which accepts value from the user and displays it. Use Constructor to initialize members.
+
+9.Create a class Employee with members (empid, salary).Create following functions
+a)calcTax() with employee object as argument and print tax on salary with 12.5% tax rate;
+b)max() which accepts two employee as objects and return the employee with higher salary
+
+10.Create a class Student with data member (rno, fees and static member totalFees).Create parameterized constructor  which update the totalFees and create member function which prints the total fees collected of all the students.
+
+11.Create a Class Number with two member function.
+a)showNum() :- which displays the first number using this
+b)dispNum() :- which displays the second number using this
+
+12.Create a Class Calculate with two data members(num,num1)Declare two member function.
+a) create parameterized constructor which takes two integer value and	initialize members with this pointer.
+b)sum() :- which displays the number using this
+
+13.Create class Plot with data members length and breadth. Create constructor. Create member functions
+a)float calcArea()->to return area of plot
+b)Plot compare(Plot p)-> which takes Object of Plot class as argument and return 0 if area of argument object is same as current object, 1 if current object area is > then argument object and -1 if area of argument object is > then current object.
+
+14.Create a class Product with data members (pid, pname, amount) and declare and define the member function 
+1.acceptProduct()-- which accept product details.
+2.displayProduct() -- display product information.
+
+15.Create a class Student (rollno, name) which keeps track of how many objects are created of the class. Every time object of the class is created, it should display number of total objects created.

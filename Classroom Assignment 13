@@ -73,3 +73,78 @@ b)Plot compare(Plot p)-> which takes Object of Plot class as argument and return
 2.displayProduct() -- display product information.
 
 15.Create a class Student (rollno, name) which keeps track of how many objects are created of the class. Every time object of the class is created, it should display number of total objects created.
+
+16.Create a class TCSEmployee with data members name, eid, salary and companyName to store information of All TCS’s Employee records. Create functions which accept these members value and display them. Now u need to manage that companyName should be assign only once, no matter how
+many number of object of this class created.
+
+17.Create a class Box with data members (boxlabel, length , width, height) and function that calculate and return volume of that box. Now create a function comapre that take an object of Box class as parameters and show boxlabel of object who’s volume is greater?. you need to create two object of Box
+class to compare.
+
+18.Create a class Max with one data member(v) and functions
+a)getV(): which is use to read variable value
+b)display() : to display value
+c)check() : which return an object of Max class and find maximum value using one objects as argument.(use this keyword to return an object).
+
+19.Create a class Distance with data members (feet and inch).Write a program showing the concept of passing object in a function and add the data members of both the objects and find out the total feet and inches.
+
+20.Create a class Distance with data members (feet and inch).Write a program showing the concept of passing object in a function and returning object from a function (add the data members of both the objects and find out the total feet and inches).
+
+21.Create a class Alpha and Beta. Both classes contain one data member of type integer. Write a program to find which class data member is greater.
+
+22.Create a class FourWheeler with two data member(category and amount).Declare two members functions.
+a)char getCategory() :- which returns category
+b)int getamount():- which returns amount
+
+Create another class Car with two data members (brand and model).
+Declare two member function:- 
+a)getDetail():- which accepts the brand, model, category and amount of a Car
+b)showDetail():- which displays the category, amount, brand and model.
+
+23.Create three classes
+Faculty (facultyname, department, salary) 
+FullTimeFaculty (basic, allowance) inherits class Faculty 
+PartTimeFaculty (hour, rate) inherits class Faculty
+
+Create a function for accepting input for FullTimeFaculty and PartTimeFaculty but salary should not be accepted. Salary is calculated on the basis of (basic+allowance) for FullTimeFaculty and (hour*rate) for PartTimeFaculty. Also create function for displaying data for any faculty.
+
+24.Create a class Rectangle with two protected data members (length and breadth).Declare a Constructor which accepts length and breadth of a Rectangle
+Create another class Area which calculates the area of a Rectangle.
+Create another class Perimeter which calculates the perimeter of a Rectangle.
+
+25.Create a class Publication with two data members (title and price).Declare two member function:-
+a)getData():- for accepting data from user.
+b)putData():- for displaying data.
+
+Create another class Sales with three data member ((s1,s2,s3) which accepts the sales of three months).
+Declare two member function :-
+a)getSales():- for accepting three month sales. 
+b)showsales():- for displaying sales.
+
+Create one more class Book with one data member (pages).
+Declare two member function :- 
+a)getBookDetail():- which accepts the book details which includes title, price, sales and pages. 
+b)showBookDetail():- which displays the book details which includes title, price, sales and pages.
+
+26.Create a class Employee with two protected data member (name, payRate).
+Declare two member function
+a)void getName() :- which accepts name.
+b)float getPay() :- which accepts the pay.
+Create a class Manager with one data member is_salaried (which should be in the form of 0(false) or 1(true).
+Declare one member function
+a)int is_salaried() :- which returns whether the manager is salaried or not. b)showDetail() :- it display the entire detail of a employee.
+
+27. Create a class Shape with one member function
+a) double calcArea()
+Create a class Rectangle with two data members (length and breadth) and inherits Shape and calculate the area
+Create a class Circle with one data members (radius) and inherits Shape and calculate the area
+
+28.Create a class BankAccount with one data member(balance).
+Declare four methods
+a)BankAccount() :- which initialize the member function with 0. 
+b)void deposit(double amount) :- which adds balance in amount.
+c)void withdraw(double amount) :- which deducts balance in amount.
+d)double getBalance() :- which returns the balance.
+Create a class SavingAccount with two data members(interest_rate and min_balance).
+
+Declare a member function
+a)setInterestRate() :- which sets the interest and use the above methods to calculate the account balance.

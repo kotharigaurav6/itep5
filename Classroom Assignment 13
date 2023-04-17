@@ -148,3 +148,110 @@ Create a class SavingAccount with two data members(interest_rate and min_balance
 
 Declare a member function
 a)setInterestRate() :- which sets the interest and use the above methods to calculate the account balance.
+
+29. Create a Abstract class Volume with two data members(radius and height).
+Declare two member function
+a)getValue() :- which accepts value from user. 
+b)showValue() :- which displays valus. 
+c)calVol() :- which calculates volumes.
+Create a class Cone which uses the above mentioned three methods to calculate the volume of Cone. Create a class Cylinder which uses the above mentioned three methods to calculate the volume of Cylinder.
+
+30.Create a class Employee with one data member(name).Declare the member function 
+a)Employee() :- initializes the data member.
+b)getName() :- which gets the name. 
+c)setName() :- which sets the name. 
+d)pay(int hours_worked)
+
+Create a class HourlyEmployee which takes two data members(name and wage).Use above member function. The pay method should calculate the hourly wage of an employee.
+
+Create a class SalariedEmployee which takes two data members(name and wage).Use above member function. The pay method should calculate the hourly wage of an employee.
+
+31.Create a class to calculate Area of circle with one data member to store the radius and another to store area value. Create method members
+1. init - to input radius from user
+2. calc - to calculate area
+3. display- to display area
+
+32.Create a class MathOperation with two data member X and Y to store the operand and third data member R to store result of operation.Create method members
+● init - to input X and Y from user
+● add - to add X and Y and store in R
+● multiply - to multiply X and Y and store in R
+● power - to calculate X Y and store in R
+● display- to display Result R
+
+33. Create a class MathOperation containing method ‘multiply’ to calculate
+multiplication of following arguments.
+a. two integers
+b. three float
+c. all elements of array
+d. one double and one integer
+
+34. Create a class Person with properties (name and age) with following features.
+a. Default age of person should be 18;
+b. A person object can be initialized with name and age;
+c. Method to display name and age of person34. 
+Create and use copy constructor for above problem.
+
+35. Create a class Employee with(empNo ,salary and totalSalary) ) with following features.
+a. Only parameterized constructor;
+b. totalSalary always represent total of all the salaries of all employees created.
+c. empNo should be auto incremented.
+d. display total employees and totalSalary using class method.
+
+36.Create class Product (pid, price, quantity) with parameterized constructor.
+Create a main function in different class (say XYZ) and perform following task:
+a. Accept five product information from user and store in an array
+b. Find Pid of product with highest price.
+c. Create method (with array of product’s object as argument) in XYZ class to calculate and return total amount spent on all products. (amount spent on single product=price of product * quantity of product)
+
+37. Make list of Students having name, roll no., age, score. Write a program to accept 10 students record and arrange the Students based on the score group [0-50], [50-65],[65-80],[80-100].
+
+38.Create class Tile to store the edge length of a square tile , and create another class Floor to store length and width of a rectangular floor. Add method totalTiles(Tile t) in Floor class with Tile as argument to calculate the whole number of tiles needed to cover the floor completely.
+
+39. Create class OneBHK with instance variable roomArea , hallArea and price
+a. Create default and parameterized constructor;
+b. Method show(): to print OneBHK data member information;
+
+40. Create another class TwoBHK which has all the properties and behaviour of OneBHK and a new instance variable room2Area.
+a. Create default and parameterized constructor;
+b. Method show(): to print all data member information;
+Write main function in another class(Say XYZ) and store three TwoBHK flat’s information and print information using show method. Also print total amount of all flats.
+
+41. Create three classes Faculty (facultyid, salary)
+FullTimeFaculty (basic, allowance) inherits class Faculty
+PartTimeFaculty (hour, rate) inherits class Faculty
+
+Create a method for accepting input in FullTimeFaculty and PartTimeFaculty, but salary should not be accepted. Salary is calculated on the basis of (basic+allowance) for FullTimeFaculty and (hour*rate) for PartTimeFaculty. Also create method in above classes to display faculty data.
+
+Create another class(say XYZ) for main method and store 2 fulltime and 2 parttime faculty information. Also print their details.
+
+42. Create a class Student with two members : rollno and percentage.
+Create default and parameterized constructors. Create method show() to display information.
+Create another class CollegeStudent inherits Student class. Add a new member semester to it. Create default and parameterized constructors. Also override show() method.
+
+Create another class SchoolStudent inherits Student class. Add a new member classname(eg 12 th ,10 th etc.) to it. Create default and parameterized constructors. Also override show() method.
+
+Create a class(say XYZ) with main method that carries out the operation of the
+project :
+-- has array to store objects of any class(Student or CollegeStudent,SchoolStudent)
+--create two CollegeStudent and three SchoolStudent record objects and store them inside the array
+-- display all record from the array
+-- search record on the basic of rollno and check given rollno is of SchoolStudent or of CollegeStudent.--count how many students are having A grade, if for A grade percentage >75
+
+43.Create an Abstract class Processor with int member variable data and method showData to display data value.
+a.Create abstract method process() to define processing of member data.
+b.Create a class Factorial using abstract class Processor to calculate and print factorial of a number by overriding the process method.
+c. Create a class Circle using abstract class Processor to calculate and print area of a circle by overriding the process method Ask user to enter choice (factorial or circle area). Also ask data to work upon; Use Processor class reference to achieve this mechanism
+
+44. Create Interface Taxable with members salesTax=7% and incomeTax=10.5%. Create abstract method calcTax().
+a. Create class Employee(empId,name,salary) and implement Taxable to calculate incomeTax on yearly salary.
+b. Create class Product(pid,price,quantity) and implement Taxable to calculate salesTax on unit price of product.
+c. Create class for main method(Say XYZ), accept employee information and a product information from user and print income tax and sales tax respectively.
+
+45.Create a program that helps banks to maintain records. It should have following facilities.
+o Anybody can create current or saving account with following initial information:account number, name, balance, and branch.
+o display account detail for a particular accounts.
+o display total money deposited in bank.
+o allow deposit and withdrawal in an account .
+o for saving account opening balance and minimum balance must be 5000.
+o for current account opening balance and minimum balance must be 1000.
+o can not withdraw the amount from the account that makes balance less than the minimum balance.

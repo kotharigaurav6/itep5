@@ -1,20 +1,22 @@
-// program showing the concept of Method Reference(Reference to a static method)
+// program showing the concept of Method Reference
 import java.util.Scanner;
 @FunctionalInterface
 interface Operation
 {
     void operation();
-}
-class Reference1{
-    static void myFun(){
+    default void myFun(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter values of a and b : ");
         int a = sc.nextInt();
         int b = sc.nextInt();
         System.out.println("Sum : "+(a+b));
     }
+}
+class Reference3 implements Operation{
+    public void operation(){}
     public static void main(String args[]){
-        Operation obj = Reference1::myFun;
+        Operation obj1 = new Reference3();
+        Operation obj = obj1::myFun;
         obj.operation();        
     }
 }

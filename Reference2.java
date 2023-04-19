@@ -4,8 +4,6 @@ import java.util.Scanner;
 interface Operation
 {
     void operation();
-}
-class Reference1{
     static void myFun(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter values of a and b : ");
@@ -13,8 +11,10 @@ class Reference1{
         int b = sc.nextInt();
         System.out.println("Sum : "+(a+b));
     }
+}
+class Reference2{
     public static void main(String args[]){
-        Operation obj = Reference1::myFun;
+        Operation obj = Operation::myFun;
         obj.operation();        
     }
 }

@@ -255,3 +255,30 @@ o allow deposit and withdrawal in an account .
 o for saving account opening balance and minimum balance must be 5000.
 o for current account opening balance and minimum balance must be 1000.
 o can not withdraw the amount from the account that makes balance less than the minimum balance.
+
+46. Create a following class/package structure in your application. Filled squares are
+packages and empty circles are classes.
+campus.data
+Person (name, age, address)
+campus.academics
+o Student(rollno, branch, semester) inherits Person▪
+o Faculty(facultyId, name, salary, branch) inherits Person
+campus
+o CampusApp- this class contains main method to accept 5 Faculty
+information and print total of salaries of all faculties.
+
+47. Add following package to above structure
+▪campus.accounts
+o Fees(Student, amount, paymentDate)
+▪ campus -
+o CampusApp- this class contains main method to accept 4 Students information with their fees for second semester and print total fees collected from all 4 students.
+Take your assumptions regarding subject, branch and student data. Create this application as a runnable jar file.
+
+48. Input name of a person and count how many vowels it contains. Use String class functions.
+
+49. Input data exactly in the following format, and print sum of all integer values.
+“67, 89, 23, 67, 12, 55, 66”. (Hint use String class split method and Integer class parseInt method)
+
+50. Store name of weekdays in an array (starting from “Sunday” at 0 index). Ask day position from user and print day name. Handle array index out of bound exception and give proper message if user enter day index outside range (0-6).
+
+51. Create a class Voter(voterId, name, age) with parameterized constructor. The parameterized constructor should throw a checked exception if age is less than 18. The message of exception is “invalid age for voter ”

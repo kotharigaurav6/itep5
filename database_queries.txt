@@ -1,0 +1,42 @@
+select rno,name,per from student;
+select rno,name,per from student where rno=5;
+select rno,name,per from student where rno=5 and per>=70;
+select rno,name,per from student where rno=5 or per>86;
+select * from student where not rno=5;
+select rno,name,per from student where not rno=4 and not per=86;
+select rno,name,per from student where not rno=4 or not per=54;
+select rno as Roll_No,name as Name,per as Percentage from student;
+select count(*) as Total_Records from student;
+select sum(per) as sum_of_per from student;
+select avg(per) as avg_of_per from student;
+select min(per) as min_per from student;
+select max(per) as min_per from student;
+select * from student limit 2;
+select * from student limit 2 offset 2;
+select * from student where per between 86 AND 87;
+select * from student where name like 'j%';
+select * from student where name like 'J_';
+ alter table student add column country varchar(45) not null;
+ desc student;
+alter table student drop column country1;
+show columns from student;
+ update student set country='usa' where rno=2;
+ select distinct country from student;
+select * from student order by per;
+select * from student order by per asc;
+select * from student order by per desc;
+ select country,count(country) as number from student group by country;
+select * from student where country in ('uk');
+select count(country) from student where country='uk';
+ select * from student where country in ('uk','usa');
+select * from student where per = (select min(per) from student);
+ select * from student where country in (select country from student);
+ alter table student add column id int after rno;
+ alter table student add column id1 int first;
+ 
+ create table orders (order_id int not null,customer_id int primary key auto_increment);
+create table customers (customer_id int not null, constraint fk foreign key(customer_id) references orders(customer_id),customer_name varchar(45) not null);
+
+select orders.order_id,orders.customer_id,customers.customer_name from orders inner join customers on orders.customer_id=customers.customer_id;
+
+select orders.order_id,orders.customer_id,customers.customer_name from orders join customers on orders.customer_id=customers.customer_id;

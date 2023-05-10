@@ -1,10 +1,12 @@
 1. Write a program to count how many times character ‘t’ occurs in a file.
 2. Write a program to count no of words in a text file and average word size.
-3. Write a program to count number of bytes in a image file(jpeg/png/gif). Also find how much time it will take to upload the file on server if internet speed is 256 bps(bitsper second).
-4.Write a program to store your shopping details in a binary file(shopping.dat) with information itemName, price, quantity. (Use ObjectOutputStream to store Item class object )
-5. Write a program to read data from shopping.dat file creted in above problem and find total money spent on all shopping items. . (Use ObjectInputStream to read Item class object ).
+3. Write a program to copy content of one file into another file.
+4. Write a program to store transaction details of a customer in a file and counts how many times amount is credited and debited. 
+5. Write a program to count number of bytes in a image file(jpeg/png/gif). Also find how much time it will take to upload the file on server if internet speed is 256 bps(bitsper second).
+6.Write a program to store your shopping details in a binary file(shopping.dat) with information itemName, price, quantity. (Use ObjectOutputStream to store Item class object )
+7. Write a program to read data from shopping.dat file creted in above problem and find total money spent on all shopping items. . (Use ObjectInputStream to read Item class object ).
 
-6. Create a Thread class to print following star(*) pattern on screen with delay of 1
+8. Create a Thread class to print following star(*) pattern on screen with delay of 1
 second between each * print. Number of lines in the pattern should be passed
 to the constructor of Thread class.
 * * * * *
@@ -13,6 +15,10 @@ to the constructor of Thread class.
 * *
 *
 Use this class in main method and ask user to enter number of lines to print.
-7. Design a Swing frame in which a label with your name moves from left to right corner of frame repeatedly.
-8. Create a class that checks whether a given number is prime or not using Runnable interface
-9. Design a AWT/SWING frame as shown below in which when user clicks on button the number of times user click should be displayed on label.
+9. Create a class that checks whether a given number is prime or not using Runnable interface
+10. Print Output like this : hii  hii hii hii HELLO ii  hii hii hii hello hii  hii hii hii HELLO .... using thread 
+11. Write a program showing the concept of Deadlock(Other then classroom example).
+12. Write a program showing the concept of Thread Synchronization(Other then classroom example).
+13. Write a program to create UserDefined Exception(Other then classroom example).
+14. Design a Swing frame in which a label with your name moves from left to right corner of frame repeatedly.
+15. Design a AWT/SWING frame as shown below in which when user clicks on button the number of times user click should be displayed on label.

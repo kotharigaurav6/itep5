@@ -282,3 +282,4 @@ Take your assumptions regarding subject, branch and student data. Create this ap
 50. Store name of weekdays in an array (starting from “Sunday” at 0 index). Ask day position from user and print day name. Handle array index out of bound exception and give proper message if user enter day index outside range (0-6).
 
 51. Create a class Voter(voterId, name, age) with parameterized constructor. The parameterized constructor should throw a checked exception if age is less than 18. The message of exception is “invalid age for voter ”
+52. Write a program to create Login and Reguistration example using string showing validation on registration form fields(validations on email, mobile number, username etc)

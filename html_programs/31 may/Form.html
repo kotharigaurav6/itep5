@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+<form action="welcome.html" method="get">
+    <fieldset>
+        <legend align="center"><fieldset>Registration Form</fieldset></legend>
+    <table align="center">
+        <tr>
+            <td><label for="username">Username</label></td>
+            <td>
+                <input required type="text" placeholder="Enter Username" name="username" id="username">
+            </td>
+        </tr>
+        <tr>
+            <td><label>Email</label></td>
+            <td>
+                <input required readonly value="andrew@gmail.com" type="email" placeholder="Enter Email" name="email" id="email">
+            </td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td>
+                <input required type="password" placeholder="Enter Password" name="password" id="password">
+            </td>
+        </tr>
+        <tr>
+            <td><label>Contact</label></td>
+            <td>
+                <input required type="text" maxlength="10" placeholder="Enter 10-digit Mobile Number" name="contact" id="contact">
+            </td>
+        </tr>
+        <tr>
+            <td><label>Gender</label></td>
+            <td>
+                <input value="male" required checked type="radio" name="gender" id="male">
+                <label for="male">Male</label>
+                <input value="female" type="radio" name="gender" id="female">
+                <label for="female">Female</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Hobbies</label></td>
+            <td>
+                <input checked value="cricket" type="checkbox" name="cricket" id="cricket">
+                <label for="cricket">Cricket</label>
+                <input type="checkbox" value="hockey" name="hockey" id="hockey">
+                <label for="hockey">Hockey</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label>DOB</label></td>
+            <td>
+                <input required type="date" name="date" id="date">
+            </td>
+        </tr>
+        <tr>
+            <td><label>Subject</label></td>
+            <td>
+                <!-- <select name="subject" id="subject"> -->
+                    <select required name="subject" multiple id="subject">
+
+                    <option value="">Select Subject</option>
+                    <option selected value="C"> C language</option>
+                    <option value="C++"> C++ language</option>
+                    <option value="C#"> C# language</option>
+                    <option value=".net"> .NET language</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Address</label></td>
+            <td>
+                <textarea required name="address" id="address" placeholder="Enter Address"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td><label>File Upload</label></td>
+            <td>
+                <input required type="file" name="file" id="file">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Register">
+                <input type="reset" value="Reset">
+                
+            </td>
+        </tr>
+    </table> </fieldset>
+    </form>   
+</body>
+</html>
+
+<!-- Form Tags
+---------------
+<form>
+<label>
+    <input>
+    <select>
+        <option>
+            <textarea>
+            <button>
+            <legend>
+            <fieldset>                
+-->
+
+
+

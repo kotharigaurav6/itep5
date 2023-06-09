@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        li:nth-of-type(even){
+            color:red;
+        }
+        li:nth-of-type(odd){
+            color:green;
+        }
+        h1::first-letter{
+            color:red;
+        }
+        ul::first-line{
+            color:brown;
+        }
+        li::marker{
+            color:orangered;
+        }
+        input::placeholder{
+            color:orchid
+        }
+        a:hover{
+            color:royalblue;
+        }
+
+        a:active{
+            color:red;
+        }
+        h1::before{
+            content: "Before Heading Tag";
+        }
+       /* attribute selector */
+        input[type="text"]{
+            font-family: cursive;
+            color:red;
+        }
+</style>
+</head>
+<body>
+    <h1><br>Selectors</h1>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+    </ul>
+    <a href="">Click on the below link</a>
+<br><br>
+    <input type="text" placeholder="Enter text">
+</body>
+</html>

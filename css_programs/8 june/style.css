@@ -1,0 +1,307 @@
+*{
+    margin:0;
+}
+#container{
+    height: auto;
+    width: 95%;
+    margin: auto;
+}
+#header{
+    height: 60px;
+    background-color: white;
+}
+#logo{
+    height: 60px;
+}
+/* #heading{
+    font-size: 30px;
+    position: absolute;
+    margin-top: 15px;
+} */
+#nav{
+    position: sticky;
+    top:0;
+    height: 50px;
+    background-color: goldenrod;
+    z-index: 1;
+}
+#nav ul{
+    list-style: none;
+    padding: 12px;
+}
+#nav ul li{
+    display: inline;
+}
+#nav ul li a{
+    font-size: 22px;
+    font-family: candara;
+    color: white;
+    text-decoration: none;
+    margin-left: 85px;
+}
+#nav ul li a:hover{
+    color:black;
+}
+#nav ul li ul{
+    display: none;
+}
+#nav ul li:hover ul{
+    display: block;
+    position: absolute;
+    width:160px;
+    background-color: goldenrod;
+    margin-left: 350px;
+    text-align: center;
+}
+#nav ul li ul li{
+    margin-left: -80px;
+}
+#image{
+    height:450px;
+    background-attachment: fixed;
+    background-position: center;
+}
+#banner{
+    height:450px;
+    width: 100%;
+}
+#mqdemo{
+    background-color: whitesmoke;
+    color:black;
+    font-size: 22px;
+    font-family: candara;
+    padding: 5px;
+}
+#box{
+    height: 320px;
+    padding: 20px;
+    background-color: whitesmoke;
+}
+#box1,#box2,#box3,#box4{
+    height: 300px;
+    width: 260px;
+    margin: 12px;
+    float:left;
+}
+#imgset{
+    height: 240px;
+    width: 260px;
+}
+#btnleft{
+    height: 36px;
+    width: 28px;
+    color:white;
+    border:0px;
+    font-weight: bolder;
+    background-color: red;
+    margin-left:15px ;
+}
+#btnright{
+    height: 36px;
+    width: 28px;
+    color:white;
+    font-weight: bolder;
+    background-color: green;
+    border:0px;
+}
+#qty{
+    height: 31px;
+    width: 160px;
+    font-size: 18px;
+    border:0px;
+    padding: 2px;
+    margin-top: 5px;
+}
+#bar{
+    height:300px;
+    padding: 60px;
+}
+#barheading{
+    font-family: candara;
+    font-size: 30px;
+}
+#barcontent{
+    padding: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+#block{
+    height: 320px;
+    background-color: whitesmoke;
+    padding: 30px;
+}
+#block1,#block2,#block3,#block4{
+    height: 250px;
+    width: 250px;
+    background-color: white;
+    border-radius: 50%;
+    margin:13px;
+    float: left;
+    margin-top: 20px;
+}
+#circleimage{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+#about{
+    height:400px;
+    padding: 30px;
+}
+#about1{
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    float: left;
+    margin-top: 20px;
+    border-radius:30%;
+}
+#about2{
+    height: 260px;
+    width: 735px;
+    margin: 10px;
+    float: left;
+    margin-top: 20px;
+    padding: 20px;
+    font-family: candara;
+    font-size: 20px;
+    text-align: justify;
+}
+#aboutimage{
+    height: 300px;
+    width: 300px;
+    border-radius:30%;
+}
+#newsletter{
+    height:150px;
+    padding: 30px;
+    background-color: whitesmoke;
+}
+#newspara{
+    height:40px;
+    padding: 40px;
+    text-align: center;
+}
+#newsinput{
+    height:50px;
+    width:600px;
+    font-family: candara;
+    font-size: 20px;
+    border:0px;
+    text-align: center;
+}
+#newsbtn{
+    height:52px;
+    background-color: crimson;
+    color:white;
+    width:150px;
+    font-family: candara;
+    font-size: 20px;
+    border:0px;
+    text-align: center;
+}
+#contact{
+    height:400px;
+    padding: 20px;
+}
+#contact1,#contact2,#contact3{
+    background-color: whitesmoke;
+    height: 300px;
+    width: 220px;
+    margin: 10px;
+    margin-top: 30px;
+    float: left;
+    font-family: candara;
+    font-size: 20px;
+    padding:10px;
+}
+#contact4{
+    height: 320px;
+    width:335px;
+    float: left;
+    margin:10px;
+    margin-top: 30px;
+}
+#contact1 p,#contact2 p,#contact3 p{
+    font-size: 22px;
+    font-weight: bolder;
+    line-height:50px;
+}
+ul{
+    list-style-image: url(images/check1.jpg);
+}
+#contact3 span{
+    font-size: 19px;
+}
+iframe{
+    height: 320px;
+    width:335px;
+}
+#footer{
+    height: 26px;
+    padding: 8px;
+    background-color: whitesmoke;
+    font-family: candara;
+    font-size: 20px;
+}
+
+#loginblock{
+    box-shadow: 1px 1px 3px 0px;
+    height:330px;
+    width:450px;
+    background-color: whitesmoke;
+    margin : 60px auto;
+}
+#loginbtn{
+    width: 223px;
+    height:42px;
+    border:0px;
+    font-size: 22px;
+    font-family: candara;
+    background-color: goldenrod;
+    color: white;
+}
+#regbtn{
+    border:0px;
+    width: 223px;
+    height:42px;
+    background-color: lightgrey;
+    color:darkslategrey;
+    font-size: 22px;
+    font-family: candara;
+}
+#inputfield{
+    height:40px;
+    width: 290px;
+    font-size: 19px;
+    font-family: candara;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom-width: 1px;
+    border-color:goldenrod;
+    text-align: center;
+    outline: 0px;
+    margin:12px;
+    margin-left: 75px;
+}
+#inputbtn{
+    height:40px;
+    width: 138px;
+    font-size: 19px;
+    font-family: candara;
+    border: 0px;
+    text-align: center;
+    outline: 0px;
+    margin:8px;
+    background-color: goldenrod;
+    color:white;
+}
+#loginblock p{
+    text-align: center;
+}
+#line a{
+    font-family: candara;
+    text-decoration: none;
+    color:darkslategrey;
+}

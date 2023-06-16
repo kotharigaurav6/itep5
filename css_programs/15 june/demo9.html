@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        #demo{
+            height: 40px;
+            width: 130px;
+            padding: 10px;
+            font-size: 28px;
+            color:white;
+            background-color: crimson;
+            font-family: cursive;
+            margin: 20px;
+            transition: 1s;
+            /* transition: width 1s , height 4s; */
+            /* transition-delay: 2s; */
+            margin-left: 50px;
+            margin-top: -10px;
+        }
+        #demo:hover{
+            width: 150px;
+            /* transform: scale(1.1); */
+            /* transform: scaleX(1.1); */
+            /* transform: scaleY(1.1); */
+            /* transform: scale(1.1); */
+            transform: rotate(360deg);
+            text-align: center;
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+        }
+        #show{
+            margin-left: 120px;
+            height: 200px;
+            width: 1px;
+            background-color: crimson;
+            border:2px solid crimson;
+        }
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="show"></div>
+    <div id="demo">Home</div>
+    <div id="demo">About</div>
+    <div id="demo">Contact</div>
+    <div id="demo">Feedback</div>
+    <div id="demo">Mission</div>
+</body>
+</html>

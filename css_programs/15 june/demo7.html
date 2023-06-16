@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        div{
+            float:left;
+            height: 200px;
+            width:200px;
+            border-radius: 50%;
+            border:2px solid;
+            background-color: crimson;
+        }
+        div:hover{
+            animation-name: myanimation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            position: absolute;
+            animation-timing-function: ease-in;
+        }
+        @keyframes myanimation {
+           0%{background-color: red;
+             
+            }
+           25%{background-color: yellow;
+           }
+           50%{background-color: teal;
+            }
+           75%{background-color: brown;
+           }
+           100%{background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        div{
+            float:left;
+            height: 200px;
+            width:200px;
+            border-radius: 50%;
+            border:2px solid;
+            background-color: crimson;
+            animation-name: myanimation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes myanimation {
+           0%{background-color: red;
+                border-radius: 10%;
+            }
+           10%{background-color: green;
+            border-radius: 20%;
+           }
+           20%{background-color: blue;
+            border-radius: 30%;
+            }
+           30%{background-color: purple;
+            border-radius: 40%;
+            }
+           40%{background-color: teal;
+            border-radius: 50%;
+            }
+           50%{background-color: crimson;
+            border-radius: 40%;
+            }
+           60%{background-color: gold;
+            border-radius: 30%;
+            }
+           70%{background-color: orchid;
+            border-radius: 20%;
+            }
+           80%{background-color: darkred;
+            border-radius: 10%;
+            }
+           90%{background-color: darkorange;}
+           100%{background-color: olive;}
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

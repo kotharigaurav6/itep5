@@ -1,0 +1,33 @@
+#demo1,#demo2,#demo3,#demo4{
+    width: 24%;
+    height: auto;
+    background-color: teal;
+    border:2px solid black;
+    float: left;
+    font-size: 28px;
+    color:white;
+}
+
+@media screen and (max-width:720px){
+    #demo1,#demo2,#demo3,#demo4{
+        width: 49%;
+        height: auto;
+        background-color: purple;
+        border:2px solid black;
+        float: left;
+        font-size: 28px;
+        color:white;
+    }        
+}
+
+@media screen and (max-width:540px){
+    #demo1,#demo2,#demo3,#demo4{
+        width: 100%;
+        height: auto;
+        background-color: crimson;
+        border:2px solid black;
+        float: left;
+        font-size: 28px;
+        color:white;
+    }        
+}

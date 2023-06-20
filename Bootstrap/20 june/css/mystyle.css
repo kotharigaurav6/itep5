@@ -1,0 +1,9 @@
+.mybtn{
+    background-color: red ;
+    height: 40px; 
+    width:500px;
+    color:white;
+}
+.mybtn:hover{
+    color:white;
+}

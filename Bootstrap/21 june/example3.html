@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        div{
+            width:80%;
+            margin: auto;
+            height:auto;
+            border:2px solid;
+            padding: 20px;
+        }
+        span{
+            font-size: 3vw;
+        }
+        input,select{
+            margin:5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <center><span>Registration Form</span></center>
+        <hr>
+        <form action="" class="form-group">
+            <input class="form-control" type="text" placeholder="Enter Username">
+            <input class="form-control" type="email" placeholder="Enter Email">
+            <input class="form-control" type="password" placeholder="Enter Password">
+            <input class="form-control" type="date">
+            <input class="radio-inline" type="radio" name="gender" id="male" value="male"> Male
+            <input class="radio-inline" type="radio" name="gender" id="female" value="female"> Female
+            <select class="form-control" name="subject" id="subject">
+                <option value="">Select Subject</option>
+                <option value="C Language">C Language</option>
+                <option value="C# Language">C# Language</option>
+                <option value="C++ Language">C++ Language</option>
+            </select>
+            <button class="btn btn-danger btn-block">Submit</button>
+            <button class="btn btn-primary btn-block">Reset</button>
+        </form>
+    </div>    
+</body>
+</html>

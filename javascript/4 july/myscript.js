@@ -1,0 +1,5 @@
+document.write("<br>typeof document : "+typeof document+" of "+document.constructor.name);
+
+document.write("<br>typeof window : "+typeof window+" of "+window.constructor.name);
+
+document.write("<br>typeof console : "+typeof console+" of "+console.constructor.name);

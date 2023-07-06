@@ -1,0 +1,47 @@
+<script>
+    var a;
+    a = 100;
+    document.write("<br>typeof 100 : "+typeof a);
+    document.write("<br>typeof(100) : "+typeof(a));
+
+    a = "100";
+    document.write("<br>typeof '100' : "+typeof a);
+    a = -100;
+    document.write("<br>typeof -100 : "+typeof a);
+    a = 15.45;
+    document.write("<br>typeof 15.45 : "+typeof a);
+    a = 'a';
+    document.write("<br>typeof 'a' : "+typeof a);
+    a = 'andrew';
+    document.write("<br>typeof 'andrew' : "+typeof a);
+    a = "simon";
+    document.write("<br>typeof 'simon' : "+typeof a);
+    a = true;
+    document.write("<br>typeof true : "+typeof a);
+    a = null;
+    document.write("<br>typeof null : "+typeof a);
+    a = undefined;
+    document.write("<br>typeof undefined : "+typeof a);
+    var b;
+    document.write("<br>typeof var b : "+typeof b);
+    a = {};
+    document.write("<br>typeof {} : "+typeof a);
+    a = {fname:"Andrew"};
+    document.write("<br>typeof {fname:'Andrew'} : "+typeof a);
+    document.write("<br>typeof {fname:'Andrew'} : "+typeof a.fname);
+
+    a = [];
+    document.write("<br>typeof [] : "+typeof a);
+    a = [1,2,3,4,5];
+    document.write("<br>typeof [1,2,3,4,5] : "+typeof a);
+    a = function(){};
+    document.write("<br>typeof function(){} : "+typeof a);
+    
+    a = Symbol();
+    document.write("<br>typeof Symbol : "+typeof a);
+    a = BigInt(97977);
+    document.write("<br>typeof BigInt : "+typeof a);
+    a = Symbol("MyId");
+    document.write("<br>a : "+a.description);
+
+</script>

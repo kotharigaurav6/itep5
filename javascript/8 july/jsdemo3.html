@@ -1,0 +1,31 @@
+<!-- JavaScript Popup's | JavaScript Dialog Boxes 
+        |-- alert()
+        |-- confirm()
+        |-- prompt()
+-->
+<script>
+    // var name = prompt("Enter Name");
+    // alert("Welcome "+name);
+
+    // var name = prompt("Enter Name","John Deo");
+    // alert("Welcome "+name);
+
+    // var number = prompt("Enter Number");
+    // alert("you entered "+number+" and its type is "+typeof number);
+
+    // var num1 = parseInt(prompt("Enter First Number"));
+    // var num2 = parseInt(prompt("Enter Second Number"));
+    // alert("Sum : "+(num1+num2));
+
+    var num1 = prompt("Enter First Number");
+    var num2 = prompt("Enter Second Number");
+  //  alert(num1+"   "+num2);
+    if(isNaN(num1))
+        alert("Input is not of number type");
+    else{
+        if(isNaN(num2))
+            alert("Input is not of number type");
+        else               
+            alert("Sum : "+(parseInt(num1)+parseInt(num2)));
+    }    
+</script>

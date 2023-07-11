@@ -1,0 +1,30 @@
+<!-- loops -->
+<script>
+    // var arr = [11,22,33,44];
+    // var arr1 = [1,2,3,4,5];
+    // arr = arr1;
+    // document.write(arr); // output
+
+    // const arr = [11,22,33,44];
+    // const arr1 = [1,2,3,4,5];
+    // arr = arr1;
+    // document.write(arr); // error
+
+    var arr = [145, 255, 354, 432, 523];
+    document.write("<br>typeof arr : " + typeof arr);
+    document.write("<br>Elements : " + arr);
+
+    // for in loop
+    for (var index in arr) {
+        document.write("<br>" + index + "------> " + arr[index]);
+        //       document.write("<br>arr["+index+"] : "+arr[index]);
+    }
+    //    document.write("<br>arr[3] : "+arr[3]);
+    document.write("<br>size | length of array : " + arr.length);
+
+    // for of loop
+    for (var value of arr) {
+        document.write("<br>value : " + value);
+    }
+
+</script>

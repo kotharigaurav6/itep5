@@ -1,0 +1,16 @@
+<!-- JavaScript Popup's | JavaScript Dialog Boxes 
+        |-- alert()
+        |-- confirm()
+        |-- prompt()
+-->
+<script>
+
+    var num = prompt("Enter Number");
+    if(isNaN(num))
+        alert("Invalid input type");
+    else{
+        for(var i=1;i<=10;i++){
+            document.write(num+" x "+i+" = "+(num*i)+"<br>");
+        }
+    }
+</script>

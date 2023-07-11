@@ -1,0 +1,18 @@
+<script>
+    var num = parseInt(prompt("Enter number"));
+    var checkPrime = function(){
+        for(var i=2;i<=num/2;i++)
+        {
+            if(num%i==0)
+                break;
+        }
+        if(i>num/2 && num>1)
+            return 1;
+        else
+            return 0;
+    }
+    if(checkPrime())
+        document.write("Number is Prime");
+    else
+        document.write("Number is not Prime");
+</script>

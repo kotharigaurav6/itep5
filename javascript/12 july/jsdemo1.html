@@ -1,0 +1,33 @@
+<!-- 
+    click(action) event
+        |
+     on<event> -- onClick ---function--- eventHandler function 
+                    |
+                eventHandler       
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        function myfun(){
+            alert('Button Clicked');
+        }
+    </script>
+</head>
+<body>
+    <button onclick="alert('Button Clicked')">Click</button>
+    <button ondblclick="alert('Button Clicked')">Click</button>
+    <button onclick="myfun()">Click</button>
+    <button id="btn">Click</button> 
+    <script>
+        var btn = document.getElementById("btn");
+       // document.write("btn : "+btn);
+        // btn.addEventListener("click",()=>alert("button clicked"));
+        btn.addEventListener("click",()=>myfun());
+        btn.addEventListener("mouseover",()=>alert('mouse over'));
+    </script>
+</body>
+</html>
+

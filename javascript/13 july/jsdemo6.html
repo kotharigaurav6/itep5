@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        div{
+            height:auto;
+            padding:15px;
+            background-color: teal;
+        }
+        h1{
+            padding:2px;
+            background-color: black;
+            color:white;
+        }
+        p{
+            font-size: 20px;
+            color:white;
+            padding: 10px;
+            background-color: crimson;
+        }
+    </style>
+    <script>
+        function move(){
+            document.getElementById("move").innerHTML++;
+        }
+        function enter(){
+            document.getElementById("enter").innerHTML++;
+        }
+        function over(){
+            document.getElementById("over").innerHTML++;
+        }
+    </script>
+</head>
+<body>
+    <div onmousemove="move()">
+        <h1>Mouse Move
+            <span id="move">0</span>
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur iste odio in nobis assumenda aperiam rerum animi sunt officiis dicta!</p>
+    </div>
+    <br>
+    <div onmouseenter="enter()">
+        <h1>Mouse Enter
+            <span id="enter">0</span>
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur iste odio in nobis assumenda aperiam rerum animi sunt officiis dicta!</p>
+    </div>
+<br>
+    <div onmouseover="over()">
+        <h1>Mouse Over
+            <span id="over">0</span>
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur iste odio in nobis assumenda aperiam rerum animi sunt officiis dicta!</p>
+    </div>
+
+</body>
+</html>

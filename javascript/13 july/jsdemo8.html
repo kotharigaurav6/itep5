@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        function show(){
+            var password = document.getElementById("password");
+            if(password.type=="text")
+                password.type="password";
+            else
+                password.type="text"; 
+        }
+    </script>
+</head>
+<body>
+    <input type="password" placeholder="Enter Password" id="password">
+    <input type="checkbox" onclick="show()">Show Password
+</body>
+</html>

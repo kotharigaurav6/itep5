@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        function up(){
+            alert("key up");
+        }
+        function down(){
+            alert("key down");
+        }
+        function press(){
+            alert("key press");
+        }
+    </script>
+</head>
+<body>
+    <input type="text" onkeyup="up()" placeholder="keyup"><br>
+    <input type="text" onkeydown="down()" placeholder="keydown"><br>
+    <input type="text" onkeypress="press()" placeholder="keypress"><br>
+</body>
+</html>

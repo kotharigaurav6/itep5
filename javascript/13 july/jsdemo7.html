@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        function fun1(){
+            var txt = document.getElementById("txt");
+            txt.style.color="red";
+            txt.style.textDecoration="line-through";
+            txt.style.fontFamily="candara";
+        }
+        function fun2(){
+            var txt = document.getElementById("txt");
+            txt.style.color="blue";
+            txt.style.fontFamily="cursive";
+            txt.style.textDecoration="none";
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="alert('Form Submitted Successfully')">
+    <input  type="text" placeholder="onFocus | OnBlur" id="txt" onfocus="fun1()" onblur="fun2()">
+        <button>Submit</button>
+    </form>
+</body>
+</html>

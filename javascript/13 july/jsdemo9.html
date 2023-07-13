@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        function fillColor(elem){
+          //  var color = document.getElementById("color").value;
+            var bdy = document.getElementById("bdy");
+            bdy.style.background = elem.value;
+        }
+    </script>
+</head>
+<body id="bdy">
+    <select name="color" id="color" onchange="fillColor(this)">
+        <option value="">Select Color</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </select>
+</body>
+</html>

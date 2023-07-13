@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        function myfun(){
+            var span1 = document.getElementById("span1");
+            span1.style.textDecoration="underline";
+        }
+        function myfun1(){
+            var span2 = document.getElementById("span2");
+            span2.style.textTransform="uppercase";
+        }
+        function myfun2(){
+            var span3 = document.getElementById("span3");
+            span3.style.color="red";
+        }
+        function myfun3(){
+            var span4 = document.getElementById("span4");
+            span4.style.backgroundColor="orange";
+            span4.style.color="white";
+        }
+
+    </script>
+</head>
+<body>
+    <span id="span1" onmouseover="myfun()">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio.</span><br>
+
+    <span id="span2" onmouseenter="myfun1()">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio.</span><br>
+
+    <span id="span3" onmousemove="myfun2()">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio.</span><br>
+
+    <span id="span4" onmousedown="myfun3()">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio.</span><br>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<script>
+    
+    function Employer(){
+        this.setData = (fname,lname,salary,age)=>{
+            this.fname = fname;
+            this.lname = lname;
+            this.salary = salary;
+            this.age = age;
+        }
+        this.getData = ()=>{
+            return "First Name : "+this.fname+"<br>Last Name : "+this.lname+"<br>Salary : "+this.salary+"<br>Age : "+this.age;
+        }
+    }
+    var fname = prompt("Enter First name : ");
+    var lname = prompt("Enter Last Name : ");
+    var salary = parseInt(prompt("Enter salary : "));
+    var age = parseInt(prompt("Enter age : "));
+    
+    var emp_obj = new Employer();
+    emp_obj.setData(fname,lname,salary,age);
+    document.write("<h2>Employer Details : </h2><br>"+emp_obj.getData());
+    
+</script>

@@ -1,0 +1,24 @@
+<script>
+    // block scopic example
+
+    // const min = 10; // block scopic
+    //       min=200;
+
+    // let min = 10; // block scopic
+    //     min = 200;
+
+    var min=10; // function scopic
+        min=2000;
+    document.write("<br>min before block: "+min);
+    {
+        // const max = 100;
+        // let max = 100;
+        var max = 100;
+        document.write("<br>min inside block : "+min);
+        document.write("<br>max inside block : "+max);
+    }
+
+        document.write("<br>min outside block : "+min);
+        document.write("<br>max outside block : "+max);
+    
+</script>

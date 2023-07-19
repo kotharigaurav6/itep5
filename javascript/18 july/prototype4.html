@@ -1,0 +1,25 @@
+<script>
+    function Employer(){
+        this.fname = "andrew";
+        this.lname = "anderson";
+        this.salary = 3456;
+        this.age = 34;
+
+        // this.show = function(){
+        //     document.write("<br>First Name : "+this.fname);
+        //     document.write("<br>Last Name : "+this.lname);
+        //     document.write("<br>Salary : "+this.salary);
+        //     document.write("<br>Age : "+this.age);
+        // }
+
+        this.show = ()=>{
+            document.write("<br>First Name : "+this.fname);
+            document.write("<br>Last Name : "+this.lname);
+            document.write("<br>Salary : "+this.salary);
+            document.write("<br>Age : "+this.age);
+        }
+    }
+    var emp_obj = new Employer();
+    emp_obj.show();
+    
+</script>

@@ -1,0 +1,17 @@
+<script>
+    function MyFun1(){
+        this.show = ()=>{
+            document.write("<br>myfun1 function called");
+        }
+    }
+    function MyFun2(){
+        this.display = ()=>{
+            document.write("<br>myfun2 function called");
+            
+            var object = new MyFun1();
+            object.show();
+        }
+    }
+    var obj = new MyFun2();
+    obj.display();
+</script>

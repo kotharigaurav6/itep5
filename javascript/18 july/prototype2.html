@@ -1,0 +1,18 @@
+<script>
+    function Employer(){
+        this.fname = "andrew";
+        this.lname = "anderson";
+        this.salary = 3456;
+        this.age = 34;
+    }
+    Employer.prototype.address = "Indore";    
+    var emp_obj = new Employer();
+    
+    document.write("<br>First Name : "+emp_obj.fname);
+    document.write("<br>Last Name : "+emp_obj.lname);
+    emp_obj.salary+=200;
+    document.write("<br>Salary : "+emp_obj.salary);
+    document.write("<br>Age : "+emp_obj.age);
+    document.write("<br>Address : "+emp_obj.address);
+    
+</script>

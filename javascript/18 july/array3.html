@@ -1,0 +1,17 @@
+<script>
+var arr = [23,34,45,6,7,-3,44];
+document.write("<br>min : "+Math.min(...arr));
+document.write("<br>max : "+Math.max(...arr));
+
+document.write("<br>min : "+Math.min.apply(null,arr));
+document.write("<br>max : "+Math.max.apply(null,arr));
+
+document.write("<br>sort : "+arr.sort());
+document.write("<br>sort : "+arr.sort(function(a,b){
+    return a-b;
+}));
+document.write("<br>sort : "+arr.sort(function(a,b){
+    return b-a;
+}));
+
+</script>

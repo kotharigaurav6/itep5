@@ -1,0 +1,26 @@
+<script>
+
+function Operation(){
+    this.setData = (num1,num2)=>{
+        this.num1=num1;
+        this.num2=num2;
+    }
+
+    this.getData = ()=>{
+        document.write("<br>num1 : "+num1+"<br>num2 : "+num2+"<br>");
+    }
+
+    this.getSum = ()=>{
+        return this.num1+this.num2;
+    }
+}
+
+var num1 = parseInt(prompt("ENTER FIRST NUMBER : "));
+var num2 = parseInt(prompt("ENTER SECOND NUMBER : "));
+
+var obj = new Operation();
+obj.setData(num1,num2);
+obj.getData();
+document.write("Sum : "+obj.getSum());
+
+</script>

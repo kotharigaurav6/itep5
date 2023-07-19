@@ -1,0 +1,17 @@
+<script>
+    function Employer(){
+        this.setData = ()=>{
+            this.fname = "andrew";
+            this.lname = "anderson";
+            this.salary = 3456;
+            this.age = 34;
+        }
+        this.getData = ()=>{
+            return "First Name : "+this.fname+"<br>Last Name : "+this.lname+"<br>Salary : "+this.salary+"<br>Age : "+this.age;
+        }
+    }
+    var emp_obj = new Employer();
+    emp_obj.setData();
+    document.write("<h2>Employer Details : </h2><br>"+emp_obj.getData());
+    
+</script>

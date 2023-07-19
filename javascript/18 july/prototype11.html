@@ -1,0 +1,23 @@
+<script>
+    function Employer(){
+        this.setData = (fname,lname,salary,age)=>{
+            this.fname = fname;
+            this.lname = lname;
+            this.salary = salary;
+            this.age = age;
+        }
+        this.getData = ()=>{
+            return "First Name : "+this.fname+"<br>Last Name : "+this.lname+"<br>Salary : "+this.salary+"<br>Age : "+this.age;
+        }
+    }
+    var emp_obj1 = new Employer();
+    var emp_obj2 = new Employer();
+
+    emp_obj1.setData("Andrew","Anderson",5678,32);
+    document.write("<h2>Employer Details : </h2><br>"+emp_obj1.getData());
+
+    emp_obj2.setData("Jackson","Jack",3278,22);
+    emp_obj2 = emp_obj1;
+    document.write("<h2><h2>Employer Details : </h2><br>"+emp_obj2.getData());
+
+</script>

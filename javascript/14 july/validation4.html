@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(){
+            var txt = document.getElementById("txt");
+            var display = document.getElementById("display");
+            if(txt.value.trim()==""){
+                display.innerHTML="Field Required";
+                display.style.color="red";  
+                return false;
+            }
+            else{
+//   var reg = /\d/;
+//   var reg = /\d{2}/;
+//   var reg = /^\d/; 
+//   var reg = /^\d$/;     
+//   var reg = /^\d{5}$/;
+//   var reg = /^\d{5,}$/;   
+//   var reg = /^\d{2,5}$/;  
+//   var reg = /^\d+$/;      
+//   var reg = /\D/;  
+//   var reg = /^[0-7]+$/;      
+//   var reg = /^[0-9]+$/;  
+//   var reg = /^[A-Z]+$/;      
+//   var reg = /^[a-z]+$/;      
+//   var reg = /^[~!@#$%^&*()_+]+$/;      
+//   var reg = /^[0-9A-Za-z_]+$/;
+//   var reg = /^\w+$/;
+//   var reg = /^[-][0-9]{1}$/;
+//   var reg = /^[6789][0-9]{9}$/;
+//   var reg = /^(?=.+?[0-9])(?=.+?[A-Z])(?=.+?[a-z])(?=.+?[~!@#$%^&*()_+]).{8}$/;
+//   var reg = /^(?=.+?[0-9])(?=.+?[A-Z])(?=.+?[a-z])(?=.+?[~!@#$%^&*()_+]).{8,}$/;
+// var reg = /^(?=.+?[0-9])(?=.+?[A-Z])(?=.+?[a-z])(?=.+?[~!@#$%^&*()_+]).{6,10}$/;
+//   var reg = /^[0-9A-Za-z_]+@[a-z]+\.[a-z]{2,3}$/; // email
+//   var reg = /^[0-9A-Za-z_]+@[a-z]+\.\edu\.[a-z]{2,3}$/; // email
+//   var reg = /^[0-9A-Za-z_]+@[a-z]+\.[a-z]{2,3}\.[a-z]{2,3}$/; // email
+    //var reg = /^\w+([\.-])?\w*@[a-z]*([\.][a-z]{2,3})+$/;
+
+                if(reg.test(txt.value)){
+                   display.innerHTML="Valid";
+                   display.style.color="green";  
+                    return true;
+                }         
+                else{
+                   display.innerHTML="Invalid";
+                   display.style.color="purple";
+                   return false; 
+                }   
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Javascript Regular Expression</h1>
+    <label>Enter Text</label>
+    <input onkeyup="validate()" type="text" placeholder="Enter Text" id="txt">
+    <!-- <input onkeyup="validate()" maxlength="10" type="text" placeholder="Enter Text" id="txt"> -->
+    <span id="display" style="color:red">*</span><br>
+    <input type="submit" value="Submit" onclick="validate()">
+</body>
+</html>

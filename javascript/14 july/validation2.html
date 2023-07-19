@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function usernamevalidate(){
+            var username = document.getElementById("username");
+            var udisplay = document.getElementById("udisplay");
+            if(username.value.trim()==""){
+                udisplay.innerHTML="Username Required";
+                return false;
+            }
+            else{
+                udisplay.innerHTML="";
+                return true;
+            }
+        }
+        function emailvalidate(){
+            var email = document.getElementById("email");
+            var edisplay = document.getElementById("edisplay");
+            if(email.value.trim()==""){
+                edisplay.innerHTML="Email Required";
+                return false;
+            }
+            else{
+                edisplay.innerHTML="";
+                return true;
+            }
+        }
+        function passwordvalidate(){
+            var password = document.getElementById("password");
+            var pdisplay = document.getElementById("pdisplay");
+            if(password.value.trim()==""){
+                pdisplay.innerHTML="Password Required";
+                return false;
+            }
+            else{
+                pdisplay.innerHTML="";
+                return true;
+            }
+        }
+        function cpasswordvalidate(){
+            var cpassword = document.getElementById("cpassword");
+            var cdisplay = document.getElementById("cdisplay");
+            if(cpassword.value.trim()==""){
+                cdisplay.innerHTML="Confirm Password Required";
+                return false;
+            }
+            else{
+                var password = document.getElementById("password");
+                if(password.value.trim()==""){
+                    cdisplay.innerHTML="Password Field is Empty";
+                    cdisplay.style.color="crimson";
+                    return false;
+                }
+                else{
+                        if(cpassword.value==password.value){
+                            cdisplay.innerHTML="Password Matched";
+                            cdisplay.style.color="green";
+                            return true;
+                        }  
+                        else{
+                            cdisplay.innerHTML="Password doesnot Matched";
+                            cdisplay.style.color="red";
+                            return false;
+                        }
+                }
+            }
+        }
+
+        function gendervalidate(){
+            var male = document.getElementById("male");
+            var female = document.getElementById("female");
+            var gdisplay = document.getElementById("gdisplay");
+           
+            if(male.checked==false && female.checked==false){
+                gdisplay.innerHTML="Gender Required";
+                return false;
+            }
+            else{
+                gdisplay.innerHTML="";
+                return true;
+            }
+        }
+
+        function subjectvalidate(){
+            var subject = document.getElementById("subject");
+            var sdisplay = document.getElementById("sdisplay");
+            if(subject.selectedIndex==0){
+                sdisplay.innerHTML="Subject Required";
+                return false;
+            }
+            else{
+                sdisplay.innerHTML="";
+                return true;
+            }
+        }
+
+        function validate(){
+            var usernamestatus = usernamevalidate();
+            var emailstatus = emailvalidate();
+            var passwordstatus = passwordvalidate();
+            var cpasswordstatus = cpasswordvalidate();
+            var genderstatus = gendervalidate();
+            var subjectstatus = subjectvalidate();
+            
+            var edisplay=document.getElementById("edisplay");
+            var pdisplay=document.getElementById("pdisplay");
+            var cdisplay=document.getElementById("cdisplay");
+            var gdisplay=document.getElementById("gdisplay");
+            var sdisplay=document.getElementById("sdisplay");
+
+            if(usernamestatus==false){
+                if(emailstatus==false)
+                    edisplay.innerHTML="*";
+                if(passwordstatus==false)
+                    pdisplay.innerHTML="*";
+                if(cpasswordstatus==false)
+                    cdisplay.innerHTML="*";
+                if(genderstatus==false)
+                    gdisplay.innerHTML="*";
+                if(subjectstatus==false)
+                    sdisplay.innerHTML="*";
+
+                return false;                     
+            }
+            else if(emailstatus==false)
+            { 
+                if(passwordstatus==false)
+                    pdisplay.innerHTML="*";
+                if(cpasswordstatus==false)
+                    cdisplay.innerHTML="*";
+                if(genderstatus==false)
+                    gdisplay.innerHTML="*";
+                if(subjectstatus==false)
+                    sdisplay.innerHTML="*";
+
+                return false;                     
+            }
+            else if(passwordstatus==false)
+            {
+                if(cpasswordstatus==false)
+                    cdisplay.innerHTML="*";
+                if(genderstatus==false)
+                    gdisplay.innerHTML="*";
+                if(subjectstatus==false)
+                    sdisplay.innerHTML="*";
+
+                return false;                     
+            }
+            else if(cpasswordstatus==false)
+            {
+                if(genderstatus==false)
+                    gdisplay.innerHTML="*";
+                if(subjectstatus==false)
+                    sdisplay.innerHTML="*";
+
+                return false;                     
+            }
+            else if(genderstatus==false)
+            {
+                if(subjectstatus==false)
+                    sdisplay.innerHTML="*";
+
+                return false;                     
+            }
+            else if(subjectstatus==false)
+                return false;                     
+        }
+    </script>
+</head>
+<body>
+    <h2>JavaScript Validation</h2>
+<form action="welcome.html" onsubmit="return validate()">
+<input type="text" onkeyup="usernamevalidate()" placeholder="Enter Username" id="username"> 
+<span id="udisplay" style="color:red">*</span>
+<br><br>
+
+<input type="email" onkeyup="emailvalidate()" placeholder="Enter Email" id="email"> 
+<span id="edisplay" style="color:red">*</span>
+<br><br>
+
+<input type="password" onkeyup="passwordvalidate()" placeholder="Enter Password" id="password"> 
+<span id="pdisplay" style="color:red">*</span>
+<br><br>
+
+<input type="password" onkeyup="cpasswordvalidate()" placeholder="Enter Confirm Password" id="cpassword"> 
+<span id="cdisplay" style="color:red">*</span>
+<br><br>
+
+<input onclick="gendervalidate()" type="radio" name="gender" id="male">
+<label onclick="gendervalidate()" for="male">Male</label>
+<input onclick="gendervalidate()" type="radio" name="gender" id="female">
+<label onclick="gendervalidate()" for="female">Female</label>
+<span id="gdisplay" style="color:red">*</span>
+<br><br>
+
+<select onchange="subjectvalidate()" name="subject" id="subject">
+    <option value="">Select Subject</option>
+    <option value="C Language">C Language</option>
+    <option value="C++ Language">C++ Language</option>
+    <option value="Java Language">Java Language</option>
+    <option value=".Net Language">.Net Language</option>
+</select>
+<span id="sdisplay" style="color:red">*</span>
+<br><br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+
+</form>
+</body>
+</html>

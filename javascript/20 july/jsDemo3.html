@@ -1,0 +1,23 @@
+<script>
+    var arr=["andrew","mathew","Simon","jackson","mathew","sim"];
+    document.write("Elements : "+arr);
+    // document.write("<br>splice removes : "+arr.splice(1,3));
+    // document.write("<br>after splice : "+arr);
+
+    // document.write("<br>splice  : "+arr.splice(1,2,"Mohan","Sohan"));
+    // document.write("<br>after splice : "+arr);
+
+//    document.write("<br>splice  : "+arr.splice(1,0,"Mohan","Sohan"));
+//document.write("<br>splice  : "+arr.splice(1,0,100,200));
+  
+//document.write("<br>after splice : "+arr);
+document.write("<br>indexOf : "+arr.indexOf("mathew"));
+document.write("<br>indexOf : "+arr.lastIndexOf("mathew"));
+
+var x = arr.indexOf("mathew");
+var y = arr.lastIndexOf("mathew");
+if(x!=y)
+    document.write("<br>occurs multiple times");
+else
+    document.write("<br>occurs only once");
+</script>

@@ -1,0 +1,25 @@
+<script>
+    var arr = [];
+    var size = parseInt(prompt("Enter size"));
+    for(i=0;i<size;i++)
+    {
+        arr[i] = parseInt(prompt("Enter element"));
+    }
+
+    document.write("<br>Sum : "+(arr[0]+arr[size-1]));
+
+    var temp;
+    for(i=0;i<size/2;i++){
+        temp = arr[i];
+        arr[i] = arr[size-1-i];
+        arr[size-1-i]=temp;
+    }
+    document.write("<br>Reverse : "+arr);
+
+    var min=arr[0];
+    for(i=0;i<size;i++){
+        if(min>arr[i])
+            min=arr[i];
+    }
+    document.write("<br>minimum : "+min);
+</script>

@@ -1,0 +1,42 @@
+<script>
+    // var arr = [11,22,33,44,55];
+    // var result = arr.map(element=>element*element);
+    // document.write(result);
+
+    // var arr = [11,22,33,44,55];
+    // var result = arr.map(element=>element%2==0);
+    // document.write(result);
+
+    // var arr = [11,22,33,44,55];
+    // var result = arr.filter((element)=>{
+    //     if(element%2==0)
+    //         return element;
+    // });
+    // document.write(result);
+
+    // var arr = [11,22,33,44,55];
+    // var result = arr.filter(element=>element%2==0);
+    // document.write(result);
+
+    
+    // var arr = [11,22,33,44,55];
+    // var result = arr.reduce((element,i)=>{
+    //     document.write("<br>element : "+element+"            i : "+i+"           Result : "+(element+i));
+    //     return element+i;
+    // });
+    //  document.write("<br>Result : "+result);
+
+
+    // var arr = [11,22,33,44,55];
+    // var result = arr.reduce((element,i)=>element+i);
+    // document.write("<br>Result : "+result);
+
+    var arr = [1561,226,3,2,555];
+    var result = arr.reduce((element,i)=>{
+        if(element>i)
+             element=i;
+        return element;    
+    });
+    document.write("<br>Result : "+result);
+
+</script>

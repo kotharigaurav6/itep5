@@ -1,0 +1,19 @@
+<script>
+    var arr=[];
+    var r = parseInt(prompt("Enter row"));
+    var c = parseInt(prompt("Enter column"));
+    
+    for(i=0;i<r;i++){
+        arr[i] = [];
+            for(j=0;j<c;j++){
+                arr[i][j] = parseInt(prompt("Enter element"));
+            }
+    }
+
+    arr.forEach((rows)=>{
+        rows.forEach((elements)=>{
+            document.write("&nbsp"+elements);
+        });
+        document.write("<br>");
+    });
+</script>

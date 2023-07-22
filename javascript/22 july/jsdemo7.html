@@ -1,0 +1,20 @@
+<script>
+    var obj = {
+        name: "andrew",
+        age:56,
+        salary:56789
+    }
+
+    /*Note : Examining objects via console.log happens in an asynchronous manner. The console receives a reference to the object synchronously, but does not display the properties of the object until it is expanded (in some cases, depending on the browser and whether you have dev tools open when the log happens). If the object has been modified before examining it in the console, the data shown will have the updated values.*/
+
+    
+    // document.write("<br>exist : "+ ("name" in obj));    
+    // document.write("<br>exist : "+ ("fname" in obj));
+    // document.write("<br>salary : "+obj.salary);
+     console.log(obj);
+    delete obj.salary;
+    // document.write("<br>delete : "+ delete obj.salary);
+    // document.write("<br>salary : "+obj.salary);
+    console.log(obj);
+        
+</script>

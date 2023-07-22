@@ -1,0 +1,96 @@
+<!-- examples showing the concept of object -->
+<!-- There are two ways to create an object : 
+     a) by object literal
+            var obj = {}; here object is going to be created by figure brackets
+     b) by object constructor (or by new keyword)
+            var obj = new Object();        
+-->
+<script>
+
+    var obj = {}; // empty object | empty cabinet
+    document.write(obj.constructor.name+"  "+obj);
+
+    // object contains data in the form of key value pair
+    /*
+        {key : value}
+        whereas key is of string type
+        value is of any type
+
+        {
+            name:"andrew",
+            age : 56,
+        }
+        here "name" is a key and "andrew" is a value
+        here "age" is a key and 56 is a value
+
+        var obj = new Object();
+        obj["name"] = "andrew";
+        obj["age"] = 56
+
+        {
+            name : "andrew",
+            age : 56,
+        }
+
+        var last_name = "lname";
+        obj[last_name] = "anderson";
+    */
+</script>
+
+
+<!-- 
+            JSON VS XML
+
+            <movie>
+                <movie-name>jupiter</movie-name>
+                <director>john due</director>
+                <rating>3 rotten tomato</rating>
+                <duration>4.5</duration>
+                <hero>jack</hero>
+                <heroin>jaquline</heroin>
+            </movie>    
+            <movie>
+                <movie-name>jupiter</movie-name>
+                <director>john due</director>
+                <rating>3 rotten tomato</rating>
+                <duration>4.5</duration>
+                <hero>jack</hero>
+                <heroin>jaquline</heroin>
+            </movie>    
+
+
+            --DATA TRANSFER FORMAT
+            --LANGUAGE INDEPENDENT
+
+[{
+    "NAME":"",
+    "TEMP":78,
+    "LAT":78889,
+
+},{
+    "NAME":"",
+    "TEMP":78,
+    "LAT":78889,
+    
+},{
+    "NAME":"",
+    "TEMP":78,
+    "LAT":78889,
+    
+},{
+    "NAME":"",
+    "TEMP":78,
+    "LAT":78889,
+    
+}................................]
+ -->
+
+
+
+
+
+
+
+
+
+

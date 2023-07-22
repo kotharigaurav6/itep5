@@ -1,0 +1,56 @@
+<script>
+    var arr=[];
+    var n = parseInt(prompt("Enter number of 2d-array : "));
+    var r = parseInt(prompt("Enter no. of rows : "));
+    var c = parseInt(prompt("Enter no. of columns : "));
+
+    for(i=0;i<n;i++){ 
+        arr[i] = [];
+            for(j=0;j<r;j++){
+                arr[i][j] = [];
+                    for(k=0;k<c;k++){
+                        arr[i][j][k] = parseInt(prompt("Enter element"));
+                    }
+            }
+    }
+    arr.forEach((twod_array)=>{
+        twod_array.forEach((oned_array)=>{
+            oned_array.forEach((elements)=>{
+                document.write("&nbsp;&nbsp;"+elements);
+            });
+            document.write("<br>");
+        });
+        document.write("<br><br>");
+    });
+</script>
+
+<!-- 
+{
+i=0
+   arr[i] = arr[0]     
+    {
+    j=0    
+    arr[i][j] = [] ---- arr[i][j][k] = 3    
+        {1,2,3},
+    j=1
+    arr[i][j] = []
+        {3,4,5},
+    j=2
+    arr[i][j] = []
+        {5,6,7}
+    },
+i=1
+   arr[i]=arr[1]    
+    {
+        {6,7,6},
+        {5,4,3},
+        {1,2,3}
+    }
+}
+ -->
+
+
+
+
+
+

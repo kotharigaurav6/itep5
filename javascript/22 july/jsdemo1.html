@@ -1,0 +1,24 @@
+<script>
+    // function getArray(){
+    //     return ["red","green","blue","pink"];
+    // }
+    // var colors = getArray();
+    // document.write(colors);
+
+
+     function getArray(){
+        var size = parseInt(prompt("Enter size"));
+        var arr = [];
+        for(i=0;i<size;i++){
+            arr[i] = parseInt(prompt("Enter element"));
+        }
+        for(i=0;i<size/2;i++){
+            temp = arr[i];
+            arr[i]=arr[size-1-i];
+            arr[size-1-i]=temp;
+        }
+        return arr;
+     }   
+     var array = getArray();
+     document.write(array);   
+</script>

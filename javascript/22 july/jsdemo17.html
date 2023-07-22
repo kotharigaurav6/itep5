@@ -1,0 +1,35 @@
+<script>
+    var data = [
+            {
+                name:"Peter",
+                age:56,
+            },
+            {
+                name:"Ester",
+                address:{
+                    state : "Delhi"
+                }
+            },{
+                age:49,
+                address:{
+                    state : "Bihar"
+                }
+            }
+    ];
+    for(var index in data){
+        for(var key in data[index]){
+            if(typeof data[index][key]=="object"){
+                for(var subkey in data[index][key]){
+                    document.write("<br>"+subkey+"      "+data[index][key][subkey]);
+                }
+            }
+            else
+                document.write("<br>"+key+"     "+data[index][key]);
+        }
+        document.write("<br><br>");
+    }            
+</script>
+
+
+
+

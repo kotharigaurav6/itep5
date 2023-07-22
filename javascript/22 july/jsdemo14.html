@@ -1,0 +1,23 @@
+<button onclick="getData()">Get Data</button>
+<div id="demo"></div>
+
+<script>
+ function getData(){   
+    var data = [
+                    {name:"Andrew",age:56,address:"Indore"},
+                    {name:"Jackson",age:43,address:"Bhopal"},
+                    {name:"Jacob",age:89,address:"Ujjain"}
+               ];
+    var table="<table style='font-family:calibri' border='1'><tr><th>Name</th><th>Age</th><th>Address</th></tr>";
+    
+    for(i=0;i<data.length;i++){
+        table+="<tr><td>"+data[i].name+"</td><td>"+data[i].age+"</td><td>"+data[i].address+"</td></tr>";
+    }
+    table+="</table>";
+    document.getElementById("demo").innerHTML=table;
+ }
+</script>
+
+
+
+

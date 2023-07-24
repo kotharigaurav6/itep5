@@ -1,0 +1,17 @@
+<script>
+    var jsobj = {
+        name:"Andrew",
+        age:89,
+        isAdmin:false,
+        subjects : ["c","c++","java"],
+        toString(){
+//            return "Hello "+this.name+" your age is : "+this.age+" and your admin status is : "+this.isAdmin;
+
+//            return "Hello "+jsobj.name+" your age is : "+jsobj.age+" and your admin status is : "+jsobj.isAdmin;
+
+return `Hello ${this.name} your age is : ${this.age} and your admin status is : ${this.isAdmin} and subjects are : ${this.subjects}`;
+        }
+    }
+    document.write(jsobj);
+//    console.log(jsobj);
+</script>

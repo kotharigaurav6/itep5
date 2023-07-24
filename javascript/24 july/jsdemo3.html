@@ -1,0 +1,173 @@
+<script>
+    var data = [
+        {
+            name:"andrew anderson",
+            age : 45,
+            contact : {
+                mobile : 9898989898,
+                landline : 7312222222
+            },
+            address : {
+                country : "India",
+                state:"MP",
+                city:{
+                    street : "vijaynagar",
+                    house : {
+                        houseno:101,
+                        color : "red",
+                        floor:{
+                            floorno:5,
+                            room :{
+                                roomno:3,
+                                bed : 5
+                            } 
+                        }
+                    }
+                }
+            }
+        },
+        {
+            name:"jackson jack",
+            age : 23,
+            contact : {
+                mobile : 9898989898,
+                landline : 7312222222
+            },
+            address : {
+                country : "India",
+                state:"MP",
+                city:{
+                    street : "vijaynagar",
+                    house : {
+                        houseno:101,
+                        color : "red",
+                        floor:{
+                            floorno:5,
+                            room :{
+                                roomno:3,
+                                bed : 5
+                            } 
+                        }
+                    }
+                }
+            }
+        },
+        {
+            name:"mathew math",
+            age : 56,
+            contact : {
+                mobile : 9898989898,
+                landline : 7312222222
+            },
+            address : {
+                country : "India",
+                state:"MP",
+                city:{
+                    street : "vijaynagar",
+                    house : {
+                        houseno:101,
+                        color : "red",
+                        floor:{
+                            floorno:5,
+                            room :{
+                                roomno:3,
+                                bed : 5
+                            } 
+                        }
+                    }
+                }
+            }
+        },
+        {
+            name:"peter parker",
+            age : 77,
+            contact : {
+                mobile : 9898989898,
+                landline : 7312222222
+            },
+            address : {
+                country : "India",
+                state:"MP",
+                city:{
+                    street : "vijaynagar",
+                    house : {
+                        houseno:101,
+                        color : "red",
+                        floor:{
+                            floorno:5,
+                            room :{
+                                roomno:3,
+                                bed : 5
+                            } 
+                        }
+                    }
+                }
+            }
+        },
+        {
+            name:"jonny john",
+            age : 12,
+            contact : {
+                mobile : 9898989898,
+                landline : 7312222222
+            },
+            address : {
+                country : "India",
+                state:"MP",
+                city:{
+                    street : "vijaynagar",
+                    house : {
+                        houseno:101,
+                        color : "red",
+                        floor:{
+                            floorno:5,
+                            room :{
+                                roomno:3,
+                                bed : 5
+                            } 
+                        }
+                    }
+                }
+            }
+        }
+    ];
+    for(var index in data){
+        for(var key in data[index]){
+            if(typeof data[index][key] == "object"){
+                for(var subkey in data[index][key]){
+                    if(typeof data[index][key][subkey] == "object"){
+                        for(var innerkey in data[index][key][subkey]){
+                            if(typeof data[index][key][subkey][innerkey] == "object"){
+                                for(var subinnerkey in data[index][key][subkey][innerkey]){
+                                    if(typeof data[index][key][subkey][innerkey][subinnerkey]=="object"){
+                                        for(var nestedkey in data[index][key][subkey][innerkey][subinnerkey]){
+                                            if(typeof data[index][key][subkey][innerkey][subinnerkey][nestedkey] == "object"){
+                                                for(var subnestedkey in data[index][key][subkey][innerkey][subinnerkey][nestedkey]){
+                                                    document.write("<br>"+subnestedkey+" : "+data[index][key][subkey][innerkey][subinnerkey][nestedkey][subnestedkey]);
+                                                }
+                                            }else{
+                                                document.write("<br>"+nestedkey+" : "+data[index][key][subkey][innerkey][subinnerkey][nestedkey]);
+                                            }
+                                        }
+                                    }
+                                    else{
+                                        document.write("<br>"+subinnerkey+" : "+data[index][key][subkey][innerkey][subinnerkey]);
+                                    }
+                                }
+                            }else{
+                                document.write("<br>"+innerkey+" : "+data[index][key][subkey][innerkey]);
+                            }
+                        }
+                    }
+                    else{
+                        document.write("<br>"+subkey+" : "+data[index][key][subkey]);
+                    }
+                }    
+            }
+            else{
+                document.write("<br>"+key+" : "+data[index][key]);
+            }
+        }
+        document.write("<br>");
+    }
+</script>

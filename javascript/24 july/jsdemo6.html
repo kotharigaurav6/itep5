@@ -1,0 +1,31 @@
+<script>
+    // javascript object
+
+    var jsobj = {
+        fname:"Andrew",
+        lname:"Anderson",
+        age:45,
+        salary:45678
+    };
+    document.write("typeof jsobj : "+typeof jsobj);
+    document.write("<br>fname : "+jsobj.fname+"<br>lname : "+jsobj.lname+"<br>age : "+jsobj.age+"<br>salary : "+jsobj.salary);
+
+    // json object
+    var jsonobj = {
+        "fname":"Andrew",
+        "lname":"Anderson",
+        "age":45,
+        "salary":45678
+    };
+    document.write("<br><br>typeof jsonobj : "+typeof jsonobj);
+    document.write("<br>fname : "+jsonobj.fname+"<br>lname : "+jsonobj.lname+"<br>age : "+jsonobj.age+"<br>salary : "+jsonobj.salary);
+
+    // json string
+    var jsonstring = `{
+        "fname":"Andrew",
+        "lname":"Anderson",
+        "age":45,
+        "salary":45678
+    }`;
+    document.write("<br><br>typeof jsonstring : "+typeof jsonstring);
+</script>

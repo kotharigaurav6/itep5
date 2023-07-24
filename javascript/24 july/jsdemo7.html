@@ -1,0 +1,19 @@
+<script>
+    // json string
+    var jsonstring = `{
+        "fname":"Andrew",
+        "lname":"Anderson",
+        "age":45,
+        "salary":45678
+    }`;
+    document.write("<br><br>typeof jsonstring : "+typeof jsonstring);
+    //document.write(JSON.constructor.name);
+    console.log(jsonstring);
+    var jsobj = JSON.parse(jsonstring);
+    console.log(jsobj);
+    document.write("<br>fname : "+jsobj.fname);
+    document.write("<br>lname : "+jsobj.lname);
+    document.write("<br>age : "+jsobj.age);
+    document.write("<br>salary : "+jsobj.salary);
+
+</script>

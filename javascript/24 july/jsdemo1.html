@@ -1,0 +1,108 @@
+<script>
+    var data = [
+        {
+            name:"andrew anderson",
+            age : 45,
+            contact : {
+                mobile : 9898989898,
+                landline : 7312222222
+            },
+            address : {
+                country : "India",
+                state:"MP",
+                city:{
+                    street : "vijaynagar",
+                    houseno : 123
+                }
+            }
+        },
+        {
+            name:"jackson jack",
+            age : 23,
+            contact : {
+                mobile : 9898989898,
+                landline : 7312222222
+            },
+            address : {
+                country : "India",
+                state:"MP",
+                city:{
+                    street : "vijaynagar",
+                    houseno : 123
+                }
+            }
+        },
+        {
+            name:"mathew math",
+            age : 56,
+            contact : {
+                mobile : 9898989898,
+                landline : 7312222222
+            },
+            address : {
+                country : "India",
+                state:"MP",
+                city:{
+                    street : "vijaynagar",
+                    houseno : 123
+                }
+            }
+        },
+        {
+            name:"peter parker",
+            age : 77,
+            contact : {
+                mobile : 9898989898,
+                landline : 7312222222
+            },
+            address : {
+                country : "India",
+                state:"MP",
+                city:{
+                    street : "vijaynagar",
+                    houseno : 123
+                }
+            }
+        },
+        {
+            name:"jonny john",
+            age : 12,
+            contact : {
+                mobile : 9898989898,
+                landline : 7312222222
+            },
+            address : {
+                country : "India",
+                state:"MP",
+                city:{
+                    street : "vijaynagar",
+                    houseno : 123
+                }
+            }
+        }
+    ];
+    for(var index in data){
+        for(var key in data[index]){
+            if(typeof data[index][key] == "object"){
+                for(var subkey in data[index][key]){
+                    if(typeof data[index][key][subkey] == "object"){
+                        for(var innerkey in data[index][key][subkey]){
+                            if(typeof data[index][key][subkey][innerkey] == "object"){
+
+                            }else{
+                                document.write("<br>"+innerkey+" : "+data[index][key][subkey][innerkey]);
+                            }
+                        }
+                    }
+                    else{
+                        document.write("<br>"+subkey+" : "+data[index][key][subkey]);
+                    }
+                }    
+            }
+            else{
+                document.write("<br>"+key+" : "+data[index][key]);
+            }
+        }
+        document.write("<br>");
+    }
+</script>

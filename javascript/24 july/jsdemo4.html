@@ -1,0 +1,211 @@
+<div id="demo"></div>
+<script>
+    var data = [
+        {
+            name:"andrew anderson",
+            age : 45,
+            contact : {
+                mobile : 9898989898,
+                landline : 7312222222
+            },
+            address : {
+                country : "India",
+                state:"MP",
+                city:{
+                    street : "vijaynagar",
+                    house : {
+                        houseno:101,
+                        color : "red",
+                        floor:{
+                            floorno:5,
+                            room :{
+                                roomno:3,
+                                bed : 5
+                            } 
+                        }
+                    }
+                }
+            }
+        },
+        {
+            name:"jackson jack",
+            age : 23,
+            contact : {
+                mobile : 9898989898,
+                landline : 7312222222
+            },
+            address : {
+                country : "India",
+                state:"MP",
+                city:{
+                    street : "vijaynagar",
+                    house : {
+                        houseno:101,
+                        color : "red",
+                        floor:{
+                            floorno:5,
+                            room :{
+                                roomno:3,
+                                bed : 5
+                            } 
+                        }
+                    }
+                }
+            }
+        },
+        {
+            name:"mathew math",
+            age : 56,
+            contact : {
+                mobile : 9898989898,
+                landline : 7312222222
+            },
+            address : {
+                country : "India",
+                state:"MP",
+                city:{
+                    street : "vijaynagar",
+                    house : {
+                        houseno:101,
+                        color : "red",
+                        floor:{
+                            floorno:5,
+                            room :{
+                                roomno:3,
+                                bed : 5
+                            } 
+                        }
+                    }
+                }
+            }
+        },
+        {
+            name:"peter parker",
+            age : 77,
+            contact : {
+                mobile : 9898989898,
+                landline : 7312222222
+            },
+            address : {
+                country : "India",
+                state:"MP",
+                city:{
+                    street : "vijaynagar",
+                    house : {
+                        houseno:101,
+                        color : "red",
+                        floor:{
+                            floorno:5,
+                            room :{
+                                roomno:3,
+                                bed : 5
+                            } 
+                        }
+                    }
+                }
+            }
+        },
+        {
+            name:"jonny john",
+            age : 12,
+            contact : {
+                mobile : 9898989898,
+                landline : 7312222222
+            },
+            address : {
+                country : "India",
+                state:"MP",
+                city:{
+                    street : "vijaynagar",
+                    house : {
+                        houseno:101,
+                        color : "red",
+                        floor:{
+                            floorno:5,
+                            room :{
+                                roomno:3,
+                                bed : 5
+                            } 
+                        }
+                    }
+                }
+            }
+        }
+    ];
+    var table=`<table border='1' cellspacing='0'>
+    <thead>
+        <tr>
+            <th rowspan='6'>Name</th>
+            <th rowspan='6'>Age</th>
+            <th colspan='2'><center>Contact</center></th>
+            <th colspan='8'><center>Address</center></th>
+        </tr>
+        <tr>
+            <th rowspan='5'>Mobile</th>
+            <th rowspan='5'>Landline</th>
+            <th rowspan='5'>Country</th>
+            <th rowspan='5'>State</th>
+            <th colspan='6'><center>City</center></th>
+        </tr>
+        <tr>
+            <th rowspan='4'>Street</th>
+            <th colspan='5'><center>House</center></th>
+        </tr>
+        <tr>
+            <th rowspan='3'>House No.</th>
+            <th rowspan='3'>Color</th>
+            <th colspan='3'><center>Floor</center></th>
+        </tr>
+        <tr>
+            <th rowspan='2'>Floor No.</th>
+            <th colspan='2'><center>Room</center></th>
+        </tr>
+        <tr>
+            <th>Room No.</th>
+            <th>Bed</th>
+        </tr>
+    </thead>`;
+    table+="<tbody>";
+    for(var index in data){
+        table+="<tr>";
+        for(var key in data[index]){
+            if(typeof data[index][key] == "object"){
+                for(var subkey in data[index][key]){
+                    if(typeof data[index][key][subkey] == "object"){
+                        for(var innerkey in data[index][key][subkey]){
+                            if(typeof data[index][key][subkey][innerkey] == "object"){
+                                for(var subinnerkey in data[index][key][subkey][innerkey]){
+                                    if(typeof data[index][key][subkey][innerkey][subinnerkey]=="object"){
+                                        for(var nestedkey in data[index][key][subkey][innerkey][subinnerkey]){
+                                            if(typeof data[index][key][subkey][innerkey][subinnerkey][nestedkey] == "object"){
+                                                for(var subnestedkey in data[index][key][subkey][innerkey][subinnerkey][nestedkey]){
+                                                    table+="<td>"+data[index][key][subkey][innerkey][subinnerkey][nestedkey][subnestedkey]+"</td>";
+                                                }
+                                            }else{
+                                                table+="<td>"+data[index][key][subkey][innerkey][subinnerkey][nestedkey]+"</td>";
+                                            }
+                                        }
+                                    }
+                                    else{
+                                        table+="<td>"+data[index][key][subkey][innerkey][subinnerkey]+"</td>";
+                                    }
+                                }
+                            }else{
+                                table+="<td>"+data[index][key][subkey][innerkey]+"</td>";
+                            }
+                        }
+                    }
+                    else{
+                        table+="<td>"+data[index][key][subkey]+"</td>";
+                    }
+                }    
+            }
+            else{
+                table+="<td>"+data[index][key]+"</td>";
+            }
+        }
+        table+="</tr>";    
+    }
+table+="</tbody></table>";
+document.getElementById("demo").innerHTML=table;
+</script>

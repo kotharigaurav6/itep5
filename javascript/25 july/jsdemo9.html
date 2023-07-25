@@ -1,0 +1,24 @@
+<!--  program showing the concept of object destructuring -->
+
+<script>
+    function demo(){    
+        var obj = {
+            name:"andrew",
+            address:{
+                state:"mp",
+                country:"india",
+                    toString(){
+                        return this.state+"  "+address.country;
+                    }
+            },
+            age:45
+        };
+        return obj;
+    }
+
+    const{name,address,age} = demo();
+    document.write("<br>Name : "+name);
+    document.write("<br>Address : "+address);
+    document.write("<br>Address : "+address.state+"  "+address.country);
+    document.write("<br>Age : "+age);
+</script>

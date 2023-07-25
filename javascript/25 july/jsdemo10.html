@@ -1,0 +1,38 @@
+<!-- program showing the concept of local storage -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        var arr=[];
+    function myFun(event){
+        console.log(typeof event);
+        console.log(event.constructor.name);
+        console.log(SubmitEvent.constructor.name);
+        
+       // event.preventDefault();
+        console.log(arr);
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+
+        var obj = {
+            username : username,
+            email : email
+        }
+
+        localStorage.setItem("entries",JSON.stringify(obj));
+        console.log(arr);
+    }
+    </script>
+</head>
+<body>
+
+    <h1>Example showing the concept of local storage</h1>
+    <form onSubmit="myFun(event)">
+    <input type="text" placeholder="Enter Username" id="username"><br>
+    <input type="email" placeholder="Enter Email" id="email"><br>
+    <input type="submit" value="Submit Data"><br>
+    </form>    
+</body>
+</html>

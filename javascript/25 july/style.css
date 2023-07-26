@@ -1,0 +1,16 @@
+input,select{
+    height:30px;
+    width: 300px;
+    margin: 5px;
+}
+input[type="radio"],input[type="checkbox"]{
+    height:20px;
+    width: 50px;
+}
+input[type="submit"],input[type="reset"]{
+    border:0px;
+    height: 30px;
+    width:300px;
+    background-color: black;
+    color:white;
+}

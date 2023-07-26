@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="myscript.js"></script>
+</head>
+<body>
+        <center><h1>Example of Local Storage</h1>
+            <hr width="300">
+            <a href="list.html">View List</a>    |   
+            <a href="register.html">Registration</a>
+            <hr width="300">
+        </center>
+        <center>
+            <h2>Registration Form</h2>
+            <form action="list.html" onSubmit="return getData()">
+            <input type="email" placeholder="Enter Email" id="email"><br>
+            <input type="password" placeholder="Enter Password" id="password"><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <br>
+            <input type="checkbox" id="cricket" name="cricket" value="cricket">
+            <label for="cricket">Cricket</label>
+            <input type="checkbox" id="hockey" name="hockey" value="hockey">
+            <label for="hockey">Hockey</label>
+            <br>
+            <select name="subject" id="subject">
+                <option value="">Select Subject</option>
+                <option value="C Language">C Language</option>
+                <option value="C++ Language">C++ Language</option>
+                <option value="C# Language">C# Language</option>
+                <option value=".Net Language">.Net Language</option>
+            </select>
+            <br>
+            <input type="submit" value="Register">
+            <br>
+            <input type="reset" value="Reset">
+            </form>
+        </center>
+</body>
+</html>

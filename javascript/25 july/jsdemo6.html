@@ -1,0 +1,25 @@
+<!--  program showing the concept of object destructuring -->
+
+<script>
+    var obj = {
+        name:"andrew",
+        address:"indore",
+        age:45,
+        pincode:452010
+    };
+    // const{name,address,age,pincode} = obj;
+    // document.write("<br>Name : "+name);
+    // document.write("<br>Address : "+address);
+    // document.write("<br>Age : "+age);
+    // document.write("<br>Pincode : "+pincode);
+    
+    // const{name,address} = obj;
+    // document.write("<br>Name : "+name);
+    // document.write("<br>Address : "+address);
+ 
+    const {salary=1234,age,pincode : pin} = obj;
+    document.write("<br>Salary : "+salary);
+    document.write("<br>Age : "+age);
+    document.write("<br>Pincode : "+pin);
+
+</script>

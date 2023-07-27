@@ -1,0 +1,21 @@
+<!--  Event capturing and Bubbling  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div onclick="alert('div')">
+        <p onclick="alert('p')">
+            <span onclick="alert('span')">Click Here</span>
+        </p>
+    </div>
+</body>
+</html>
+
+window-->document-->html-->body-->div--->p--->span = capturing <br>
+span = target <br>
+span-->p--->div-->body-->html-->document--->window = bubbling

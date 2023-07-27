@@ -1,0 +1,25 @@
+<!--  Asynchronous  -->
+<script>
+    console.log("Before execution");
+    function show(){
+        console.log("show function called");
+    }
+    const display = function(){
+        setInterval(()=>{
+            console.log("display function called interval");
+        },5000);
+
+        setTimeout(()=>{
+            console.log("display function called timeout");
+        },5000);
+        return 100;
+    }
+    const draw = ()=>{
+        console.log("draw function called");
+    }
+    show();
+    var dis = display();
+    console.log("----> "+dis);
+    draw();
+    console.log("After execution");
+</script>

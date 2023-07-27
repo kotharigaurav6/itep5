@@ -1,0 +1,17 @@
+<!--  Asynchronous  -->
+<script>
+    var a = parseInt(prompt("Enter number : "));
+
+    var res = setTimeout(()=>{
+        console.log("Function executes");
+    },5000);
+
+
+    if(a==100){
+        console.log("Task completed");
+        clearTimeout(res);
+    }
+
+
+    
+</script>

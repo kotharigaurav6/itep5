@@ -1,0 +1,26 @@
+<!--  Asynchronous  -->
+<script>
+    console.log("Before execution");
+    function show(){
+        console.log("show function called");
+    }
+    const display = function(){
+        console.log("display function called");
+    }
+    const draw = ()=>{
+        console.log("draw function called");
+    }
+    setTimeout(show,1000);
+    setTimeout(display,0);
+   show();
+    setTimeout(draw);
+    display();
+   console.log("After execution");
+</script>
+
+<!-- 
+                here a and b are variables
+            show(a,b)   --- here a and b are arguments
+
+            here a=function(){} and b=()=>{} are variables which holds function
+            show(a,b)   --- here a and b are arguments -->

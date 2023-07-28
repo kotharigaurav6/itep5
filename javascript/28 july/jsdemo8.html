@@ -1,0 +1,14 @@
+<!-- Program showing the concept of callback -->
+<script>
+        var a = parseInt(prompt("Enter first number"));
+        var b = parseInt(prompt("Enter second number"));
+    
+    var res = (result)=>{
+        console.log("Result : "+result);
+    };
+    function operation(callback,a,b){
+        callback(a+b);
+    }
+    operation(res,a,b);
+</script>
+

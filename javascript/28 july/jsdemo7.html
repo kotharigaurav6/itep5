@@ -1,0 +1,20 @@
+<!-- Program showing the concept of callback -->
+<script>
+    console.log("Before Execution");      
+        var myFun = (message)=>{
+            console.log("Message : "+message);
+        }
+
+        function callingFun(callback){
+            var msg = "This is an example of callback";
+            callback(msg);
+        }
+
+        callingFun(myFun);
+    console.log("After Execution");    
+</script>
+
+<!-- callback = (message)=>{
+    console.log("Message : "+message);
+}
+callback(msg); -->

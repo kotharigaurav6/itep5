@@ -1,0 +1,23 @@
+<!-- Program showing the concept of Synchronous callback -->
+<script>
+    console.log("Before Execution");    
+
+    var msg1 = ()=>{
+        console.log("Hello User 1 | This is an example of Callback");
+    }
+    var msg2 = ()=>{
+        console.log("Hello User 2 | This is an example of Callback");
+    }
+
+    function myFun(callback1,callback2){
+        console.log("Inside MyFun");
+        callback1();
+        console.log("After callback 1 | Inside MyFun");
+        callback2();
+        console.log("After callback 2 | Inside MyFun");
+    }
+
+    myFun(msg1,msg2);
+
+console.log("After Execution");    
+</script>

@@ -1,0 +1,16 @@
+<!-- Program showing the concept of Synchronous callback -->
+<script>
+    console.log("Before Execution");    
+
+    function myFun(callback){
+        console.log("Inside MyFun");
+        callback();
+        console.log("After callback | Inside MyFun");
+    }
+
+    myFun(function message(){
+        console.log("Hello User | This is an example of Callback");
+    });
+
+console.log("After Execution");    
+</script>

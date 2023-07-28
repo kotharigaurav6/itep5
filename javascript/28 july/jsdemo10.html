@@ -1,0 +1,33 @@
+<!-- callback hell | pyramid of doom -->
+<script>
+    //Program showing the concept of callback
+    var a = 5;
+    var b = 6;
+    const addition = (a,b,callback)=>{
+        console.log("sum : "+(a+b));
+        callback(false);
+    }
+    const subtraction = (a,b,callback)=>{
+        console.log("sub : "+(a-b));
+        callback(false);
+    }
+    const multiplication = (a,b,callback)=>{
+        console.log("multiply : "+(a*b));
+        callback(false);
+    }
+
+    addition(a,b,(val)=>{
+        if(!val){
+            subtraction(a,b,(val)=>{
+                if(!val){
+                    multiplication(a,b,(val)=>{
+                        if(!val){
+                            console.log("End of Program Flow");
+                        }
+                    })
+                }
+            })            
+        }
+    })
+</script>
+

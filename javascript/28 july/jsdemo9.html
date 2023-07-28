@@ -1,0 +1,47 @@
+
+<script>
+    // const gotoroom = ()=>{
+    //     console.log("gotoroom");
+    // }
+    // const removegarbage = ()=>{
+    //     console.log("removegarbage");
+    // }
+    // const wonprize = ()=>{
+    //     console.log("wonprize");
+    // }
+    // gotoroom();
+    // removegarbage();
+    // wonprize();
+
+
+    // const gotoroom = ()=>{
+    //     console.log("gotoroom");
+    //     removegarbage();
+    // }
+    // const removegarbage = ()=>{
+    //     console.log("removegarbage");
+    //     wonprize();
+    // }
+    // const wonprize = ()=>{
+    //     console.log("wonprize");
+    // }
+    // gotoroom();
+
+
+    //Program showing the concept of callback
+    
+    const gotoroom = (callback)=>{
+        console.log("gotoroom");
+        callback(wonprize);
+    }
+    const removegarbage = (callback)=>{
+        console.log("removegarbage");
+        callback();
+    }
+    const wonprize = ()=>{
+        console.log("wonprize");
+    }
+    gotoroom(removegarbage);
+
+</script>
+

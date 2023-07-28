@@ -1,0 +1,18 @@
+<!-- callback hell | pyramid of doom -->
+<script>
+    var num=10;
+    const printValue = (num,callback)=>{
+        console.log(num+" ");
+        callback(num+2,(num,callback)=>{
+            console.log(num+"  ");
+            callback();
+        })
+    };
+    printValue(num,(num,callback)=>{
+        console.log(num+"  ");
+        callback(num+2,()=>{
+            console.log("End of program");
+        });
+    });
+</script>
+

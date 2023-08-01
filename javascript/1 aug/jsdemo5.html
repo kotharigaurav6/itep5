@@ -1,0 +1,16 @@
+<script>
+    var msg1 = function(result){
+        document.write("<br>resolve : "+result);
+    }
+    var msg2 = function(result){
+        document.write("<br>reject : "+result);
+    }
+    var executor = function(resolve,reject){
+        resolve("resolved value");
+        //reject("Error generated");
+    }
+    new Promise(executor)
+        .then(msg1)
+            .catch(msg2);
+</script>
+

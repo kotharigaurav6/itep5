@@ -1,0 +1,16 @@
+<script>
+    var checknum = (num)=>{
+        console.log("Gets Entry");
+        return new Promise((even,odd)=>{
+            (num%2==0) ? even("Number is even") : odd("Number is odd");
+            console.log("Exit");
+        });
+    }
+    checknum(52).then((msg)=>{
+       console.log(msg);
+        document.write(msg);
+    }).catch((msg)=>{
+        document.write(msg);
+    });
+</script>
+

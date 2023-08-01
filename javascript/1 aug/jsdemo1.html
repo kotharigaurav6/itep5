@@ -1,0 +1,11 @@
+<script>
+    new Promise(function(resolve,reject){
+        resolve("resolved value");
+        reject(new Error("Error generated"));
+    }).then(function(result){
+        document.write("resolve : "+result);
+    },function(result){
+        document.write("reject : "+result);
+    });
+</script>
+

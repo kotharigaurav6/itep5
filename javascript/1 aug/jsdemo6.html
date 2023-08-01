@@ -1,0 +1,32 @@
+<script>
+    // var promise = new Promise((resolve,reject)=>{
+    //    resolve(6);
+    // });
+    // var pro = promise.then((num)=>{
+    //     return num*num;
+    // });
+    // pro.then((num)=>{
+    //     document.write("Result : "+num);
+    // })
+
+
+    // var promise = new Promise((resolve,reject)=>{
+    //    resolve(5);
+    // });
+    // promise.then((num)=>{
+    //     return num*num;
+    // }).then((num)=>{
+    //     document.write("Result : "+num);
+    // })
+
+    var promise = new Promise((resolve,reject)=>{
+       reject(5);
+    });
+    promise.catch((num)=>{
+        return num*num;
+    }).then((num)=>{
+        document.write("Result : "+num);
+    })
+
+</script>
+

@@ -1,0 +1,14 @@
+<script>
+    var checknum = (num)=>{
+        return new Promise((even,odd)=>{
+            (num%2==0) ? even("Number is even") : odd("Number is odd");
+        });
+    }
+    var promise = checknum(52);
+    promise.then((msg)=>{
+        document.write(msg);
+    }).catch((msg)=>{
+        document.write(msg);
+    });
+</script>
+

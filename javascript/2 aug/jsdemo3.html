@@ -1,0 +1,38 @@
+<script>
+    function gotoroom(){
+        return new Promise((resolve,reject)=>{
+            console.log("before");
+            setTimeout(()=>{
+                resolve("gotoroom");
+            },2000);
+            console.log("after");
+        })
+        console.log("-------------->>>");
+    }
+    function removegarbage(){    
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("removegarbage");
+            },3000);
+        })
+    }
+    function wonprize(){
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("wonprize");
+            },1000);
+        })
+    }
+    console.log("before goto");
+    gotoroom().finally(()=>{console.log("##############")}).then((msg)=>{
+        console.log(msg);
+            removegarbage().then((msg)=>{
+                console.log(msg);
+                    wonprize().then((msg)=>{
+                        console.log(msg);             
+            }).catch((msg)=>{});
+        }).catch((msg)=>{});        
+    }).catch((msg)=>{});
+    console.log("after goto");
+
+</script>

@@ -1,0 +1,26 @@
+<script>
+    function gotoroom(){
+        return new Promise((resolve,reject)=>{
+            resolve("gotoroom");
+        })
+    }
+    function removegarbage(){    
+        return new Promise((resolve,reject)=>{
+            resolve("removegarbage");
+        })
+    }
+    function wonprize(){
+        return new Promise((resolve,reject)=>{
+            resolve("wonprize");
+        })
+    }
+    gotoroom().then((msg)=>{
+        document.write("<br>"+msg);
+            removegarbage().then((msg)=>{
+                document.write("<br>"+msg);
+                    wonprize().then((msg)=>{
+                        document.write("<br>"+msg);             
+            }).catch((msg)=>{});
+        }).catch((msg)=>{});        
+    }).catch((msg)=>{});
+</script>

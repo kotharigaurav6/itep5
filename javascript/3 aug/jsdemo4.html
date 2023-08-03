@@ -1,0 +1,27 @@
+ <!-- async / await -->
+<script>
+    var checknum = (num)=>{
+        return new Promise((resolve,reject)=>{
+            (num%2==0) ? resolve("Even Number") : reject("Odd Number");
+        });
+    }
+    
+    async function result(){
+        try{
+            console.log("before execution");
+                var res = await checknum(100);
+                console.log("--Message : "+res);
+            console.log("after execution");
+        }catch(err){
+            document.write("--Error : "+err);
+        }    
+    }
+    result();
+
+    // checknum(100).then((msg)=>{
+    //     document.write("Message : "+msg);
+    // }).catch((msg)=>{
+    //     document.write("Message : "+msg);
+    // });
+    
+</script>

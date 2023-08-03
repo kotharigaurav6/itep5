@@ -1,0 +1,23 @@
+ <!-- async / await -->
+<script>
+    var num = parseInt(prompt("Enter Number"));
+    var demo = (num)=>{
+        return new Promise((resolve,reject)=>{
+            if(num<=10)
+                resolve(num);
+            else    
+                reject("Number exceeds");
+        });
+    }
+
+    async function myFun(){
+        try{
+            var result = await demo(num);
+            var res = await demo(result*result);
+            document.write("Number : "+res);
+        }catch(err){
+            document.write(err);
+        }
+    }
+    myFun();
+</script>

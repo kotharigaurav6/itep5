@@ -1,0 +1,25 @@
+ <!-- async / await -->
+<script>
+    // async function demo(){
+    //     return new Error("Error Occured");
+    // }
+    // var d = demo(); 
+    // console.log(d);
+    // console.log(d.toString());
+    // // d.then((num)=>{
+    // //     document.write(num);
+    // // });
+    // d.then(alert);
+
+    async function demo(){
+        throw new Error("Error Occured");
+    }
+    var d = demo(); 
+    console.log(d);
+   // console.log(d.toString());
+    d.catch((num)=>{
+        document.write(num);
+    });
+    d.then(alert);
+
+</script>

@@ -1,0 +1,19 @@
+ <!-- async / await -->
+<script>
+    // function demo1(){
+    //     return 1;
+    // }
+    // var x = demo1(); 
+    // document.write(typeof x+"<br>");
+
+    async function demo(){
+        return 1; // resolve(1)
+    }
+    var d = demo(); 
+    console.log(d);
+    console.log(d.toString());
+    d.then((num)=>{
+        document.write(num);
+    });
+//    d.then(alert);
+</script>

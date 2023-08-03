@@ -1,0 +1,22 @@
+ <!-- Fetch API -->
+<script>
+    async function myFun(){
+        try{
+            var response = await fetch("https://jsonplaceholder.typicode.com/posts");
+            //console.log(await response.json());
+        
+            var arr = await response.json();
+            
+                var table = "<table border='1' cellspacing='0' cellpadding='6'><tr><th>UserId</th><th>Id</th><th>Title</th><th>Body</th></tr>";
+                    for(var index in arr){
+                        table+=`<tr><td>${arr[index].userId}</td><td>${arr[index].id}</td><td>${arr[index].title}</td><td>${arr[index].body}</td></tr>`;
+                    }
+                table+="</table>";
+                document.write(table);    
+              
+            } catch(err){
+            document.write(err);   
+        }
+    }
+    myFun();
+</script>

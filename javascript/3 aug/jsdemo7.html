@@ -1,0 +1,47 @@
+ <!-- async / await -->
+<script>
+    /*
+    var demo = ()=>{
+        var num = parseInt(prompt("Enter Number"));
+        return new Promise((resolve,reject)=>{
+            resolve(num);
+        });
+    }
+
+        demo().then(result => result*result)
+            .then((num)=>{
+                document.write("Number : "+num);
+            });
+    */
+   
+    var demo = ()=>{
+        var num = parseInt(prompt("Enter Number"));
+        return new Promise((resolve,reject)=>{
+            resolve(num);
+        });
+    }
+    var demo1 = (num)=>{
+        return new Promise((resolve,reject)=>{
+            resolve(num);
+        });
+    }
+
+    async function myFun(){
+        try{
+            var result = await demo();
+        //    console.log(result);              
+        //    console.log(typeof result);              
+            var res = await demo1(result*result);
+            document.write("Number : "+res);
+        }catch(err){
+            document.write(err);
+        }
+    }
+    myFun();
+
+        // demo().then(result => result*result)
+        //     .then((num)=>{
+        //         document.write("Number : "+num);
+        //     });
+   
+</script>

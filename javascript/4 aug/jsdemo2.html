@@ -1,0 +1,70 @@
+<!-- closure -->
+<script>
+    // function outerfun(){
+    //     function innerfun(){
+    //         document.write("This is an example of closure");
+    //     }
+    //     innerfun();
+    // }
+    // outerfun();
+
+    // function outerfun(){
+    //     function innerfun(){
+    //         document.write("This is an example of closure");
+    //     }
+    //     return innerfun;
+    // }
+    // var res = outerfun();
+    //     res();
+
+    // function outerfun(){
+    //     var name = "Andrew Anderson";
+    //     return function innerfun(){
+    //         document.write("Name : "+name);
+    //     }
+    // }
+    // var res = outerfun();
+    //     res();
+
+
+    // function outerfun(){
+    //     return function innerfun(name){
+    //         document.write("Name : "+name);
+    //     }
+    // }
+    // var name = "Andrew Anderson";
+    // var res = outerfun();
+    //     res(name);
+
+
+    // function outerfun(num){
+    //     return function innerfun(num1){
+    //         return num*num1;
+    //     }
+    // }
+    // var num1 = 101;
+    // var res = outerfun(100);
+    //     document.write(res(num1));
+
+    function outerfun(){
+        var arr=[];
+        var count=10;  
+            function innerFun(){   
+                for( i=0;i<5;i++){
+                    arr[i] = function(){ return count++; }
+                } 
+                return arr;
+            }
+        return innerFun;
+    }
+    var res = outerfun();
+    var arr = res();
+
+    // console.log(arr[0]());
+    // console.log(arr[4]());
+       
+    for(var i=0;i<5;i++){
+        console.log(arr[i]());
+    }
+
+</script>

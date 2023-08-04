@@ -1,0 +1,26 @@
+ <!-- Fetch API -->
+ <script>
+    async function myFun(){
+        try{
+            var obj = {
+                "UserId" : 11,
+                "id" : 101,
+                "title" : "post example",
+                "body" : "This is an example of Body"
+            }
+            var response = await fetch("https://jsonplaceholder.typicode.com/posts",{
+                method : 'POST',
+                headers : {
+                    'Content-Type' : 'Application/json'
+                },
+                body:JSON.stringify(obj)
+            });
+            //console.log(response.json());        
+            var arr = await response.json();
+            console.log(response.status);
+            } catch(err){
+            document.write(err);   
+        }
+    }
+    myFun();
+</script>

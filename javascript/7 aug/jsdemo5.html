@@ -1,0 +1,17 @@
+<script>
+    function webUrl(protocol){
+        return (domain)=>{
+            return (path)=>{
+                return `${protocol}://${domain}${path}`;
+            }
+        }
+    }
+
+    var domainName = webUrl('https');
+    var pathName = domainName("example.com");
+    document.write("URL : "+pathName("/home"));
+
+   // document.write("URL : "+webUrl('https')('example.com')('/home/abc'));
+</script>
+
+<!-- webUrl('https')('example.com')('/home'); -->

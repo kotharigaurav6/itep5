@@ -1,0 +1,40 @@
+<script>
+    var obj = {
+        name:"andrew",
+        age : 45,
+        address : "indore"
+    }
+    // document.write("status : "+Object.isFrozen(obj));
+    // obj.salary = 34565;
+    // document.write("<br>salary : "+obj.salary);
+    // obj.salary = 88565;
+    // document.write("<br>salary : "+obj.salary);
+    // document.write("<br>address : "+obj.address);
+    // delete obj.address;
+    // document.write("<br>address : "+obj.address);
+
+    // Object.freeze(obj);
+    // document.write("<br><br>status : "+Object.isFrozen(obj));
+    // obj.name = "john";
+    // document.write("<br>name : "+obj.name);
+    // obj.salary = 34565;
+    // document.write("<br>salary : "+obj.salary);
+    // obj.salary = 88565;
+    // document.write("<br>salary : "+obj.salary);
+    // document.write("<br>address : "+obj.address);
+    // delete obj.address;
+    // document.write("<br>address : "+obj.address);
+
+    Object.seal(obj);
+    document.write("<br><br>status : "+Object.isSealed(obj));
+    obj.name = "john";
+    document.write("<br>name : "+obj.name);
+    obj.salary = 34565;
+    document.write("<br>salary : "+obj.salary);
+    obj.salary = 88565;
+    document.write("<br>salary : "+obj.salary);
+    document.write("<br>address : "+obj.address);
+    delete obj.address;
+    document.write("<br>address : "+obj.address);
+
+</script>

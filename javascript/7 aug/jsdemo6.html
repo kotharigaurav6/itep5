@@ -1,0 +1,38 @@
+<script>
+    function arithmeticOperator(operator){
+        return (a)=>{
+            return (b)=>{
+                switch(operator){
+                    case '+' : return a+b;
+                    case '-' : return a-b;
+                    case '*' : return a*b;
+                    case '/' : return a/b;
+                    case '%' : return a%b;
+                        default : return "No Result";
+                }
+            }
+        }
+    }
+    var add = arithmeticOperator('+');
+//    var add = arithmeticOperator('+')(5)(4);
+    var sub = arithmeticOperator('-');
+    var mul = arithmeticOperator('*');
+    var div = arithmeticOperator('/');
+    var mod = arithmeticOperator('%');
+
+    document.write("<br>Addition : "+add(5)(4));
+    document.write("<br>Subtraction : "+sub(5)(4));
+    document.write("<br>Multiplication : "+mul(5)(4));
+    document.write("<br>Division : "+div(5)(4));
+    document.write("<br>Modulus : "+mod(5)(4));
+    
+    document.write("<br>symbol : "+eval('2+2'));
+
+    /*
+    // we can also replace switch with the below code
+    a = 1;
+    b = 2;
+    operator = "-";
+    document.write("<br>symbol : "+eval(`${a}${operator}${b}`));
+    */
+</script>

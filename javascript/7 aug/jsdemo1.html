@@ -1,0 +1,82 @@
+<script>
+    // non currying concept
+    // var a=5,b=6,c=7;
+    // function addition(a,b,c){
+    //     return a+b+c;
+    // }
+    // document.write("<br>Addition : "+addition(a,b,c));
+
+//currying concept
+    // var a=5,b=6,c=8;
+    // function addition(a){
+    //     return function add(b){
+    //         return function adding(c){
+    //             return a+b+c;
+    //         }
+    //     }
+    // }
+    // document.write("<br>Addition : "+addition(a)(b)(c));     
+
+
+    // var a=5,b=6,c=8;
+    // function addition(a){
+    //     var d = 100;
+    //     return (b)=>{
+    //         return (c)=>{
+    //             return a+b+c+d;
+    //         }
+    //     }
+    // }
+    // document.write("<br>Addition : "+addition(a)(b)(c));    
+
+    // var a=5,b=6,c=8,d=3;
+    // function addition(a){
+    //     return (b,c)=>{
+    //             return (d)=>{
+    //                 return a+b+c+d;
+    //             };
+    //     }
+    // }
+    // document.write("<br>Addition : "+addition(a)(b,c)(d));    
+
+
+    // var a=5,b=6,c=8;
+    // function addition(a){
+    //     return (b)=>{
+    //         return (c)=>{
+    //             return a+b+c;
+    //         }
+    //     }
+    // }
+    // var res = addition(a)(b);
+    // document.write("<br>Addition : "+res(100));    
+
+    // var a=5,b=6,c=8;
+    // function addition(a){
+    //     return (b)=>{
+    //         return (c)=>{
+    //             return a+b+c;
+    //         }
+    //     }
+    // }
+    // var res = addition(a);
+    // var res1 = res(b);
+    // var res2 = res1(c);
+
+    // document.write("<br>Addition : "+res2);    
+
+
+    var a=5,b=6,c=8;
+    function addition(a){
+        return (b)=>{
+            return (c)=>{
+                return a+b+c;
+            }
+        }
+    }
+    var res = addition(a);
+    var res1 = res(b)(c);
+
+    document.write("<br>Addition : "+res1);    
+
+</script>

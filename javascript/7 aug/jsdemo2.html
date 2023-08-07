@@ -1,0 +1,11 @@
+<script>
+
+    function displayParagraph(greeting){
+        return (name)=>{
+            return (message)=>{
+                return `${greeting} ${name} , ${message}`;
+            }
+        }
+    }
+    document.write(displayParagraph("Hello")("Andrew")("How are you ?"));    
+</script>

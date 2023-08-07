@@ -1,0 +1,12 @@
+<script>
+
+    function displayParagraph(greeting){
+        return (name)=>{
+            var year = 2002;
+            return (message)=>{
+                return `${greeting} ${name} , ${message} <br> You are ${new Date().getFullYear()-year} years old`;
+            }
+        }
+    }
+    document.write(displayParagraph("Hello")("Andrew")("How are you ?"));    
+</script>

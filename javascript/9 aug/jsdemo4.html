@@ -1,0 +1,19 @@
+<!--  concept of string  -->
+
+<script>
+    var str2 = "              Hello user how are you ?               ";
+    document.write("<br>res : "+str2.trim());
+    document.write("<br>res : "+str2.strike());
+    document.write("<br>res : "+str2.repeat(6));
+ 
+    var str3 = "Welcome User, Needs a Breakfast Needs";
+    document.write("<br>res : "+str3.substring(0,15));
+    //document.write("<br>res : "+str3.substring(5,5));
+    //document.write("<br>res : "+str3.substring(-10,-3));
+    document.write("<br>res : "+str3.substr(5,5));
+    document.write("<br>res : "+str3.slice(3,5));
+    document.write("<br>res : "+str3.slice(-9,-3));
+    document.write("<br>res : "+str3.search("needs"));
+    document.write("<br>res : "+str3.search("Needs"));
+    document.write("<br>res : "+str3.match("needs"));    
+</script>

@@ -1,0 +1,19 @@
+<!--  concept of string  -->
+
+<script>
+    var str1 = "Hello";
+    var str3 = "Hello";
+    var str2 = new String("Hello");
+    var str4 = "hello";
+    document.write("<br>res : "+typeof str1);
+    document.write("<br>res : "+typeof str2);
+
+    document.write("<br>res : "+(str1==str2));
+    document.write("<br>res : "+(str1==str3));
+    document.write("<br>res : "+(str1===str2));
+    document.write("<br>res : "+str1.localeCompare(str2));
+    document.write("<br>res : "+str4.localeCompare(str1));
+  
+    document.write("<br>res : "+String.fromCharCode(67)+"<br>");
+    document.write('C'.codePointAt());  
+</script>

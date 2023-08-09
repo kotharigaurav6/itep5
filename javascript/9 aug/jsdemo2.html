@@ -1,0 +1,25 @@
+<!--  concept of string  -->
+
+<script>
+    var str1 = "andrew";
+    document.write("<br>res : "+str1.toUpperCase());
+    document.write("<br>res : "+str1);
+    var str2 = "MATHEW";
+    document.write("<br>res : "+str2.toLowerCase());
+    document.write("<br>res : "+str2.length);
+    document.write("<br>res : "+str1.charAt(1));
+    document.write("<br>res : "+str1.charCodeAt(0));
+
+    var str3 = "Hello user how are you user ?";
+    document.write("<br>res : "+str3.indexOf("user"));
+    document.write("<br>res : "+str3.indexOf("user",10));
+    document.write("<br>res : "+str3.lastIndexOf("user"));
+
+//    document.write("<br>res : "+str3.replace("user","Mathew"));
+    document.write("<br>res : "+str3.replaceAll("user","Mathew"));
+    document.write("<br>res : "+str3.includes("userInf"));
+    str1.concat(str2);
+    document.write("<br>res : "+str1);
+    document.write("<br>res : "+str1.concat(" "+str2));
+    
+</script>

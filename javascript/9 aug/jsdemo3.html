@@ -1,0 +1,25 @@
+<!--  concept of string  -->
+
+<script>
+    var str1 = "andrew";
+    document.write("<br> res : "+str1[3]);
+    str1[3] = "d";
+    document.write("<br> res : "+str1[3]);
+    document.write("<br>"+"andrew".toUpperCase()+"<br>");
+    
+    var str2 = "Hello user how are you ?";
+    var words = str2.split(" ");
+    for(var index in words){
+        document.write(words[index]+"<br>");
+    }
+    document.write("<br>res : "+str2);
+    document.write("<br>res : "+str2.big());
+    document.write("<br>res : "+str2.small());
+    document.write("<br>res : "+str2.bold());
+    document.write("<br>res : "+str2.sup());
+    document.write("<br>res : "+str2.sub());
+    document.write("<br>res : "+str2.fontcolor("red"));
+    document.write("<br>res : "+str2.fontsize("45px"));
+
+    
+</script>

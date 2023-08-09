@@ -1,0 +1,25 @@
+<script>
+    class Demo{
+        // constructor
+        constructor(a,b){
+            this.a=a;
+            this.b=b;
+            document.write("constructor called<br>");
+        }
+        swapping(){
+            var temp = this.a;
+            this.a=this.b;
+            this.b = temp;
+        }
+        display(){
+            document.write("a : "+this.a+"<br>");
+            document.write("b : "+this.b+"<br>");
+        }
+    }
+    const obj = new Demo(5,6);
+    document.write("Before swapping<br>");
+    obj.display();
+        obj.swapping();
+    document.write("After swapping<br>");
+    obj.display();
+</script>

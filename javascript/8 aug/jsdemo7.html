@@ -1,0 +1,21 @@
+<!-- Program showing the concept of abstraction -->
+<script>
+    class Demo{
+        #height;
+        #width;
+            constructor(a,b){
+                this.#height=a;
+                this.#width=b;
+            }
+            #getArea(){
+                return this.#height*this.#width;
+            }    
+            result(){
+                document.write("Area : "+this.#getArea());
+            }
+    }
+    const obj = new Demo(5,6);
+    obj.result();
+//    document.write(obj.#getArea());
+    console.log(obj);
+</script>

@@ -1,0 +1,16 @@
+<!-- Program showing the concept of inheritance -->
+<script>
+    class Parent{
+        getDetails(){
+            document.write("parent method called");
+        }
+    }    
+    class Demo extends Parent{
+        getDetails(){
+            super.getDetails();
+            document.write("<br>child method called");
+        }
+    }
+    const obj = new Demo();
+    obj.getDetails();
+</script>

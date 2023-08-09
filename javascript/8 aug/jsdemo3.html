@@ -1,0 +1,11 @@
+<script>
+    class Demo{
+        year=2012;
+        displayMessage(){
+            document.write("<br>display message method called<br>");
+            document.write("Hello andrew, you are "+(new Date().getFullYear()-this.year)+" years old");
+        }
+    }
+    const obj = new Demo();
+    obj.displayMessage();
+</script>

@@ -1,0 +1,18 @@
+<!-- Program showing the concept of inheritance -->
+<script>
+    class Parent{
+        constructor(name){
+            this.name=name;
+            document.write("Parent name : "+this.name);
+        }
+    }
+    class Demo extends Parent{
+        constructor(fname,lname){
+            super(fname);    
+            this.lname=lname;     
+            document.write("<br>Surname : "+this.lname);
+        }
+    }
+    const obj = new Demo("Andrew","Anderson");
+    console.log(obj);
+</script>

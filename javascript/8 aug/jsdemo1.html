@@ -1,0 +1,13 @@
+<script>
+    class Demo{
+        showMessage(){
+            document.write("show method called<br>");
+        }
+        displayMessage(){
+            document.write("display message method called<br>");
+            this.showMessage();
+        }
+    }
+    const obj = new Demo();
+    obj.displayMessage();
+</script>

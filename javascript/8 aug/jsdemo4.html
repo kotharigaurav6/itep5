@@ -1,0 +1,17 @@
+<script>
+    class Demo{
+        c=100;
+        setData(a,b){
+            this.a=a;
+            this.b=b;
+        }
+        printData(){
+            document.write("<br>a : "+this.a+"<br>b : "+this.b+"<br>c : "+this.c);
+        }
+    }
+    const obj = new Demo();
+    console.log(Demo);
+    obj.setData(10,20);
+    obj.printData();
+    console.log(obj);
+</script>

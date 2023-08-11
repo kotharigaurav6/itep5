@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <h1 id="heading">This is an example of dom manipulation</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fuga accusamus ipsa quis unde atque est facilis eius, dolor eos molestias sunt eum harum quas, illum amet natus voluptatum quia!</p>
+    </div>
+    <button onclick="myfun()">Click Me</button>
+</body>
+<script>
+    function myfun(){
+        var main = document.getElementById("main");
+        var para = document.getElementById("para");
+        var newDiv = document.createElement("p");
+        var textNode = document.createTextNode("Hello user this is an example of dom manipulation");
+        newDiv.appendChild(textNode);
+
+        main.replaceChild(newDiv,para);
+    }
+</script>
+</html>

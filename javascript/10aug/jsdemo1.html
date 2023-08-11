@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti est, ipsam laborum officia sequi a quo iusto at culpa! Placeat.</p><br>
+    <div class="mydiv">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius architecto ullam ratione eligendi tenetur culpa suscipit quaerat maiores libero ipsa?</div>
+    <div class="mydiv">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius architecto ullam ratione eligendi tenetur culpa suscipit quaerat maiores libero ipsa?</div>
+    <div class="mydiv">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius architecto ullam ratione eligendi tenetur culpa suscipit quaerat maiores libero ipsa?</div><br>
+    <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem dolorum est id. Vel id iure molestiae expedita ea eaque sit.</span><br>
+    <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem dolorum est id. Vel id iure molestiae expedita ea eaque sit.</span><br>
+    <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem dolorum est id. Vel id iure molestiae expedita ea eaque sit.</span><br>
+</body>
+<script>
+    var para1 = document.getElementById("para1");
+    para1.style.textTransform="uppercase";
+
+    var multiple = document.getElementsByClassName("mydiv");
+    for(i=0;i<multiple.length;i++){
+        if(i==0)
+            multiple[i].style.backgroundColor="red";
+        if(i==1)
+            multiple[i].style.backgroundColor="green";
+        if(i==2)
+            multiple[i].style.backgroundColor="blue";
+    }
+
+    var multiple1 = document.getElementsByTagName("span");
+    for(i=0;i<multiple1.length;i++){
+        if(i==0)
+            multiple1[i].style.color="red";
+        if(i==1)
+            multiple1[i].style.color="green";
+        if(i==2)
+            multiple1[i].style.color="blue";
+    }
+
+</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mystyle{
+            background-color: red;
+            color:white;
+        }
+        .mydiv{
+            background-color: green;
+            color:white;
+        }
+        .mydiv1{
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="mydiv">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius architecto ullam ratione eligendi tenetur culpa suscipit quaerat maiores libero ipsa?</div>
+    <div id="mydiv">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius architecto ullam ratione eligendi tenetur culpa suscipit quaerat maiores libero ipsa?</div>
+    <div class="mydiv">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius architecto ullam ratione eligendi tenetur culpa suscipit quaerat maiores libero ipsa?</div><br>
+</body>
+<script>
+    var element_classname = document.getElementById("mydiv");
+    element_classname.classList.add("mystyle","mydiv1");
+  //  element_classname.classList.remove("mystyle");
+  //  element_classname.classList.toggle("mystyle");
+  
+</script>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://www.google.com" id="google">Google</a>
+</body>
+<script>
+    var anchor = document.getElementById("google");
+    alert(anchor.getAttribute("href"));
+    anchor.setAttribute("href","http://www.facebook.com");
+    anchor.removeAttribute("href");
+</script>
+</html>

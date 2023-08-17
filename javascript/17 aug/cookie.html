@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cookie Example</h1>
+    <form id="loginForm">
+        <input type="email" id="email" placeholder="Enter Email"> <br><br>
+        <input type="password" id="password" placeholder="Enter Password"> <br><br>
+        <input type="checkbox" id="remember">Remember Me <br><br>
+        <input type="submit" value="Login"> <br>
+    </form>
+    <script>
+        function setCookie(cookieName,cookieValue,expiryDay){
+            var date = new Date();
+            date.setTime(date.getTime()+(expiryDay*24*60*60*1000));
+            var expires = "expires = "+date.toUTCString();
+            var samesite = "SameSite=None";
+            document.cookie = cookieName +" = "+cookieValue+" ; "+expires+";"+samesite+";path=/";
+        }
+//         function getCookie(cookieName){
+//             var name = cookieName+"=";
+//             var decodedCookie = decodeURIComponent(document.cookie);
+//             console.log(decodedCookie);
+//             var cookieArr = decodedCookie.split(";");
+//             for(i=0;i<cookieArr.length;i++){
+//                 var cookie = cookieArr[i].trim();
+//                 if(cookie.indexOf(name)==0){
+//                     return cookie.substring(name.length,cookie.length);
+//                 }
+// //                console.log(cookie);
+//             }
+//         return '';    
+//         }
+
+function getCookie(cookieName){
+            var name = cookieName+"=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+//            console.log(decodedCookie);
+            var cookieArr = decodedCookie.split(";");
+            for(i=0;i<cookieArr.length;i++){
+                var cookie = cookieArr[i].trim();
+                if(cookie.indexOf(name)==0){
+                    return cookie.substring(name.length,cookie.length);
+                }
+//                console.log(cookie);
+            }
+        return '';    
+        }
+        
+        window.onload=function(){
+            var email = getCookie('rememberedEmail');
+            var password = getCookie('rememberedPassword');
+            alert(email+" "+password);
+            if(email)
+                document.getElementById("email").value=email;
+            if(password)
+                document.getElementById("password").value=password;
+        }
+        function saveCredentials(){
+          var email = document.getElementById("email").value;     
+          var password = document.getElementById("password").value;     
+
+          if(document.getElementById("remember").checked){
+            setCookie('rememberedEmail',email,30);
+            setCookie('rememberedPassword',password,30);
+          }  
+          else{
+            setCookie('rememberedEmail','',-1);
+            setCookie('rememberedPassword','',-1);
+          }
+        }
+        document.getElementById("loginForm").addEventListener("submit",function(event){
+          event.preventDefault();
+            saveCredentials();
+        });
+
+    </script>
+</body>
+</html>

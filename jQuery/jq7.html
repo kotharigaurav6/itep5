@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        div{
+            background-color: yellow;
+        }
+        p{  
+            border:2px solid red;
+            background-color: orange;
+        }
+    </style>
+<script>
+    $(document).ready(function(){
+        $("p").click(function(){
+            $(this).detach();
+        });
+        $("button").click(function(){
+            // $("button").before("<p>This is paragraph</p>");
+            $("div").after("<p>This is paragraph</p>");
+        });
+});
+</script>
+</head>
+<body>
+    <button>Add Paragraph</button>
+    <div>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <p>Paragraph 4</p>
+        <p>Paragraph 5</p>
+    </div>
+</body>
+</html>

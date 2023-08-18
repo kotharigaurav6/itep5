@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    
+<script>
+    $(document).ready(function(){
+
+        $("#fadeIn").click(function(){
+           $("p").fadeIn(3000);
+        });        
+        $("#fadeOut").click(function(){
+            $("p").fadeOut();
+        });        
+        $("#fadeToggle").click(function(){
+            $("p").fadeToggle();
+        });        
+
+});
+</script>
+</head>
+<body>
+    <button id="fadeIn">fade in</button>
+    <button id="fadeOut">fade out</button>
+    <button id="fadeToggle">fade toggle</button>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla suscipit a blanditiis provident harum alias deserunt, possimus nihil veniam repellat esse rerum, rem, voluptatibus maiores culpa enim quaerat perferendis corporis?</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla suscipit a blanditiis provident harum alias deserunt, possimus nihil veniam repellat esse rerum, rem, voluptatibus maiores culpa enim quaerat perferendis corporis?</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla suscipit a blanditiis provident harum alias deserunt, possimus nihil veniam repellat esse rerum, rem, voluptatibus maiores culpa enim quaerat perferendis corporis?</p>
+
+</body>
+</html>

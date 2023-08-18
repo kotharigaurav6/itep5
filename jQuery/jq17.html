@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    
+<script>
+    $(document).ready(function(){
+        $("fieldset").hide();
+        $("#slideDown").click(function(){
+           $("fieldset").slideToggle(1000);
+        });        
+});
+</script>
+</head>
+<body>
+    <button id="slideDown">Login</button>
+
+    <fieldset style="width:25%">
+    <center><h2>Login Form</h2>
+        <input type="email" placeholder="Enter Email" id="email"> <br><br>
+        <input type="password" placeholder="Enter Password" id="password"><br> <br>
+        <input type="submit" value="Submit">
+    </center>
+    </fieldset>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+   <script>
+    $(document).ready(function(){
+        $("#frm").submit(function(){
+            var email = $("#email").val();
+            var reg = /^[0-9A-Za-z_]+@[a-z]+\.[a-z]{2,3}$/;
+            if(reg.test(email)){
+                alert("Email is correct");
+            }
+            else
+                alert("Invalid email");
+        });
+        $("#frm").validate({
+            rules:{
+                username:{required :true},
+                email:{required :true},
+                password:{required :true},
+                contact:{required :true,minlength:10,maxlength:10,digits:"true"},
+                gender:{required :true},
+                hobbies:{required :true},
+                date:{required :true},
+                subject:{required :true},
+                address:{required :true},
+                file:{required :true}
+            },
+            messages:{
+                username:{required:"<span style='color:red'>Username Required</span>"},
+                email:{required:"<span style='color:red'>Email Required</span>"},
+                password:{required:"<span style='color:red'>Password Required</span>"},
+                contact:{required:"<span style='color:red'>Contact Required</span>",minlength:"<span style='color:red'>Needs 10 Digits</span>",digits:"<span style='color:red'>Only Digits are Acceptable</span>"},
+                gender:{required:"<span style='color:red'>Gender Required</span>"},
+                hobbies:{required:"<span style='color:red'>Hobbies Required</span>"},
+                date:{required:"<span style='color:red'>Date Required</span>"},
+                subject:{required:"<span style='color:red'>Subject Required</span>"},
+                address:{required:"<span style='color:red'>Address Required</span>"},
+                file:{required:"<span style='color:red'>Select File</span>"}
+            }
+        });
+    });
+   </script>
+</head>
+<body>
+<form id="frm" action="welcome.html" method="get">
+    <fieldset>
+        <legend align="center"><fieldset>Registration Form</fieldset></legend>
+    <table>
+        <tr>
+            <td><label for="username">Username</label></td>
+            <td>
+                <input   type="text" placeholder="Enter Username" name="username" id="username">
+            </td>
+        </tr>
+        <tr>
+            <td><label>Email</label></td>
+            <td>
+                <input type="email" placeholder="Enter Email" name="email" id="email">
+            </td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td>
+                <input   type="password" placeholder="Enter Password" name="password" id="password">
+            </td>
+        </tr>
+        <tr>
+            <td><label>Contact</label></td>
+            <td>
+                <input   type="text" maxlength="10" placeholder="Enter 10-digit Mobile Number" name="contact" id="contact">
+            </td>
+        </tr>
+        <tr>
+            <td><label>Gender</label></td>
+            <td>
+                <label for="male">Male</label>
+                <input value="male"   type="radio" name="gender" id="male">
+                <br>
+                <label for="female">Female</label>
+                <input value="female" type="radio" name="gender" id="female">
+             </td>
+        </tr>
+        <tr>
+            <td><label>Hobbies</label></td>
+            <td>
+                <label for="cricket">Cricket</label>
+                <input value="cricket" type="checkbox" name="hobbies" id="cricket">
+                <br>
+                <label for="hockey">Hockey</label>
+                <input type="checkbox" value="hockey" name="hobbies" id="hockey">
+                
+            </td>
+        </tr>
+        <tr>
+            <td><label>DOB</label></td>
+            <td>
+                <input   type="date" name="date" id="date">
+            </td>
+        </tr>
+        <tr>
+            <td><label>Subject</label></td>
+            <td>
+                <select name="subject" id="subject">
+                    <!-- <select   name="subject" multiple id="subject"> -->
+
+                    <option value="">Select Subject</option>
+                    <option value="C"> C language</option>
+                    <option value="C++"> C++ language</option>
+                    <option value="C#"> C# language</option>
+                    <option value=".net"> .NET language</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Address</label></td>
+            <td>
+                <textarea   name="address" id="address" placeholder="Enter Address"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td><label>File Upload</label></td>
+            <td>
+                <input   type="file" name="file" id="file">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Register">
+                <input type="reset" value="Reset">
+                
+            </td>
+        </tr>
+    </table> </fieldset>
+    </form>   
+</body>
+</html>

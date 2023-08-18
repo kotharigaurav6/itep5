@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+<script>
+        $(document).ready(function(){
+            $("#frm").submit(()=>{
+                alert("Form Submitted successfully");   
+            });
+            $(":input").css({"height":"30px","width":"300px","margin":"5px"});
+            $("button").css({"height":"33px","width":"310px"}); 
+            $("[type='email']").css("font-family","cursive");
+        });
+    </script>
+</head>
+<body>
+    <form id="frm">
+        <input type="text" placeholder="Enter Username"><br>
+        <input type="email" placeholder="Enter Email"><br>
+        <input type="password" placeholder="Enter Password"><br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

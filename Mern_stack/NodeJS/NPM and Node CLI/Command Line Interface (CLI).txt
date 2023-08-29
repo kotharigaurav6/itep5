@@ -1,0 +1,13 @@
+Command Line Interface (CLI)
+---------------------------------------------------
+
+CLI (Command-line interface) is the most common way to run a program in a terminal. As a software engineer, you’ll come across different CLIs every day namely git, Docker & npm etc.
+
+Today, with graphical user interfaces (GUI), most users never use command-line interfaces (CLI).
+
+However, CLI is still used by software developers and system administrators to configure computers, install software, and access features that are not available in the graphical interface.
+
+Today, users rely upon graphical user interfaces and menu-driven interactions. However some programming and maintenance tasks may not have a graphical user interface and may still use a command line.
+
+Compared with a graphical user interface, a command line interface requires fewer system resources to implement.
+The command line provides an interface between programs as well as the user.

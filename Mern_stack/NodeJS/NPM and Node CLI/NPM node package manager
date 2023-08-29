@@ -1,0 +1,327 @@
+https://www.tutorialspoint.com/nodejs/nodejs_npm.htm
+
+https://www.tutorialsteacher.com/nodejs/what-is-node-package-manager
+
+https://www.studytonight.com/post/node-package-manager-npm
+
+https://www.geeksforgeeks.org/node-js-npm-node-package-manager/
+
+https://www.edureka.co/blog/node-js-npm-tutorial/#whatisnpm
+
+https://medium.com/beginners-guide-to-mobile-web-development/introduction-to-npm-and-basic-npm-commands-18aa16f69f6b
+
+https://docs.npmjs.com/cli-documentation/
+
+https://www.npmjs.com/
+                                                                                     ---------------------------------------------------------
+                                                                                    NPM (NODE PACKAGE MANAGER)
+                                                                                     ---------------------------------------------------------
+
+NPM stands for Node Package Manager. It is the default package manager of Node.js that is completely written in JavaScript.
+
+It was developed by  Isaac Z. Schlueter and released in the market in 2010. Since then, it was responsible for managing all the Node.js packages and modules and consists of command line client npm. It gets installed into the system with installation of Node.js. The required packages and modules in Node project are installed using NPM.
+
+It is the world’s largest software registry(registry is a database of information, settings, options, and other values for software and hardware installed on all versions) which is completely free and open-sourced  and developers use it for sharing software across the globe.
+
+NPM can install all the dependencies(modules) of a project through the package.json file. It can also update and uninstall packages.
+[ visit for package.json ] https://www.geeksforgeeks.org/node-js-package-json/
+
+[NOTE ] Registry:
+npm registry is a large database consisting of more than half a million packages. Developers download packages from the npm registry and publish their packages to the registry.
+
+[ NOTE ] Online repositories : 
+An online repository is a digital library or archive which is accessible via the internet. All online repositories should have conditions of deposit and access attached. Most have free access to a part of a collection and require users to sign a licence if they seek to use copies of original documents or audio files.
+
+The main two functionalities of NPM are:
+---------------------------------------------------------------------
+
+1) It provides online repositories for packages/modules for Node.js which you can easily search online on their official site(https://www.npmjs.com/).
+2) It also provides a Command Line Interface (CLI) which helps the developers in locally interacting with their systems.
+
+One thing which you must remember is, any package or module required in a Node.js project is needed to be installed via 
+NPM.
+
+Need for NPM
+------------------------
+1) It helps in incorporating the pre-built packages into our project.
+2) Helps in managing and maintaining various versions of codes and their dependencies
+
+NPM Packages
+-------------------------
+A package is a group of code bundled up into a separate logical unit, each one of which serves a different functionality.
+Example:  express, body-parser, nodemon etc But before you can use any of these packages you need to install NPM in your system.
+
+NPM Installation [ NEEDS INTERNET TO RUN THIS COMMANDS BECAUSE THIS Dependencies ARE INSTALL FROM INTERNET ]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+npm comes with the node.js. So, you don’t have to install it separately.
+After installing node, You can check the version of node and npm by
+
+node -v 
+npm -v  (npm --version)
+
+If the installed version is not latest, one can always update it using the given syntax:
+
+npm npm@latest -g.
+
+As npm is a global package, -g flag is used to update it globally.
+
+OR
+
+If you have an older version of NPM then you can update it to the latest version using the following command.
+
+npm install npm -g   (sudo npm install npm -g)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Let me show you how to install, update and delete packages using NPM CLI (Command Line Interface). But before you start installing or downloading your packages, one thing you need to know is the packages can be installed in two ways:
+Locally or Globally.
+
+Local and Global Packages
+--------------------------------------------
+1) Local Packages
+2) Global Packages
+
+1) Local Packages
+-------------------------------
+These are the packages which are installed within the directory where you will be executing the install command and will be accessible by only your project. Local packages are contained by a node_modules folder under your main project directory.
+
+Below is the command to install packages locally:
+
+npm install <package-name>
+
+For example, to install express
+
+npm install express
+
+All the modules installed using npm are installed under the node_modules folder. This will create a folder of express under node_modules.
+
+Adding the Dependency into package.json
+-----------------------------------------------------------------------
+To add the dependency into package.json you need to use --save at the end of the install command.
+
+For example,
+npm install express --save
+
+The above command will add the dependency in the package.json file like following,
+
+"dependencies": {
+    "express": "^4.17.1"
+}
+
+2) Global Packages
+--------------------------------
+These are the packages which are installed at a single place in your system irrespective of the place where you execute your run command. They are called global packages as they can be used by any of the projects present in your system. To install a package globally, you need the below-given command:
+
+npm install -g <package-name>
+( -g flag for global packages)
+
+The above command will install the package globally so that all the Node.js applications on the computer can import and use the installed packages. NPM installs global packages into /<User>/local/lib/node_modules folder.
+
+Few of the most used global packages are: npm, nodemon etc.
+
+But in general, it is a good practice to install the packages locally. This is because you might be having a number of Node.js projects in your system having a different version of each of the packages used in them.
+
+You can install multiple packages using a single command too, like this,
+-----------------------------------------------------------------------------------------------------------------------
+Example : npm install express body-parser mongoose --save
+This will install all the packages and will add them to the package.json file too,
+
+"dependencies": {
+    "body":"^5.1.0",
+    "express": "^4.17.1",
+    "mongoose":"^5.7.14",
+    "parser": "^0.1.4"
+}
+-----------------------------------------------------------------------------------------------------------------------
+Now, if you update a global package then it will update it in all the projects it has been used in your system. It can cause a huge disaster as few of these packages might become incompatible with the further dependencies used in the projects. But in case of local packages, you can always keep your version of a package and update it according to your own needs. In terms of resource utilization, it might seem like a waste of memory but it has relatively less negative impacts.
+
+Thus, you should make a package global only when it has a CLI executable command and can be reused throughout the 
+projects in your system.
+
+You can also check how many global packages you have in your system by typing in the below command.
+
+npm list -g --depth 0
+
+Updating packages:
+-------------------------------------
+npm update <package_name> for a specific package (or)
+npm update to update all packages.
+
+For global packages, you’ve to use -g.
+---------------------------------------------------------------
+npm update <package_name> -g
+
+Remove  package (Uninstalling packages)
+-----------------------------------------------------------------------
+npm uninstall <package_name>
+
+For global packages
+-----------------------------------
+npm uninstall <package_name> -g
+
+Here I would like to slip in a piece of advice, that is whenever you are installing the packages make sure you include --save flag with it.
+
+npm install <package_name> --save
+
+It will ensure that your requested module has been added in your package.json file. 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Installing from package.json:
+------------------------------------------------
+If you want to share your project then you may not want to share all your node modules. So, you will be sharing only your package.json which contains the packages needed for your project. And also If you want to contribute to some others project then you need to download the project and install packages in it. To do that, you have to use the command
+
+npm install
+
+This command will download all the packages the project needs.
+
+List of installed packages:
+-------------------------------------------
+To get the list of installed packages, use the command
+
+npm list
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+what is package.json and why it is needed?
+------------------------------------------------------------------------
+(It is a node application configuration file, which stores all dependencies(list of modules) which is required to run an nodejs application.
+Some Important Points to Rember : 
+--> package.json as the extension itself indicates  that the package.json is in JSON Format.
+--> Default Configuration File.
+--> We can also write directly but we can create it by commands.
+--> We can restore dependencies from package.json if node_module may deleted.
+)
+
+The package.json file in Node.js is considered to be the heart of an application. It is nothing but the manifest file that holds the metadata of the project.Thus, it is very important to understand this file in order to work a Node project.The package.json file is usually present in the root folder of any Node.js application.
+
+What does package.json file consist of?
+
+The metadata information in package.json file can be categorized into below categories:
+
+1. Identifying metadata properties: It basically consist of the properties to identify the module/project such as the name of the project, current version of the module, license, author of the project, description about the project etc.
+
+2. Functional metadata properties:As the name suggests, it consists of the functional values/properties of the project/module such as the entry/starting point of the module, dependencies in project, scripts being used, repository links of Node project etc.
+
+Creating a package.json file:
+------------------------------------------------
+A package.json file can be created in two ways:
+
+1. Using npm init : Running this command, system expects user to fill the vital information required as discussed above. It provides users with default values which are editable by the user.
+
+Syntax: npm init
+
+[Note] The best practice for installing and dependency is to, first do npm init, so that package.json file is created, then install dependency what you want.
+
+2. Writing directly to file : One can directly write into file with all the required information and can include it in the Node project.
+
+Example: A demo package.json file with the required information.
+{
+"name": "samplenode",
+"version": "1.0.0",
+"description": "Edureka demo on how to build a Node.js application",
+"main": "script.js",
+"scripts": {
+"test": "echo \"Error: no test specified\" && exit 1"
+},
+"author": "Edureka",
+"license": "ISC",
+"dependencies": {
+"body-parser": "^1.19.0",
+"express": "^4.16.4",
+"express-handlebars": "^3.0.2",
+"nodemon": "^1.19.0"
+},
+"devDependencies": {},
+"repository": {},
+"bugs": {}
+}
+As you can see in the above code, package.json file holds definitions of various properties used in a project. Let us understand each of these properties in detail and see why they are important in a Node.js project:
+
+name: The name of the application/project.
+
+version: The version of application. The version should follow semantic versioning rules.
+[Example ] 4.7.6 here 4 means major version(Major changes breaks the api)
+                                 here 7 means minor version(Minor changes does not break the api)
+                                 here 6 means patches(Bug Fixes)
+
+[NOTE]“express”:”^4.1.1″. in package.json file. The caret symbol (^) is used to tell the npm to find a version greater than 4.1.1 and install it.
+
+description: The description about the application, purpose of the application, technology used like React, MongoDB, etc.
+
+main: This is the entry/starting point of the app. It specifies the main file of the application that triggers when the application starts. Application can be started using npm start.
+
+scripts: The scripts which needs to be included in the application to run properly.
+
+engines: The versions of the node and npm used. These versions are specified in case the application is deployed on cloud like heroku or google-cloud.
+
+keywords: It specifies the array of strings that characterizes the application.
+
+author: It consist of the information about the author like name, email and other author related information.
+
+license: The license to which the application confirms are mentioned in this key-value pair.
+
+dependencies: The third party package or modules installed using npm are specified in this segment.
+
+devDependencies: The dependencies that are used only in the development part of the application are specified in this segment. These dependencies do not get rolled out when the application is in production stage.
+
+repository: It contain the information about the type and url of the repository where the code of the application lives is mentioned here in this segment.
+
+bugs: The url and email where the bugs in the application should be reported are mentioned in this segment.
+
+Note: Here, “body-parser”, “express”, “express-validator”, “mongoose” and “nodemon” are the modules/packages 
+            installed using npm (Node Package Manager).
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Creating a Node Project:
+----------------------------------------
+To create a Node project, npm init is used in the folder in which user want to create project. The npm command line will ask a number of questions like name, license, scripts, description, author, keywords, version, main file etc. After npm is done creating the project, a package.json file will be visible in project folder as a proof that the project has been initialized.
+
+npm init
+
+Installing Packages:
+
+After creating the project, next step is to incorporate the packages and modules to be used in the Node Project. To install packages and modules in the project use the following syntax:
+
+Syntax: npm install package_name
+
+Example: Installing the express package into the project. Express is the web development framework used by the Node.
+
+Syntax: npm install express
+
+To use express in the Node, follow the below syntax:
+
+Syntax:var express = require('express');
+
+Example: To install a package globally (accessible by all projects in system), add an extra -g tag in syntax used to install the 
+package.Installing nodemon package globally.
+
+npm install nodemon -g
+
+Controlling where the package gets installed:
+-----------------------------------------------------------------------------
+To install a package and simultaneously save it in package.json file (in case using Node.js), add –save flag.
+The –save flag is default in npm install command so it is equal to npm install package_name command.
+
+Example: npm install express --save
+
+By –save flag one can control where the packages are to be installed.
+
+–save-prod : Using this packages will appear in Dependencies which is also by default.
+(prod : production)
+–save-dev : Using this packages will get appear in devDependencies and will only be used in the development mode.
+(dev : development)
+
+------------------------------------------------------------------------------------------------------------
+[ NOTE ]
+Do you need both package-lock.json and package.json? No.
+
+Do you need the package.json? Yes.
+
+Can you have a project with only the package-lock.json? No.
+
+The package.json is used for more than dependencies - like defining project properties, description, author & license information, scripts, etc. The package-lock.json is solely used to lock dependencies to a specific version number.
+
+package-lock.json: records the exact version of each installed package which allows you to re-install them. Future installs will be able to build an identical dependency tree.
+
+package.json: records the minimum version your app needs. If you update the versions of a particular package, the change is not going to be reflected here.
+
+[ NOTE  ]We can say package as a module also.
+nodemon is a global module .

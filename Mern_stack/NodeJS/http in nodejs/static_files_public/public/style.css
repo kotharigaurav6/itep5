@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+}
+#outerdiv{
+    height: 600px;
+    background-color: dodgerblue;
+}
+#innerdiv{
+    height: 600px;
+    background-color: white;
+    border-radius: 0% 0% 0% 75%;
+}
+#img_dim{
+    height: 400px;
+    width: 800px;
+    margin-left: 300px;
+}

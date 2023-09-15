@@ -1,0 +1,113 @@
+https://www.w3schools.com/nodejs/nodejs_http.asp
+https://www.tutorialsteacher.com/nodejs/create-nodejs-web-server
+https://medium.com/@vsvaibhav2016/create-http-server-in-node-js-a3a452477771
+https://www.tutorialkart.com/nodejs/create-http-web-server-in-node-js/
+https://www.tutorialspoint.com/nodejs/nodejs_web_module.htm
+
+                                                                    ---------------------------------------------------------------------------------------
+                                                                                    Create HTTP Server in Node JS
+                                                                    ---------------------------------------------------------------------------------------
+                                    
+HTTP is an application level protocol for application delivery and content transfer. Http uses TCP(TCP/IP stands for Transmission Control Protocol/Internet Protocol, which is a set of networking protocols that allows two or more computers to communicate.) as its transfer protocol. Data communication on the World Wide Web (www) through internet by Http 
+server. Http server accepts request from the  user and gives response in respect of that request.
+
+Node.js Web Server
+---------------------------------
+In this section, we will learn how to create a simple Node.js web server and handle HTTP requests. To access web pages of any web application, you need a web server. The web server will handle all the http requests for the web application e.g IIS is a web server for ASP.NET web applications and Apache is a web server for PHP or Java web applications.
+
+Node.js provides capabilities to create your own web server which will handle HTTP requests asynchronously. You can use IIS or Apache to run Node.js web application but it is recommended to use Node.js web server.
+
+Create Node.js Web Server
+---------------------------------------------
+Node.js makes it easy to create a simple web server that processes incoming requests asynchronously.
+
+[Note : Node.js has a built-in module called HTTP, which allows Node.js to transfer data over the Hyper Text Transfer Protocol (HTTP). 
+The HTTP module can create an HTTP server that listens to server ports and gives a response back to the client.
+An HTTP server is software that understands URLs (web addresses) and HTTP (the protocol your browser uses to view webpages.
+https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server
+]
+
+Step 1 :  We require the HTTP module(dependency) of Node JS. Some of the modules automatically  installed when Node JS installed in the developer machine.
+
+Step 2 : We call the createServer() function of HTTP module. which create an HTTP server object in NodeJS
+
+Step 3 : Listen for any incoming requests.
+serverObject.listen(<port number>); to start server on port number <port number>.
+
+[ NOTE ]
+Port numbers range from 0 to 65535, but only port numbers 0 to 1023 are reserved for privileged services and designated as well-known ports.
+
+Default HTTP Port: 80
+Default HTTPS Port: 443
+
+Recommended Express.js(or LoopBack ) Dev Port: 3000, 8000, 8080 (by npm start)
+Default Angular Webpack Dev Port: 4200 (by ng serve)
+Default Ionic Webpack Dev Port: 8100, 8200 (by ionic serve or ionic lab)
+
+Well-known ports (also known as system ports)  range from 0 through 1023.
+Registered ports are 1024 to 49151.
+Dynamic ports (also called private ports) are 49152 to 65535.
+
+step 4 : The callback which handle incomming requests, provides two arguments: the request and the response objects.
+You can then use the request object to learn details about this request and use the response object to write back to the client.
+
+step 5 : we can write header Content-type with status code 200 which means server sends response object with success.
+
+step 6 : Terminates the request by res.end().
+/*
+if we do not put then request is hanging, task bar shows processing on browser screen
+*/
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[ NOTE ]
+How to run programs of this topic:
+
+.....#node demo.js
+go to browser and write localhost:<portnumber> in url then enter, then browser starts processing.
+
+[ NOTE ]
+ctrl + c to end server
+ctrl + x & ctrl + z server crash( server will not run on same port for some times , needs to change port)
+ctrl + x & ctrl + z process terminate but port not release so gives error
+
+[ NOTE ]
+Every time when we do any changes then we need to RESTART SERVER by ctrl + c
+
+[ NOTE ]
+request or route or url one of the same thing
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Handle HTTP Request
+------------------------------------
+The http.createServer() method includes request and response parameters which is supplied by Node.js. The request object 
+can be used to get information about the current HTTP request e.g., url, request header, and data. The response object can 
+be used to send a response for a current HTTP request.
+
+
+Http.serverRequest Object
+---------------------------------------------
+When the server listening to the request from any source, the request object is the first argument of the callback function. 
+This object has many properties, but we discuss three main properties of Http.serverRequest Object :
+
+1) Method
+2) URL
+3) Headers
+
+1) Method : This contains the HTTP method used on the request. The method here will always be a normal HTTP method/verb. 
+It can be, for example, GET, POST, DELETE.
+
+2) URL : The url is the full URL without the server, protocol or port. This property contains the requested URL as a string. 
+It does not contain the schema, hostname, or port, but it contains everything after that. For a typical URL, this means 
+everything after and including the third forward slash.
+
+3) Headers : This contains an object with a property for every HTTP header on the request. The header object property keys 
+are lowercase. For instance, if the browser sent a “cache-control: max-age=0” header, req.headers will have a property 
+named “cache-control” with the value “max-age=0”. Values are untouched.
+
+Http.serverResponse Object 
+-----------------------------------------------
+When the server give response to any request, the response object is the second argument of the callback function.
+
+Shutdown the Server 
+------------------------------------
+In the Node JS, we can close or shutdown the server by the below command :
+
+serverObject.close();

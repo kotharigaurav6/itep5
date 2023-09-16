@@ -1,0 +1,72 @@
+What is Express.js?
+------------------------------
+1) Express.js is a web application framework that is built on top of Node.js. or (Express is an application level framework of nodeJs.Used to generate efficient web application,web services,& to overcome the drawbacks of nodeJS implementations)
+
+2) Express.js adds flexibility to an application with a huge range of modules available on npm that you can directly plug into Express as per requirement.
+
+3) It was developed by TJ Holo-way-chuk and was released in the market on 22nd of May, 2010.
+
+4) Formerly it was managed by IBM but currently, it is placed under the stewardship of the Node.js Foundation incubator.
+ 
+5)Express is majorly responsible for handling the backend part in the MEAN/MERN stack. 
+MEAN/MERN Stack is the open-source JavaScript software stack that is heavily used for building dynamic websites and web applications in the market. Here, MEAN stands for MongoDB, Express.js, AngularJS, and Node.js.
+
+(express is dependency i.e module)
+
+As we know, Node is javascript runtime environment and Express is a web application framework.(we can directly rander html view in express but not in node.)
+
+Drawbacks of nodeJs
+------------------------------------
+1) Mannual routing checking
+    if(request.url=='/login'){ }
+
+2) Manual Method checking
+    if(request.method=='POST' && request.url=='/register'){}
+
+3) Problem in static file routing like style.css | images (needs to write code explicitly for request)
+
+4) No view randering support, here we directly cannot rander view, first we add it in response then perform 
+operations on it.
+
+5) No template engine support.
+
+6) code complexity due to no default architecture.(fetching data and connectivity on the same page).
+
+7) Response Management
+    --> to manage response header for each type of data
+    --> in response, data will always be send   
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[ note ]
+1) we can represent both client side and server side code on template engine.
+2) Middleware is the back bone of express framework. All the problems of node is solved by middleware.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Features of Express.js
+-------------------------------------
+1) Express quickens the development pace of a web application.
+2) It also helps in creating mobile and web application of single-page, multi-page, and hybrid types
+3) Express can work with various templating engines such as Pug, Mustache, and EJS.
+    For Ex : if we talk about ejs, then .ejs extension pages are considered as template pages, and they loads easily,
+    whereas html pages or javascript pages not loads.
+    (Browser screen par dikhega html type page he, jo internally convert hua he .)
+
+Prerequisite for PUG is pug script, then only we can use.
+EJS --> pure html code
+
+4) Express follows the Model-View-Controller (MVC) architecture.
+        M = Model       = models   =DB implementations (Mongoose | mongodb)
+        V = View           = views      = UI of an application  ( EJS )
+        C = Controller = routes    = Application business Logic ( express )
+        (Routes and views already bane banae mil jate he, we need to create model)
+https://www.slideshare.net/huseyinbabal/complete-mvc-on-node-js-27877254 (slide no. 28)
+
+5) It makes the integration process with databases such as MongoDB, Redis, MySQL effortless.
+6) Express also defines an error-handling middleware.
+7) Built-In URL routing  and method checking.
+8) Support for middleware(middleware are Intermediators)
+        a) Application-level middleware
+        b) Router-level middleware
+        c) Error-handling middleware
+        d) Built-in middleware
+        e) Third-party middleware
+
+Default port of express : 3000 (can be changed)

@@ -1,0 +1,142 @@
+/*
+https://expressjs.com/en/guide/routing.html
+*/
+Basic routing
+----------------------
+1) Routing refers to determining how an application responds to a client request.
+/*
+You define routing using methods of the Express app object that correspond to HTTP methods; for example, app.get() to handle GET requests(routes GET request) and app.post to handle POST requests. For a full list, see app.METHOD.
+
+You can also use app.all() to handle all HTTP methods and app.use() to specify middleware as the callback function (See Using middleware for details)[see at the last of this page]
+*/
+
+2) Each route can have one or more handler functions(callbacks), which are executed when the route is matched.
+
+[Note ]Requests are routed based on two pieces of information: the HTTP request method, and the request path. 
+A route refers to an HTTP method, path, and handler combination.
+
+Route definition takes the following structure:
+
+app.METHOD(PATH, HANDLER) : Routes an HTTP request(handles an HTTP Request), where METHOD is the HTTP method of the request, such as GET, PUT, POST, and so on, in lowercase. Thus, the actual methods are app.get(), app.post(), app.put(), and so on.
+
+Where:
+app is an instance of express.
+METHOD is an HTTP request method(they are also termed as routing methods), in lowercase.
+PATH is a path on the server.(route)
+HANDLER is the function(calback or middleware) executed when the route is matched.
+
+Routing methods
+------------------------------
+Express supports the following routing methods corresponding to the HTTP methods of the same names:
+
+checkout(),copy(),delete(),get(),head(),lock(),merge(),mkactivity(),mkcol(),move(),m-search(),notify(),options(),
+patch(),post(),purge(),put(),report(),search(),subscribe(),trace(),unlock(),unsubscribe().
+
+The API documentation has explicit entries only for the most popular HTTP methods app.get(), app.post(),
+ app.put(), and app.delete(). However, the other methods listed above work in exactly the same way.
+
+/*
+https://expressjs.com/en/4x/api.html#app.METHOD
+*/
+
+The app object has methods for : 
+
+Routing HTTP requests; see for example, app.METHOD and app.param.
+Configuring middleware; see app.route.
+Rendering HTML views; see app.render.
+Registering a template engine; see app.engine.
+out of all this (other than routing methods), we can call other methods like app.all(), app.use(), app.path() many more. 
+
+Route methods
+--------------------------
+A route method is derived from one of the HTTP methods, and is attached to an instance of the express class.
+
+The following code is an example of routes that are defined for the GET and the POST methods to the root of the app.
+
+// GET method route
+app.get('/', function (req, res) {
+  res.send('GET request to the homepage')
+})
+
+// POST method route
+app.post('/', function (req, res) {
+  res.send('POST request to the homepage')
+})
+
+
+There is a special routing method, app.all(), used to load middleware functions at a path for all HTTP request methods. 
+For example, the following handler is executed for requests to the route “/secret” whether using GET, POST, PUT, DELETE, 
+or any other HTTP request method supported in the http module.
+
+app.all('/secret', function (req, res, next) {
+  console.log('Accessing the secret section ...')
+  next() // pass control to the next handler
+})
+
+
+The following examples illustrate defining simple routes.
+
+Respond with Hello World! on the homepage:
+
+app.get('/', function (req, res) {
+  res.send('Hello World!')
+})
+
+Respond to POST request on the root route (/), the application’s home page:
+
+app.post('/', function (req, res) {
+  res.send('Got a POST request')
+})
+
+Respond to a PUT request to the /user route:
+
+app.put('/user', function (req, res) {
+  res.send('Got a PUT request at /user')
+})
+
+Respond to a DELETE request to the /user route:
+
+app.delete('/user', function (req, res) {
+  res.send('Got a DELETE request at /user')
+})
+------------------------------------------------------------------------------------------
+/*
+app.get(path, callback [, callback ...]) : Routes HTTP GET requests to the specified path with the specified callback functions.
+
+// here path is mandatory
+
+path : The path for which the middleware function is invoked--> default '/' (root path)
+callback : Callback functions; can be:
+-->A middleware function.
+-->A series of middleware functions (separated by commas).
+-->An array of middleware functions.
+-->A combination of all of the above.
+
+app.post(path, callback [, callback ...])  : Routes HTTP POST requests to the specified path with the specified callback functions.
+
+// here path is mandatory
+
+path : The path for which the middleware function is invoked--> default '/' (root path)
+callback : Callback functions; can be:
+-->A middleware function.
+-->A series of middleware functions (separated by commas).
+-->An array of middleware functions.
+-->A combination of all of the above.
+
+app.use([path,] callback [, callback...]) : Mounts the specified middleware function or functions at the specified path.
+ the middleware function is executed when the base of the requested path matches path.
+
+// here path is optional and for middleware we use mostly use() method. beacuse no need to give path because it is optional and by default '/' there is a root path. and we use use() method to run it before any route.
+
+in case of get and post , simply for giving call back or middleware, we needs to give atleast '/' , so for that in place of get and post , we simply use use() method where path is optional.
+
+path : The path for which the middleware function is invoked--> default '/' (root path)
+callback : Callback functions; can be:
+-->A middleware function.
+-->A series of middleware functions (separated by commas).
+-->An array of middleware functions.
+-->A combination of all of the above.
+
+*/
+
+

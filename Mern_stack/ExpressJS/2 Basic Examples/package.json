@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "name": "2-basic-examples",
+  "version": "1.0.0",
+  "main": "expressDemo1.js",
+  "scripts": {
+    "start": "nodemon expressDemo3.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

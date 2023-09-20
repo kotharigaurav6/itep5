@@ -1,4 +1,4 @@
-
+// example of middleware
 var express = require("express");
 var app = express();
 

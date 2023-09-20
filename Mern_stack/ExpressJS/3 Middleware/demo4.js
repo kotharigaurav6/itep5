@@ -1,4 +1,4 @@
-
+// example of Application level middleware (Top level middleware)
 var express = require("express");
 var app = express();
 

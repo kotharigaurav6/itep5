@@ -1,0 +1,23 @@
+*{
+    margin:0;
+}
+#outerdiv
+{
+    height: 600px;
+    background-color: grey;
+}
+#leftdiv{
+    width: 25%;
+    background-color:black;
+    height: 600px;
+    float: left;
+}   
+#rightdiv{
+    width: 75%;
+    background-color: whitesmoke;
+    height: 600px;
+    float: left;
+}
+#banner{
+    height:600px;
+}

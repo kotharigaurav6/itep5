@@ -1,0 +1,21 @@
+<%- include('./index.ejs') %>
+<style>
+    input{
+        height:30px;
+        width: 250px;
+        margin: 5px;
+    }
+</style>
+<center>
+    <h2>Registration Form</h2>
+    <form action="/adddata" method="post">
+        <input type="text" placeholder="Enter Username" name="username" id="username"> <br>
+        <input type="email" placeholder="Enter Email" name="email" id="email"> <br>
+        <input type="password" placeholder="Enter Password" name="password" id="password"> <br>
+        <textarea cols="32" placeholder="Enter Address" name="address" id="address"></textarea> <br>
+
+        <input type="submit" value="Register"><br>
+        <input type="reset" value="Reset"><br>
+        <a href="/login">Already Registered ? Login Here</a>
+    </form>
+</center>

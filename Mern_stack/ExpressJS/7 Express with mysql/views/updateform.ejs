@@ -1,0 +1,24 @@
+<%- include('./index.ejs') %>
+<style>
+    input{
+        height:30px;
+        width: 250px;
+        margin: 5px;
+    }
+</style>
+<center>
+    <h2>Update Profile</h2>
+    <form action="/updatedata" method="post">
+        <%
+          console.log(result);
+          console.log(result.username);
+        %>
+        <input value="<%=result.username%>" type="text" placeholder="Enter Username" name="username" id="username"> <br>
+        <input value="<%=result.email%>" type="email" readonly placeholder="Enter Email" name="email" id="email"> <br>
+        <input value="<%=result.password%>" type="text" placeholder="Enter Password" name="password" id="password"> <br>
+        <textarea cols="32" placeholder="Enter Address" name="address" id="address"><%=result.address%></textarea> <br>
+
+        <input type="submit" value="Update"><br>
+        <input type="reset" value="Reset"><br>
+    </form>
+</center>

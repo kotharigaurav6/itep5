@@ -9,9 +9,15 @@
 <body>
     <center><h2>Express with MySQL</h2>
     <hr>
+    <% if(!email){ %>
     <a href="/">Home</a> |
     <a href="/login">Login</a>    |
     <a href="/register">Register</a>
+    <%}else{%>
+        Welcome <%= email %> |  
+        <a href="/update">Update</a>    |
+        <a href="/logout">Logout</a>        
+    <%}%>
     <hr>
     </center>
 </body>

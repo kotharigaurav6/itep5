@@ -1,0 +1,28 @@
+<%- include('./adminhome.ejs') %>
+
+<table align="center" cellspacing="0" cellpadding="8" border="1">
+<caption><h3>User Details</h3></caption>
+<thead>
+    <tr>
+        <th rowspan="2" colspan="2">Username</th>
+        <th rowspan="2" colspan="2">Email</th>
+        <th rowspan="2" colspan="2">Address</th>
+        <th colspan="2">Action</th>
+    </tr>
+    <tr>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+</thead>
+<tbody>
+    <%userrecord.forEach((user)=>{%>
+        <tr>
+            <td  colspan="2"><%=user.username%></td>
+            <td  colspan="2"><%=user.email%></td>
+            <td  colspan="2"><%=user.address%></td>
+            <td ><a href="/admin/updateuser/<%=user.email%>">Update</a></td>
+            <td><a href="/admin/deleteuser/<%=user.email%>">Delete</a></td>
+        </tr>
+    <%})%>
+</tbody>
+</table>

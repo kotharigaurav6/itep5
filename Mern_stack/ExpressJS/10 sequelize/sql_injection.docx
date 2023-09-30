@@ -1,0 +1,64 @@
+
+
+SQL Injection
+SQL Injection is a technique where SQL commands are executed from the form input fields or URL query parameters. This leads to unauthorized access to the database (a type of hacking).
+
+If an SQL injection is successful, unauthorized people may read, create, update or even delete records from the database tables. This technique is mainly used by (but not limited to) hackers, pentesters, QAs and security researchers.
+
+SQL Injection Using Multiple Statements
+Suppose we have a search form to search products by their ID on our website. The code snippet to search product would look something like,
+
+prod_id = 20; DROP TABLE Products;
+
+If the user inputs 20; DROP TABLE Products; in the form, then the SQL statement becomes,
+
+SELECT * FROM Products WHERE product_id = 20; DROP TABLE Products;
+Now, this SQL statement deletes the Products table from the database. This is possible because most database systems can execute multiple statements at the same time.
+
+SQL Injection Using Always True Condition
+Another way to perform an SQL injection is by passing a condition that always results in TRUE so that the data is always fetched no matter what.
+
+Let's take a look at another code snippet where we have a login form in our website and we need to fetch users by providing credentials.
+
+If the user inputs username as invalid_user" OR "1"="1 and password as invalid_pass" OR "1"="1, then the SQL statement becomes
+
+SELECT * FROM Users WHERE username = "invalid_user" OR "1"="1" AND password = "invalid_pass" OR "1"="1"
+Since, "1"="1" is always TRUE, no matter what the username and password user enters, SQL will fetch the data of all users from the database.
+
+How to Protect SQL Statements From Injections?
+
+Validate User Input
+
+We should always validate the user's input data before actually sending them to the database. Some best practices include: trimming spaces, parsing special characters, limiting the input size, etc.
+
+Using ORMs
+ORM (Object Relational Mapping) is a tool that basically parses SQL statements into programming language code and vice-versa.
+
+ORM stands for Object-Relational Mapping. It is a programming technique that allows developers to interact with a relational database using an object-oriented programming language. In a traditional relational database, data is stored in tables with rows and columns, and relationships between tables are established using keys.
+
+ORM provides a higher-level abstraction over the database, allowing developers to work with objects in their programming language of choice (such as Python, Java, or C#) instead of writing SQL queries directly. The ORM system then takes care of mapping these objects to the underlying database tables and handling the necessary database operations.
+
+If we use ORM's, we don't have to write raw SQL for the most part.
+
+Using Prepared Statements
+
+Another method to protect SQL statements from injections is by using prepared statements.
+
+Prepared statements are basically SQL statements but with placeholders. The passed arguments are just replaced in place of the placeholders.
+
+For example,
+
+INSERT INTO Users (first_name, last_name, email) VALUES (?, ?, ?);
+Here, the values are only placed in place of the ? placeholder and the structure of SQL statements are preserved.
+
+Using Frameworks
+
+Also, if we are building a real world application, it's always a good idea to use frameworks (such as Django, Laravel, ASP.net,Hibernate etc.) instead of writing code from scratch.
+
+It's because these frameworks handle SQL injection and many other commonly occurring issues by default.
+
+Conclusion
+
+SQL Injection is a very common way of hacking any web application.
+
+So, if we use raw SQL statements while building our application, we must test and verify them thoroughly.

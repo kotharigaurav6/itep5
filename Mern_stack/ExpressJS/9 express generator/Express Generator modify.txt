@@ -1,0 +1,123 @@
+/*
+For downloading template : 
+go to google --> all free download html css templates --> first link --> https://all-free-download.com/free-website-templates/free-html-css-templates.html
+
+*/
+/*
+Prefer this :  https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website
+*/
+
+Express application generator
+--------------------------------------------------
+Express-generator is an all-in-one tool that allows you to quickly create a express-js application using the express library.
+Using the application generator tool(express-generator), we can quickly create an application skeleton.
+
+we can also say that, Express Generator is also a Node JS Module.It does not come as part of Node JS Platform basic installation. We need to install it manually.
+
+Install the application generator as a global npm package and then launch it.
+(Then open the terminal and install the Express-generator module.)
+
+$ npm install -g express-generator
+
+For creating application, run the following command.
+$ express <application_name>
+
+The above command creates an Express app named <application_name>. The app will be created in a folder named <application_name> in the current working directory.
+
+output : 
+
+F:\MEAN STACK\express\8 Project>express OnlineManagementSystem
+
+  warning: the default view engine will not be jade in future releases
+  warning: use `--view=jade' or `--help' for additional options
+
+
+   create : OnlineManagementSystem\
+   create : OnlineManagementSystem\public\
+   create : OnlineManagementSystem\public\javascripts\
+   create : OnlineManagementSystem\public\images\
+   create : OnlineManagementSystem\public\stylesheets\
+   create : OnlineManagementSystem\public\stylesheets\style.css
+   create : OnlineManagementSystem\routes\
+   create : OnlineManagementSystem\routes\index.js
+   create : OnlineManagementSystem\routes\users.js
+   create : OnlineManagementSystem\views\
+   create : OnlineManagementSystem\views\error.jade
+   create : OnlineManagementSystem\views\index.jade
+   create : OnlineManagementSystem\views\layout.jade
+   create : OnlineManagementSystem\app.js
+   create : OnlineManagementSystem\package.json
+   create : OnlineManagementSystem\bin\
+   create : OnlineManagementSystem\bin\www
+
+   change directory:
+     > cd OnlineManagementSystem
+
+   install dependencies:
+     > npm install
+
+   run the app:
+     > SET DEBUG=onlinemanagementsystem:* & npm start
+
+On terminal follow this 3 steps ,and  we get : 
+
+> onlinemanagementsystem@0.0.0 start F:\MEAN STACK\express\8 Project\OnlineManagementSystem
+> node ./bin/www 
+
+  onlinemanagementsystem:server Listening on port 3000 +0ms
+GET / 200 524.738 ms - 170
+GET /stylesheets/style.css 200 7.018 ms - 111
+GET /favicon.ico 404 34.406 ms - 1362
+
+goto browser and write localhost:3000 ---> enter --> you will get Express written on your browser screen.
+
+but if we follow--
+
+   change directory:
+     > cd OnlineManagementSystem
+
+   install dependencies:
+     > npm install
+
+   run the app:
+     > node ./bin/www or node bin/www
+     or
+     > npm start
+
+output  : 
+F:\MEAN STACK\express\8 Project\OnlineManagementSystem>node ./bin/www
+GET / 304 777.875 ms - -
+GET /stylesheets/style.css 304 2.823 ms - -
+
+goto browser and write localhost:3000 ---> enter --> you will get Express written on your browser screen.
+
+In all of this,jade is the default engine... but if we want view engine of our choice, we need to write this command
+express --view=ejs <application_name> instead of this express <application_name>.
+
+we get same result but get ejs instead of jade.
+
+/*
+
+https://expressjs.com/en/starter/generator.html
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website
+https://www.journaldev.com/7993/nodejs-express-js-and-express-generator-module-basics#what-is-express-generator
+https://www.pabbly.com/tutorials/expressjs-scaffolding/
+
+*/
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+www file
+---------------
+The file /bin/www is the application entry point! The very first thing this does is require() the "real" application entry point (app.js, in the project root) that sets up and returns the express() application object.
+
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var app = require('../app');
+
+Note: require() is a global node function that is used to import modules into the current file. Here we specify app.js module using a relative path and omitting the optional (.js) file extension.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+[ NOTE ] server is configure in bin/www
+[ NOTE ] we can also write node bin/www or nodemon bin/www

@@ -1,0 +1,22 @@
+<%- include('./header.ejs') %>
+<br>
+<table border="1" cellspacing="0" cellpadding="10" align="center">
+    <thead>
+        <tr>
+            <th>Student Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% result.forEach((student)=>{ %>
+            <tr>
+                <td><%= student.sid %></td>
+                <td><%= student.name %></td>
+                <td><%= student.email %></td>
+                <td><%= student.password %></td>
+            </tr>
+        <%})%>
+    </tbody>
+</table>

@@ -1,0 +1,36 @@
+<%- include('./header.ejs') %>
+
+<form action="/searchstudent">
+    <table align="center">
+    <tr>
+        <td>
+            <input type="number" placeholder="Enter stuent's Id" name="sid" id="sid">
+            <input type="submit" value="Search Student">
+        </td>
+    </tr>
+    </table>
+</form>
+
+<% if(result){ %>
+    <table border="1" cellspacing="0" cellpadding="10" align="center">
+        <thead>
+            <tr>
+                <th>Student Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td><%= result.sid %></td>
+                    <td><%= result.name %></td>
+                    <td><%= result.email %></td>
+                    <td><%= result.password %></td>
+                </tr>
+        </tbody>
+    </table>
+<%}else{%>
+    <center><h2><%= message %></h2></center>    
+<%}%>
+

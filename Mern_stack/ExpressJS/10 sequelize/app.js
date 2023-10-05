@@ -1,6 +1,6 @@
 import {Sequelize,DataTypes} from "sequelize";
 import express from "express";
-import mysql from "mysql";
+import mysql from "mysql2";
 
 var app = express();
 var sequelize = new Sequelize(
@@ -86,7 +86,14 @@ student.sequelize.sync().then(()=>{
         }).catch(()=>{
             console.log("Error occured");
         });
-    
+   
+        /*
+             student.findAll().then((result)=>{
+              console.log(result);
+          }).catch(()=>{
+              console.log("Error occured");
+          });
+        */
     /*
         student.findOne({
             where :{

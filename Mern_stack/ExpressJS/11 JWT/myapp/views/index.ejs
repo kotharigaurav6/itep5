@@ -1,0 +1,25 @@
+<%- include('./header.ejs') %>
+<form action="/login" method="post">
+<table align="center">
+    <tr>
+        <td>Email</td>
+        <td>
+            <input type="email" placeholder="Enter Email" name="email" id="email">
+        </td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>
+            <input type="password" placeholder="Enter Password" name="password" id="password">
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </td>
+    </tr>
+
+</table>
+</form>

@@ -1,0 +1,328 @@
+/*
+https://www.tutorialkart.com/mongodb/mongodb-tutorial/
+*/
+
+Difference between dbms and rdbms ? 
+------------------------------------
+Answer : https://www.geeksforgeeks.org/difference-between-rdbms-and-dbms/
+
+What is SQL?
+--------------------
+SQL is Structured Query Language, which is a computer language for storing, manipulating and retrieving data stored in a relational database.
+
+SQL is the standard language for Relational Database System. All the Relational Database Management Systems (RDMS) like MySQL, MS Access, Oracle, Sybase, Informix, Postgres and SQL Server use SQL as their standard database language.
+
+Document-oriented
+---------------------------------
+A document-oriented database, or document store, is a computer program designed for storing, retrieving and managing document-oriented information, also known as semi-structured data.
+
+Document-oriented databases are one of the main categories of NoSQL databases, and the popularity of the term "document-oriented database" has grown[2] with the use of the term NoSQL itself.
+
+MongoDB is a document-oriented NoSQL database. It is used for high volume data storage and is designed to store a large scale of data. Instead of using tables and rows as in the traditional relational databases, MongoDB makes use of collections and documents. Documents consist of key-value pairs which are the basic unit of data in MongoDB.
+
+1. What is MongoDB and How it Works?
+-----------------------------------------------------------------
+MongoDB is a NoSQL(Not only Structured Query Language) database program, which is cross-platform document-oriented. 
+It is an open source database management system, which supports various forms of data.It is popular because---
+                        1) It is use in big data applications 
+                        2) For the processing of unstructured data.
+
+ Developed by software company 10gen (now MongoDB Incorporation)  • Fast NoSQL schemaless database written in C++. 
+
+MongoDB architecture is made up of collections and documents. It uses BSON format for document storage, which is a binary form of JSON documents.
+
+Example of Document : { id : 101 , name : 'gaurav' }  it is 1 document
+                    { id : 102 , name : 'RamLaxman' }  it is 2nd document
+
+2. Prerequisites for Learning MongoDB
+----------------------------------------------------------------
+Knowledge of any programming language, Some knowledge of RDBMS, javascript, json
+
+-> Where  MongoDB is used | common use cases of mongodb
+-------------------------------------------------------------------------------------------------------
+Adobe, LinkedIn, SAP, eBay, McAfee etc.
+
+
+3. Introduction to NoSQL Database
+----------------------------------------------------------
+It is a kind of database used to manage unstructured data i.e which comes from various locations like social media, banking, stock market etc. It is basically having no rows or columns in it. NoSQL is playing a vital role in handling this huge amount of data, which is changing and growing at a very fast rate. A relational database is not fit for handling this kind of data which 
+keeps on changing so rapidly.
+
+Hence, the NoSQL database is being designed to overcome all the disadvantages of a relational database in context with today’s world.
+
+There is a list of NoSQL databases which are used quite heavily in the industry, some of which I have listed below:
+
+1) MongoDB
+2) Hbase
+3) Cassandra
+4) Amazon SimpleDB
+5) Hypertable
+
+4. MongoDB Vs RDBMS | Advantages of Mongodb
+-----------------------------------------------------------------------------------
+Following are some of the points which tell us the difference between MongoDB and RDBMS.
+
+1) RDBMS is having a relational database but MongoDB has a non-relational database.
+2) In RDBMS we need to design the table then only we can start coding but in MongoDB, we can directly start coding.
+3) RDBMS supports SQL language and MongoDB as JSON query language.
+4) RDBMS is table based whereas MongoDB is collection based.
+5) RDBMS is row based whereas MongoDB is document based. 
+6) RDBMS is column based whereas MongoDB is field based.
+7) RDBMS is not that easy to set up but MongoDB is comparatively easy to set up.
+8) In RDMS,data is in structured format(rows and columns are fixed), whereas in mongodb, data is in non-structured format(for ex: ek entry me rno,name,address, or dusri entry me rno,name,address,contact,pinno etc). 
+9) RDBMS processes the data very slow as compared to the unstructured data of MongoDB.
+10) RDBMS accentuates on ACID (Atomicity, Consistency, Isolation, Durability) properties. On the other hand, MongoDB accentuates on CAP (Consistency, Availability, Partition tolerance) theorem.
+11) Mongodb : Very easy to install and setup MongoDB.
+12) Mongodb : It is a schema-less database.
+(A schema-less database is a type of database where the structure of the data is not predefined.)
+
+5. Why MongoDB is Used?
+-------------------------------------------
+MongoDB is  handling NoSQL data, which is being generated nowadays in TB’s within a fraction of seconds. So to handle this large amount of data and also to get some useful information out of it we are using  MongoDB.
+
+1) Queries
+2) Indexing
+3) Handling Multiple Servers
+4) High Performance
+
+i. Queries
+It supports document-based queries. Queries include user-defined JavaScript functions.
+
+ii. Indexing
+Fields in the document can be indexed either as primary or secondary. MongoDB is also capable of handling and dealing with the replication in data. As we know that replica sets contain the same data with more than one copy of itself. Each replica will try to put itself in either the primary or secondary index. Generally all the read and write processing on the data is done by using the primary index but sometimes it may happen that the primary index of the replica fails due to some reason.
+
+So at that time, the replica set goes under election process as to which secondary index of replica should be chosen to go for further processing by either read or write operation. Most of the times the secondary one is being used for a write operation and it is rarely being used for reading operation.
+
+iii. Handling multiple servers
+MongoDB can run on multiple servers at the same time while handling the duplicate data and also balancing a load of data even in cases, where there might be chances of hardware failure.
+
+iv. High Performance
+Here, the input/output operations take less time to execute as compared to the relational database. Queries are also being executed in a fast pace as compared to the relational database.
+
+6. Disadvantages of MongoDB
+---------------------------------------------------
+As we all know that a coin has two sides so with such amazing advantages there are some disadvantages with MongoDB. 
+They are as follows:
+
+--> It does not support the transaction
+--> MongoDB does not support joins.
+--> RAM limitation.
+
+7. Common Terminologies used in MongoDB
+--------------------------------------------------------------------------
+i. Document
+This is the basic unit of storing information over here. It is an ordered set of a key-value pair, where for every key there exists an associated value with it.
+
+e.g. {“first”: “Hello, world!”}
+
+Where first is the key and Hello, the world is the value.
+
+ii. Collection
+It is a group of documents. In terms of RDBMS, it is a table which contains rows in it.
+
+iii. Date Operator
+We can use it to see the date. Command that we use to write the date is as follows:
+
+--> Date() – returns current date as string.
+--> new Date() – returns the current date as a date object.
+
+iv. Delete Command
+We can use it to delete anything from MongoDB. A command for the same is as follows:
+
+--> collection.remove() – Deletes a single document that matches a filter.
+--> db.collection.deletemany() – Deletes all the specified documents that match the filter.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Data Modelling in MongoDB & RDBMS
+-----------------------------------------------------------------
+Let us consider a simple example of building a student database in a college. Assume there are 3 models – Student, Address and Course. In a typical RDBMS database, these 3 models will be translated into 3 tables as shown below:
+
+see Data Modelling in RDBMS image in folder.
+
+Hence, from the above model, if a student details has to be added, then entries should be made in all the 3 tables!!
+
+Let us see, how the same data can be modelled in MongoDB. In MongoDB, schema design will have only collection one Student and will have the below structure.
+
+{
+   _id: 123,
+   firstName: 'Test',
+   lastName: 'Student',
+   address :[{
+           City: 'Bangalore',
+           State: 'Karnataka',
+           Country: 'India'
+        }
+    ],
+   Course: 'MCA'
+}
+In MongoDB, data related to all the 3 models will be shown under one Collection !!
+--------------------------------------------------------------------------------------------------------------------------------------------
+MongoDB Datatypes
+------------------------------------
+MongoDB has a unique way of representing data types in which each data type is associated with an alias as well as a number that is usually used to search or find any specific record within a MongoDB database. MongoDB allows its users to 
+implement different variations of data types:
+
+1) Integer Data type
+----------------------------------
+Integer is a data type that is used for storing a numerical value, i.e., integers as you can save in other programming languages.
+32 bit or 64-bit integers are supported, which depends on the server.
+Example : db.TestCollection.insert({"Integer example": 62})
+
+2) Boolean Data type
+-----------------------------------
+Boolean is implemented for storing a Boolean (i.e., true or false) values.
+Example  : db.TestCollection.insert({"Nationality Indian": true})
+
+3) Double Data type
+---------------------------------
+Double is implemented for storing floating-point data in MongoDB.
+Example : db.TestCollection.insert({"double data type": 3.1415})
+
+4) String Data Type
+---------------------------------------
+String is one of the most frequently implemented data type for storing the data.
+Example : db.TestCollection.insert({"string data type" : "This is a sample message."})
+
+5) Arrays Data Type
+---------------------------------------
+Arrays are implemented for storing arrays or list type or several values under a single key.
+Example : var degrees = ["BCA", "BS", "MCA"]
+db.TestCollection.insert({" Array Example" : " Here is an example of array",
+" Qualification" : degrees})
+
+6) Object Data Type
+---------------------------------------
+Object is implemented for embedded documents.
+Example : var embeddedObject={"English" : 94, "ComputerSc." : 96, "Maths" : 80,
+"GeneralSc." : 85}
+db.TestCollection.insert({"Object data type" : "This is Object",
+"Marks" : embeddedObject})
+
+7)  Null Data Type
+---------------------------------------
+Null is implemented for storing a Null value.
+Example : db.TestCollection.insert({" EmailID ": null})
+
+8) Date Data Type
+---------------------------------------
+Date is implemented for storing the current date and time as UNIX-time format.
+Example : var date=new Date()
+var date2=ISODate()
+var month=date2.getMonth()
+db.TestCollection.insert({"Date":date, "Date2":date2, "Month":month})
+
+9) Binary Data
+-------------------------
+Binary data is implemented for storing binary data.
+
+10) Object ID
+---------------------
+Object ID is implemented for storing the ID of the document.
+
+11) Regular expression
+--------------------------------------
+Regular expression is implemented for storing regular expression.
+
+12) Code
+---------------
+Code is implemented for storing JavaScript code for your MongoDB document.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MongoDB Shell
+---------------------------
+MongoDB have a JavaScript shell that allows interaction with MongoDB instance from the command line.
+If you want to create a table, you should name the table and define its column and each column's data type.
+The shell is useful for performing administrative functions and running instances.
+
+Prior to connecting to MongoDB, ensure that MongoDB is running. If it is not, start MongoDB.
+To start MongoDB, run the following command in a terminal.
+
+Windows :  
+C:\> "C:\Program Files\MongoDB\Server\4.0\bin\mongod.exe"
+ 
+Ubuntu : 
+$ sudo service mongod start
+ 
+Start Mongo Shell
+------------------------------
+Once you are sure that MongoDB is running,
+
+Windows : 
+Open another Command Window and run the following command.
+C:\> "C:\Program Files\MongoDB\Server\4.0\bin\mongo.exe"
+ 
+Ubuntu : 
+Open another Terminal and run the following command to start mongo shell.
+  $ mongo
+
+[ NOTE ]  If the server is not running, you may get connect failed message.
+
+When no parameters are provided with mongo command, the default functionality is that, the mongo shell tries to make a 
+connection to the MongoDB server running at localhost on port 27017.
+
+But if you like to connect to MongoDB server that is running on a different machine connected to your network, you may 
+make use of the options of mongo shell as shown below
+
+$ mongo --host <host> --port <port_number>
+ 
+An example is provided below
+mongo --host 192.168.0.104 --port 28019
+
+Now we shall run a simple query db to know the database the shell is pointing to.
+
+> db
+test
+test is a default database.
+
+Start Mongo Shell for a specified MongoDB instance among multiple instances
+-----------------------------------------------------------------------------------------------------------------------------------
+If you come across the scenario that there are multiple MongoDB instances running in a same machine, but on the different 
+ports of-course, then to connect to a particular MongoDB instance differentiated by the port it is running on, run the 
+following command :
+
+ $ mongo --port <port_number>
+ 
+Following is an example demonstrating to open a Mongo Shell connected to a MongoDB instance running at 27018.
+mongo --port 27018
+ 
+Mongo Shell Commands
+-----------------------------------------
+Following are a useful list of Mongo Shell Commands :
+
+help – show help
+help admin – administrative help
+help connect – connecting to a db help
+help keys – key shortcuts
+help misc – misc things to know
+help mr – mapreduce
+show dbs – show database names
+show collections – show collections in current database
+show users – show users in current database
+show profile – show most recent system.profile entries with time >= 1ms
+show logs – show the accessible logger names
+show log [name] – prints out the last segment of log in memory, ‘global’ is default
+use <db_name> – set current database
+it – result of the last line evaluated; use to further iterate
+exit – quit the mongo shell
+------------------------------------------------------------
+    Collection are of two types : 
+        1) caped collection
+        2) uncaped collection
+
+    1) caped collection : collection with boundation is called caped collection.
+    Boundation related to------
+            |-- total number of documents(Records | objects)
+            |-- total size of records
+            |-- Auto index enabling options
+            |-- Only data will be added
+            |-- no modification and no Deletion
+    Ex : db.createCollection("Employer",{max : 100000, size : 1000, capped : true})
+    Here Employer is collection name
+    if coming data limit exceeds 100000 bytes, then it gives error.
+    size means 1000 objects.
+
+    2) uncaped collection :    collection with no boundation is called uncaped collection.
+            |-- restricted less collection
+            |-- not boundation
+            |-- add modify delete 
+    Ex : db.createCollection("Employer")

@@ -1,0 +1,69 @@
+// https://www.npmjs.com/package/express-session
+
+Managing Session in Express
+-------------------------------------------------
+1) Session Management is a mechanism which is mainly used to store session information for a particular user. 
+
+2) We all know that HTTP is a stateless protocol. But sometimes you need to keep track of client's activity across multiple 
+requests. For eg. When a User logs into your website, not matter on which web page he visits after logging in, his 
+credentials will be with the server, until he logs out. So this is managed by creating a session.
+
+[ NOTE ]
+Cookies and URL parameters are both transport data between the client and the server. But they are both readable and 
+on the client side.
+
+Sessions are an integral part of web application development because they allow the application to store state. Based 
+on what action a user took on Page A, we can show a different Page B.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Session is yet another way to store user-specific data between requests. It works similar to cookies. To use session you 
+must set the secret key first.
+
+When we use sessions the data is stored in the browser as a cookie. The cookie used to store session data is known 
+session cookie. In session cookie, anyone can view the contents of the cookie, but can’t modify the cookie unless he has 
+the secret key used to sign the cookie. That’s why it is recommended to set a long and hard to guess string as a secret key.
+Once the session cookie is set, every subsequent request to the server verifies the authenticity of the cookie by unsigning 
+it using the same secret key. If secret key fails to unsign the cookie then its content is discarded and a new session cookie 
+is sent to the browser.
+
+saveUninitialized : Forces a session that is "uninitialized" to be saved to the store. Choosing false will also help with race 
+conditions where a client makes multiple parallel requests without a session.
+The default value is true, but using the default has been deprecated, as the default will change in the future. 
+
+resave : Forces the session to be saved back to the session store, even if the session was never modified during the 
+request. The default value is true, but using the default has been deprecated, as the default will change in the future.
+
+req.session : To store or access session data, simply use the request property req.session
+
+if we write this ---
+var sess;
+sess=req.session;
+Here we have assign the 'session' to 'sess'.
+
+req.session.email then in that case, email is session variable.
+
+//https://stackoverflow.com/questions/40755622/how-to-use-session-variable-with-nodejs
+
+/*
+https://github.com/expressjs/session#sessionsavecallback
+
+Session.destroy(callback)
+------------------------------------------
+Destroys the session and will unset the req.session property. Once complete, the callback will be invoked.
+
+req.session.destroy(function(err) {
+  // cannot access session here
+})
+
+Session.save(callback)
+--------------------------------------
+Save the session back to the store, replacing the contents on the store with the contents in memory (though a store may do something else--consult the store's documentation for exact behavior).
+
+This method is automatically called at the end of the HTTP response if the session data has been altered (though this behavior can be altered with various options in the middleware constructor). Because of this, typically this method does not need to be called.
+
+There are some cases where it is useful to call this method, for example, redirects, long-lived requests or in WebSockets.
+
+req.session.save(function(err) {
+  // session saved
+})
+*/

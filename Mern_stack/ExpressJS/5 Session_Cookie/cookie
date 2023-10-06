@@ -1,0 +1,130 @@
+Using Cookies for Session Management in Express
+------------------------------------------------------------------------------------
+1) Cookies are small pieces of information that are sent in response from the web server to the client. 
+2) Cookies are the simplest technique used for storing client state.
+3) Cookies are stored on client's computer. 
+4) They have a lifespan and are destroyed by the client browser at the end of that lifespan.
+5)  If the client has turned of Cookie saving settings in his browser then, client state can never be saved because the 
+browser will not allow the application to store cookies.
+
+Why Cookie ? 
+----------------------
+1) Cookies are most commonly used to track website activity. When you visit some sites, the server gives you a cookie 
+that acts as your identification card. Upon each return visit to that site, your browser passes that cookie back to the 
+server. In this way, a web server can gather information about which web pages are used the most, and which pages 
+are gathering the most repeat hits.
+
+2) Cookies are also used for online shopping. Online stores often use cookies that record any personal information you 
+enter, as well as any items in your electronic shopping cart, so that you don't need to re-enter this information each time 
+you visit the site.
+
+Installation:-
+--------------------
+To use cookies with express, firstly we have to install cookie-parser module.To install it, use the following command-
+
+npm install cookie-parser --save or npm install cookie-parser
+
+Now to use cookies with express, we will have to require the cookie-parser module. 
+Cookie-parser is a middleware which parses cookies to attach with the client request object.
+
+var  cookieparser = require(‘cookie-parser’);
+app.use(cookieparser());
+
+note : https://expressjs.com/en/guide/using-middleware.html
+cookie-parser is a Third-party middleware.
+
+Define a route:-
+-------------------------
+To set new cookies first we have to define a route and for this follow the below example:- 
+
+app.get(‘/’,function(req,res) {  <------------defining route
+            .............
+                    res.cookie('cookie_name','cookie_value');   <------------adding cookie
+            .............
+   });
+
+Adding cookies
+-------------------------
+To use a new cookie, first define a new route in your express.js app like:-
+
+var express = require('express');
+var app = express();
+var cookieParser = require('cookie-parser');
+app.use(cookieParser());
+app.get('/', function(req, res) {
+
+   res.cookie('mycookies', 'express').send('cookie set');
+            or
+   res.cookie(‘mycookie’,'express');
+   res.end(‘cookies inserted…’);
+            or
+   res.cookie(‘mycookie’,'express');
+   res.send(‘cookies inserted…’);
+
+ });
+app.listen(3000, function(err, message) {
+   console.log("server start......")
+});
+
+Browser always sends back cookies every time it queries the server. To view cookies from your server, add the 
+following console to that route.
+
+console.log(‘cookies:’ ,req.cookies)
+
+You will get the output like this:-
+
+Cookies: {mycookies:  ‘express’ }
+
+Can I see/view the cookies on my computer?
+-------------------------------------------------------------------------
+Yes, chrome://settings/content/cookies
+
+How Long Does a Cookie Store?
+---------------------------------------------------
+The time of expiry of a cookie can be set when the cookie is created.If time is not set by the user then by default, the 
+cookie is destroyed when the current browser window is closed.
+
+Adding Cookies with Expiration Time:-
+--------------------------------------------------------------
+You can add cookies that expire. Just pass an object with property ‘expire’ and set to the time when you want it to 
+expire from your browser. Following is an example of this method.
+
+//Expires after 360000 ms from the time it is set.
+res.cookie(name, 'value', {expire: 360000 + Date.now()});
+
+The other way to set the expiration time is using ‘maxAge’ property. By using this property, we can provide relative time 
+rather of absolute time. Following is an example of this method.
+
+//This cookie also expires after 360000 ms from the time it is set.
+res.cookie(name, 'value', {maxAge: 360000});
+
+Delete existing cookies:-
+---------------------------------------
+To delete a cookie, use the clearCookie function. You need to define a route in your express.js app.Use the following 
+code to delete an existing cookie in your browser:-
+
+var express = require('express');
+var app = express();
+var cookieParser = require('cookie-parser');
+app.use(cookieParser());
+app.get('/remove', function(req, res) {
+   
+   res.clearCookie('mycookies', { expires: new Date(), path: '/' });
+   or
+   res.clearCookie('mycookies');
+
+   res.send('cookie deleted');
+   console.log(Date())
+});
+
+app.listen(3000, function(err, message) {
+   console.log("server start......")
+});
+----------------------------------------------------------------------------------------------------
+
+localhost:3000 ---> enter ----> inspect element-----> networks -----> name(localhost) ---> right me informations aa jaegi
+or
+localhost:3000 ---> enter ----> inspect element----->application ---> storage ---> cookie --> click---> sitename--->click
+-----------------------------------------------------------------------------------------------------
+
+ By default a newly created cookie persists until the browser exists.

@@ -1,0 +1,67 @@
+1) show dbs;
+2) use mymongodb;
+3) db
+4) db.dropDatabase();
+5) db.createCollection("employer");
+6) db.createCollection("employer1");
+7) db.employer1.drop();
+8) show collections;
+9) db.employer.insert({name:"andrew anderson",age:45,salary:25000});
+10) db.employer.insertOne({name:"mathew math",age:35,salary:35000});
+11) db.employer.insertOne({"name":"jackson jack","age":25,"salary":45000});
+12)  db.employer.find();
+13) 
+db.employer.insertMany([
+    {
+        "name":"Kim Kimpson",
+        "age":15,
+        "salary":55000
+    },
+    {
+        "name":"jackky jack",
+        "age":50,
+        "salary":25000
+    }
+]);
+14) 
+db.employer.deleteOne({name:"Kim Kimpson"});
+db.employer.remove({name:"Kim Kimpson"});
+
+15) db.employer.find({age:50});
+
+selection criteria and projection 
+
+16)  db.employer.find({},{_id:0});
+17)  db.employer.find({},{_id:0,name:1,salary:1});
+18) 
+db.employer.updateOne({name:"andrew anderson"},{
+    $set : {
+        name : "Andrew Anderson"
+    }
+});
+19) field insertion and removal
+
+db.employer.updateOne({name:"Andrew Anderson"},{
+    $set:{ state : "madhya pradesh"}
+})
+
+db.employer.updateMany({},{
+    $set:{ state : "madhya pradesh"}
+})
+
+db.employer.updateOne({name:"Andrew Anderson"},{
+    $set:{ country : "madhya pradesh"}
+})
+
+db.employer.updateOne({name:"Andrew Anderson"},{
+    $unset:{ country : ""}
+})
+
+20) db.employer.find({state : { $exists : true}});
+db.employer.find({state : { $exists : false}});
+
+21) db.employer.update({},{
+    $set : {
+        state : "Gujrat"
+    }
+},{multi:true});

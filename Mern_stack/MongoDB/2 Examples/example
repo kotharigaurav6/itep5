@@ -1,5 +1,5 @@
 1) show dbs;
-2) use mymongodb;
+2) use firstmongodb;
 3) db
 4) db.dropDatabase();
 5) db.createCollection("employer");
@@ -65,3 +65,153 @@ db.employer.find({state : { $exists : false}});
         state : "Gujrat"
     }
 },{multi:true});
+
+22) db.employer.find({
+    salary : {
+        $gt:40000
+    }
+});
+
+23) db.employer.find().toArray()[0];
+24) db.employer.find().toArray()[0].salary;
+25) db.employer.find().count();
+26) db.employer.find({salary:25000}).count();
+27) db.employer.find().limit(2);
+28) db.employer.find().limit(2).skip(2);
+29) db.employer.find().sort({salary:1}); // ascending order
+30) db.employer.find().sort({salary:-1}); // descending order
+31) db.employer.find().sort({salary:-1,name:-1});
+32) db.employer.find({
+    $and : [
+        {
+            salary : {
+                $gt : 30000
+            }
+        },
+        {
+            salary : {
+                $lt : 48000
+            }
+        }
+    ]
+})
+
+33) db.employer.find({
+    $or : [
+        {
+            salary : {
+                $gt : 30000
+            }
+        },
+        {
+            salary : {
+                $lt : 48000
+            }
+        }
+    ]
+})
+
+34) db.employer.find({
+            salary : {
+                $ne : 35000
+            }
+   })
+
+35) db.employer.find({
+    $nor:[
+        {
+            name:"Andrew Anderson"
+        },{
+           salary : 25000
+        }
+    ]
+})
+
+36) db.employer.find({salary : {
+    $in:[35000,45000]
+}})
+
+37) db.employer.find({salary : {
+    $nin:[35000,45000]
+}})
+
+38) db.employer.find({
+    $and : [
+        {
+            salary : {
+                $gt : 30000
+            }
+        },
+        {
+            $or : [
+                {
+                    age : 250
+                },{
+                    name : "abc xyz"
+                }
+            ]
+        }
+    ]
+})
+
+39) db.employer.find().sort({salary:-1}).toArray()[0].salary;
+40) db.employer.find().sort({salary:-1}).toArray()[0];
+41) db.employer.find({
+    salary : db.employer.find().sort({salary:-1}).toArray()[0].salary
+},{_id:0});
+
+42) db.employer.find({
+    salary : {
+        $ne : db.employer.find().sort({salary:-1}).toArray()[0].salary
+    }
+},{_id:0});
+
+43) db.employer.find({
+    salary : {
+        $ne : db.employer.find().sort({salary:-1}).toArray()[0].salary
+    }
+},{_id:0}).sort({salary:-1});
+
+44) db.employer.find({
+    salary : {
+        $ne : db.employer.find().sort({salary:-1}).toArray()[0].salary
+    }
+},{_id:0}).sort({salary:-1}).toArray()[0].salary;
+
+45) db.employer.find({
+    salary : db.employer.find({
+        salary : {
+            $ne : db.employer.find().sort({salary:-1}).toArray()[0].salary
+        }
+    }).sort({salary:-1}).toArray()[0].salary
+},{_id:0});
+
+46) db.employer.find({
+    $and : [
+        {
+            salary : db.employer.find({
+                salary : {
+                    $ne : db.employer.find().sort({salary:-1}).toArray()[0].salary
+                }
+            }).sort({salary:-1}).toArray()[0].salary
+        },{
+            state : "Delhi" 
+        }
+    ]
+},{_id:0});
+
+47) db.employer.find({
+    $and : [
+        {
+            salary : db.employer.find({
+                salary : {
+                    $ne : db.employer.find().sort({salary:-1}).toArray()[0].salary
+                }
+            }).sort({salary:-1}).toArray()[0].salary
+        },{
+            state : {
+                $ne : "Delhi"
+            } 
+        }
+    ]
+},{_id:0});

@@ -215,3 +215,197 @@ db.employer.find({state : { $exists : false}});
         }
     ]
 },{_id:0});
+
+Aggregate | $project $match $group $limit $skip $unwind $first $last $lookup ...
+---------
+48) db.employer.aggregate([{
+    $group : {
+        _id : "$name",
+        total_entries : {$sum:1} 
+    }
+}]);
+
+db.employer.aggregate([{
+    $group : {
+        _id : "",
+        total_entries : {$sum:1} 
+    }
+}]);
+
+db.employer.aggregate([{
+    $group : {
+        _id : "",
+        salary_total : {$sum:"$salary"} 
+    }
+}]);
+
+db.employer.aggregate([{
+    $group : {
+        _id : "$name",
+        salary_total : {$sum:"$salary"} 
+    }
+}]);
+
+db.employer.aggregate([{
+    $group : {
+        _id : "$name",
+        salary : {$sum:"$salary"},
+        age : {$sum:"$age"} 
+    }
+},{
+    $project:{
+        name: "$_id",
+        salary:1,
+        age:1,
+        _id:0
+    }
+}]);
+
+db.employer.aggregate([{
+    $group : {
+        _id : "$name",
+        salary : {$avg:"$salary"},
+        age : {$avg:"$age"} 
+    }
+},{
+    $project:{
+        name: "$_id",
+        salary:1,
+        age:1,
+        _id:0
+    }
+}]);
+
+db.employer.aggregate([{
+    $group : {
+        _id : "",
+        Minimum_salary : {$min:"$salary"} 
+    }
+},{
+    $project:{
+        _id:0
+    }
+}]);
+
+db.employer.aggregate([{
+    $group : {
+        _id : "",
+        Maximum_salary : {$max:"$salary"} 
+    }
+},{
+    $project:{
+        _id:0
+    }
+}]);
+
+db.employer.aggregate([{
+    $group : {
+        _id : "",
+        Average_salary : {$avg:"$salary"} 
+    }
+},{
+    $project:{
+        _id:false
+    }
+}]);
+
+db.employer.aggregate([{
+    $group : {
+        _id : "$name",
+    }
+}]);
+
+db.employer.aggregate([{
+    $group : {
+        _id : "$name",
+    }
+},{$skip:2}]);
+
+db.employer.aggregate([{
+    $group : {
+        _id : "$name",
+    }
+},{$limit:2}]);
+
+49) 
+db.product.insertMany([
+    {
+        name:"Fan",
+        price:15000,
+        product_id:"PRD001",
+        category_id:100
+    },
+    {
+        name:"Fairness Cream",
+        price:18000,
+        product_id:"PRD002",
+        category_id:101
+    },
+    {
+        name:"Rice",
+        price:12000,
+        product_id:"PRD003",
+        category_id:102
+    }
+]);
+
+ db.category.insertMany([
+    {
+        name:"Electronic",
+        cat_id:100
+    },
+    {
+        name:"Cosmatics",
+        cat_id:101
+    },
+    {
+        name:"Grocery",
+        cat_id:102
+    }
+]);
+
+db.product.aggregate([{
+    $lookup:{
+        from:"category",
+        foreignField:"cat_id",
+        localField : "category_id",
+        as:"Product Details"
+    }
+}]);
+
+50) db.product.aggregate([{
+    $lookup:{
+        from:"category",
+        foreignField:"cat_id",
+        localField : "category_id",
+        as:"Product Details"
+    }
+},{
+    $match : {
+        price:{
+            $gte : 15000
+        }
+    }
+}]);
+
+51) 
+ db.employer.createIndex({name:1});
+ db.employer.createIndex({age:1,salary:1});
+ db.employer.getIndexes();
+
+ db.employer1.insertMany([
+    {name:"ABC",pincode:452010},
+    {name:"PQR",pincode:452011},
+    {name:"XYZ",pincode:452012},
+    {name:"LMN",pincode:452013}
+]);
+db.employer1.createIndex({pincode:1},{unique:true});
+
+output : firstmongodb>  db.employer1.getIndexes();
+[
+  { v: 2, key: { _id: 1 }, name: '_id_' },
+  { v: 2, key: { pincode: 1 }, name: 'pincode_1', unique: true }
+]
+
+db.employer2.insertMany([{expireAt : new Date(),name:"ABC"},{expireAt : new Date(),name:"PQR"}]);
+db.employer2.createIndex({expireAt:1},{expireAfterSeconds:10});

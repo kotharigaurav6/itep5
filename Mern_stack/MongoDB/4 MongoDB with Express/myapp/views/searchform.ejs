@@ -1,0 +1,36 @@
+<%- include('./header.ejs') %>
+
+<form action="/searchstudent">
+    <table align="center">
+    <tr>
+        <td>
+            <input type="email" placeholder="Enter student's Email Id" name="email" id="email">
+            <input type="submit" value="Search Student">
+        </td>
+    </tr>
+    </table>
+</form>
+<%if(result.length!=0){%>
+    <table border="1" cellspacing="0" cellpadding="10" align="center">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% result.forEach(student=>{ %>
+
+            <tr>
+                    <td><%= student.name %></td>
+                    <td><%= student.email %></td>
+                    <td><%= student.password %></td>
+                </tr>
+            <%})%>
+        </tbody>
+    </table>
+<%}else{%>
+    <center><h2><%= message %></h2></center>    
+<%}%>
+

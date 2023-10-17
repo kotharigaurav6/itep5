@@ -1,0 +1,137 @@
+﻿https://www.google.com/search?q=mongoose+is+a+part+of+mongodb&rlz=1C1CHBF_enIN923IN923&oq=mongoose+is+a+part+of+mongodb&aqs=chrome..69i57j0i333.7268j1j9&sourceid=chrome&ie=UTF-8
+https://www.tutorialkart.com/nodejs/node-js-mongodb/
+https://www.stackchief.com/blog/Top%204%20Reasons%20to%20Use%20Mongoose%20with%20MongoDB
+http://voidcanvas.com/mongoose-vs-mongodb-native/
+https://medium.com/@thatisuday/mongoose-js-in-a-nutshell-8b0b60f3d093
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                            Top 4 Reasons to Use Mongoose with MongoDB
+                                                            ---------------------------------------------------------------------------------
+Mongoose:
+------------------
+It provides fixed Schema and gives a structure and more maitainability to your application code.
+
+Mongoose is an object data modeling (ODM) layer that sits on top of Node's MongoDB driver.
+It manages relationship between data and provides schema validation . While it's not 
+required to use Mongoose with the Mongo, here are four reasons why using Mongoose with MongoDB is generally a good idea.
+
+/*
+Defining your schema
+------------------------
+Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines the shape of the documents within that collection.
+*/
+
+Eg: If you want to develop a website to sell movie tickets, to store the inventories it’s better to have a fixed schema. 
+Because you know that the inventories will have fixed properties.
+
+1. Schemas
+MongoDb is a schemaless database  or if you came from sql back ground so its difficult to understand thats why Mongoose defines a schema for your data models so your documents follow a specific structure with pre-defined data types.
+
+2. Validation
+Mongoose has built in validation for schema definitions. This saves you from writing a bunch of validation code that you have to otherwise write with the MongoDB driver. By simply including things like required:true in your schema definitions, Mongoose provides out-of-the-box validations for your collections (including data types).
+
+3. Instance Methods
+Mongoose provides optional pre and post save operations for data models. You can also define custom methods that act on a particular instance (or document). Mongoose makes it easier to define and organize such methods within your schema definition.
+
+4. Returning results
+Mongoose makes returning updated documents or query results easier. A prime example can be found with update queries. While the native driver returns an object with a success flag and the number of documents modified, Mongoose returns the updated object itself so you can easily work with the results.
+
+What is a schema?
+A schema defines the structure of your collection documents. A Mongoose schema maps directly to a MongoDB collection.
+
+const blog = new Schema({
+  title: String,
+  published: Boolean,
+  author: String,
+});
+
+With schemas, we define each field and its data type. Permitted types are:
+String
+Number
+Date
+Buffer
+Boolean
+Mixed
+ObjectId
+Array
+Decimal
+Map
+
+What is a model?
+------------------
+Models take your schema and apply it to each document in its collection.
+Models are responsible for all document interactions like creating, reading, updating, and deleting (CRUD).
+
+An important note: the first argument passed to the model should be the singular form of your collection name. Mongoose automatically changes this to the plural form, transforms it to lowercase, and uses that for the database collection name.
+
+const Blog = mongoose.model('Blog', blog);
+In this example, Blog translates to the blogs collection.
+
+You can explicitly specify the collection name when you create a model by passing it as the third parameter to model. For example, if you want to name your collection ‘Mice’, you can write:
+var Mice = mongoose.model ('Mice', MouseSchema, 'Mice');
+
+Reasons not to use Mongoose?
+-----------------------------
+There are few reasons not to use Mongoose with MongoDB (especially if you are just getting started). For more advanced queries, it can be argued that Mongoose makes things more difficult and can slow performance. Advocates  of the native MongoDB driver also argue that bringing ODM to a denormalized design entirely defeats the purpose  of a NoSQL database.
+
+Conclusion
+Despite the arguments against using Mongoose, it remains one of the most popular ODM tools for Mongo. If you are  coming from a SQL background then using Mongoose will make the transition into a NoSQL environment much  easier. It will also save you time writing your own validations and instance methods and is highly recommended for smaller DBs and basic Mongo operations.
+
+Mongodb native: Driver for interacting with a mongodb instance
+--------------
+In Node.js, mongodb is the native driver for interacting with a mongodb instance. It allows JavaScript applications to interact with the NoSQL database, either locally or on the cloud through MongoDB Atlas.
+----------------------------
+There are situation when a fixed schema can become a curse. 
+
+Ex : Suppose you have an online glossary shop. So will you create a schema for every different kind of product; cause all of them have different property sets? Probably this is where you would like to go with a document mapping way and select  mongodb native for that.
+
+[ Overview ]
+Mongoose, a popular ODM (Object -Data Mapper) for MongoDB. Mongoose is similar to an ORM (Object-Relational Mapper) you would use with a relational database. Both ODMs and ORMs can make your life easier with built-in structure and methods. The structure of an ODM or ORM will contain business logic that helps you organize data. The built in methods of an ODM or ORM automate common tasks that help you communicate with the native drivers, which helps you work more quickly and efficiently.
+
+Mongoose is an ODM that provides a straightforward and schema-based solution to model your application data on top of MongoDB’s native drivers. It includes built-in type casting, validation (which enhances MongoDB’s native document validation), query building, and more.
+
+[ NOTE ]
+CRUD operations using mongodb native is really faster than mongoose.
+But if you do a single db operation in each web request, and follow the conventional ways of mongodb (opening a db connection, finish your operation and close it) and you have millions of concurrent requests, your app will die. 
+Cause the proper way would be opening and closing a db connection and handle each request in optimized way. 
+You cant just open and close it for each request. So this optimized handling need to be coded by you if you are making a performant app using mongodb native; for what you have to spend a little extra development time (it’s not that hard thing to do).
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Mongodb is the database itself, while Mongoose is an object modeling tool for Mongodb
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+Mongoose model provides an interface to the database for creating, querying, updating, deleting records, etc.
+*/
+
+In the context of databases and Mongoose (an Object Data Modeling library for MongoDB and Node.js), a schema is a blueprint or plan that defines the structure of the data, including the data types and relationships between different pieces of data. A schema provides a way to organize and enforce rules on how data should be stored in a database.
+
+In a relational database, a schema typically refers to the organization of data into tables, specifying the columns in each table and the relationships between tables. In the context of Mongoose and MongoDB, which is a NoSQL database, a schema defines the shape of documents within a collection.
+
+In Mongoose, a schema is created using the `mongoose.Schema` class. It allows you to define the fields, types, and constraints for the data you want to store. Here's a simple example:
+
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const personSchema = new Schema({
+  firstName: String,
+  lastName: String,
+  age: Number,
+});
+
+const Person = mongoose.model('Person', personSchema);
+
+In this example, `personSchema` defines the structure of a document in the `Person` collection. It specifies that each document should have `firstName` and `lastName` fields of type `String` and an `age` field of type `Number`. This schema is then used to create a Mongoose model (`Person`) that interacts with the MongoDB collection.
+
+The use of a schema provides several benefits:
+
+1.  Data Validation:  Schemas can enforce data types and other constraints, helping to maintain data integrity.
+
+2.  Structure:  Schemas provide a clear structure for the data, making it easier to understand and work with.
+
+3.  Defaults:  You can specify default values for fields in a schema.
+
+4.  Middleware:  Schemas allow you to define pre and post hooks (middleware) for various operations.
+
+5.  Indexes:  You can define indexes to optimize queries.
+
+In summary, a schema in the context of databases and Mongoose is a way to define the structure, rules, and constraints for the data you want to store. It helps to organize and manage data effectively.

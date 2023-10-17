@@ -1,0 +1,74 @@
+API (Application Programming Interface)
+--------------------------------------------------------------------
+a ) It is a set of rules that allow programs to talk to each other. 
+b) The developer creates the API on the server and allows the client to talk to it. 
+
+REST or RESTful ( REpresentational State Transfer )
+-------------------------------------------------------------------------------------
+a) Over internet when two systems need to interact with each other they need some language to communicate, REST is that medium which enables transferring of data between two remote systems. 
+b) REST is based on HTTP protocol(because of which it is more faster and with json format which is faster to parse and compact as compared to XML) and hence supports all the HTTP verbs like GET, POST, PUT, DELETE, PATH etc.
+c) SOAP is based on XML format and is slow whereas with REST get the freedom to use formats like text, XML or JSON.
+
+A request is send from client to server in the form of web URL as HTTP GET or POST or PUT or DELETE. 
+After that a response is come back from server in the form of resource which can be anything like HTML, XML, Image or JSON. But now JSON is the most popular format being used in Web Services.
+
+Web Service
+--------------------
+A web service is a collection of open protocols and standards used for exchanging data between applications or systems. 
+
+Software applications written in various programming languages and running on various platforms can use web services to exchange data over computer networks like the Internet in a manner similar to inter-process communication on a single computer. This interoperability (e.g., communication between Java and Python, or Windows and Linux applications)
+ is due to the use of open standards.
+
+Web services are mainly of two types. These are:
+1) SOAP Web Services
+        a) The abbreviation of SOAP is the Simple Object Access Protocol.
+        b) It is an XML-based protocol having the main benefit of implementing the SOAP Web Service as its security. 
+        c) All its messages are usually in XML format.
+
+2) REST Web Services | RESTful Web Services
+
+REST API
+---------------
+REST API is a way of accessing the web services in a simple and flexible way without having any processing like SOAP.
+REST API uses only HTTP request at the time of communication.
+
+How REST API works ?
+------------------------------------
+Let’s say you’re trying to find videos about Batman on Youtube. You open up Youtube, type “Batman” into a search field, hit enter, and you see a list of videos about Batman. A REST API works in a similar way. You search for something, and  you get a list of results back from the service you’re requesting from.
+
+What is REST architecture?
+--------------------------------------------
+1 ) REST stands for REpresentational State Transfer. 
+2) REST is web standards based architecture and uses HTTP Protocol.
+3) It revolves around resource where every component is a resource and a resource is accessed by a common interface using HTTP standard methods. 
+4) REST was first introduced by Roy Fielding in 2000.
+
+A REST Server simply provides access to resources and REST client accesses and modifies the resources using HTTP protocol. Here each resource is identified by URIs/ global IDs. REST uses various representation to represent a resource like text, JSON, XML but JSON is the most popular one.
+
+HTTP methods
+--------------------------
+Following four HTTP methods are commonly used in REST based architecture.
+
+GET − This is used to provide a read only access to a resource.
+POST − This is used to create a new resource.
+PUT −  This is used to update a existing resource.
+DELETE − This is used to remove a resource.
+
+RESTful Web Services
+------------------------------------
+Web services based on REST Architecture are known as RESTful web services. These webservices uses HTTP methods to implement the concept of REST architecture. A RESTful web service usually defines a URI, Uniform Resource Identifier a service, which provides resource representation such as JSON and set of HTTP Methods.
+
+/*
+What are Web Standards? 
+Web standards are rules and guidelines established by the World Wide Web Consortium ( W3C ) developed to promote consistency in the design code which makes up a web page.
+
+Web standards are the formal, non-proprietary standards and other technical specifications that define and describe aspects of the World Wide Web.
+*/
+
+/*
+Here we use POSTMAN(chrome) | Rested(firefox) | Yet Another Rest Client(chrome)  as a REST CLIENT to accesses and modifies the resources using HTTP protocol.
+*/
+/*
+https://www.js-tutorials.com/nodejs-tutorial/crud-operations-using-nodejs-express-mongodb-mongoose/
+https://www.js-tutorials.com/nodejs-tutorial/node-js-rest-api-add-edit-delete-record-mysql-using-express/
+*/

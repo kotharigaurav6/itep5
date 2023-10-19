@@ -1,0 +1,31 @@
+Points need to cover in documentation?
+
+1. Introduction: Provide an overview of the software project, including its purpose, goals, and intended audience. Explain the need for the project and its potential benefits.
+
+2. Scope: Clearly define the boundaries and limitations of the software project. Specify what functionalities and features are included and what are excluded from the project scope.
+
+3. Requirements: Document the functional and non-functional requirements of the software. This includes the desired features, user interactions, performance expectations, security considerations, and any specific standards or regulations that need to be followed.
+
+4. Architecture: Describe the high-level architecture of the software, including the system components, modules, and their interactions. Illustrate the relationships and dependencies between different parts of the system.
+
+5. Design: Provide detailed information about the design of the software. This includes class diagrams, database schemas, flowcharts, sequence diagrams, and any other relevant design artifacts. Explain the rationale behind design decisions and how different components work together.
+
+6. Implementation: Describe the technology stack and programming languages used in the development. Explain the coding conventions, standards, and best practices followed. Include any relevant code snippets or examples that help understand the implementation details.
+
+7. User Interface: Explain the user interface design, including wireframes, mockups, and visual guidelines. Describe the user interaction patterns, navigation flows, and usability considerations.
+
+8. Testing: Detail the testing approach and strategies employed to ensure software quality. Document the test cases, test scenarios, and test data used during the testing phase. Include any automated testing frameworks or tools utilized.
+
+9. Deployment: Describe the process of deploying the software, including server configuration, installation steps, and any dependencies or prerequisites. Provide instructions for setting up the software environment and deploying updates or patches.
+
+10. Maintenance and Support: Outline the procedures for maintaining and supporting the software post-deployment. Include guidelines for bug reporting, issue tracking, and version control. Document any support channels, such as user forums or help desks.
+
+11. Security and Privacy: Explain the security measures implemented within the software, such as authentication, authorization, encryption, and data protection. Address any privacy concerns and compliance requirements.
+
+12. Troubleshooting and FAQs: Compile a list of common issues and their resolutions. Include a frequently asked questions (FAQ) section that addresses common user queries.
+
+13. Glossary: Provide a glossary of terms used throughout the documentation to ensure consistent understanding and avoid confusion.
+
+14. References: Include a list of external resources, such as books, articles, or websites, that were consulted during the project.
+
+Remember, the documentation should be clear, concise, and well-organized. It should serve as a comprehensive guide for developers, testers, users, and any other stakeholders involved in the software project.

@@ -1,0 +1,35 @@
+<%- include('./index.ejs')%>
+<style>
+    input{
+        margin:3px;
+    }
+</style>
+<center>
+<h2>Registration Form</h2>
+    <form action="/register" method="post">
+<input type="text" placeholder="Enter Username" name="username" id="username"><br>
+<input type="email" placeholder="Enter Email" name="_id" id="_id"><br>
+<input type="password" placeholder="Enter Password" name="password" id="password"><br>
+<input type="radio" name="gender" value="male" id="male">
+<label for="male">Male</label>
+<input type="radio" name="gender" value="female" id="female">
+<label for="female">Female</label><br>
+
+<input type="checkbox" name="hobbies" value="cricket" id="cricket">
+<label for="cricket">Cricket</label>
+<input type="checkbox" name="hobbies" value="hockey" id="hockey">
+<label for="hockey">Hockey</label><br>
+
+<select name="subject" id="subject">
+    <option value="">Select Subject</option>
+    <option value="C Language">C Language</option>
+    <option value="C++ Language">C++ Language</option>
+    <option value="C# Language">C# Language</option>
+    <option value=".Net Language">.Net Language</option>
+    <option value="Php Language">Php Language</option>
+</select><br>
+
+<input type="submit" value="Register">
+<input type="reset" value="Reset">
+</form>
+</center>

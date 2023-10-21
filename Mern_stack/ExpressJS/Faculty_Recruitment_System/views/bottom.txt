@@ -1,0 +1,119 @@
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.4.1.slim.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+      $(function () {
+        $('.navbar-toggler').click(function () {
+          $('body').toggleClass('noscroll');
+        })
+      });
+    </script>
+    <!-- disable body scroll which navbar is in active -->
+
+
+
+    <script src="assets/js/owl.carousel.js"></script>
+    <!-- script for teams1-->
+    <script>
+      $(document).ready(function () {
+        $('.owl-carousel').owlCarousel({
+          loop: true,
+          margin: 0,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1,
+              nav: true
+            },
+            667: {
+              items: 2,
+              nav: true,
+              margin: 20
+            },
+            1000: {
+              items: 4,
+              nav: true,
+              loop: true,
+              margin: 25
+            }
+          }
+        })
+      })
+    </script>
+    <!-- //script for teams1-->
+
+    <script>
+      $(document).ready(function () {
+
+        var $menuBtn = $('.menu-btn');
+        var $nav = $('#nav');
+        var $stylebox = $('#style-box');
+        var $styleli = $stylebox.find('li');
+
+        $menuBtn.on('click', function () {
+          var $this = $(this);
+          var styles = $stylebox.data('styles');
+          $this.toggleClass("active");
+          $this.next('#nav').toggleClass("open");
+          $stylebox.toggleClass(styles);
+        });
+
+        $nav.addClass('topslide');
+
+        $styleli.on('click', function () {
+          var $this = $(this);
+          $this.siblings().removeClass('now');
+          $this.addClass('now');
+          var styles = $this.data('styles');
+          $nav.removeClass();
+          $nav.addClass(styles);
+          $nav.siblings('#style-box').removeClass();
+          $nav.siblings('#style-box').data('styles', styles);
+        });
+      });
+    </script>
+
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.popup-with-zoom-anim').magnificPopup({
+          type: 'inline',
+
+          fixedContentPos: false,
+          fixedBgPos: true,
+
+          overflowY: 'auto',
+
+          closeBtnInside: true,
+          preloader: false,
+
+          midClick: true,
+          removalDelay: 300,
+          mainClass: 'my-mfp-zoom-in'
+        });
+
+        $('.popup-with-move-anim').magnificPopup({
+          type: 'inline',
+
+          fixedContentPos: false,
+          fixedBgPos: true,
+
+          overflowY: 'auto',
+
+          closeBtnInside: true,
+          preloader: false,
+
+          midClick: true,
+          removalDelay: 300,
+          mainClass: 'my-mfp-slide-bottom'
+        });
+      });
+    </script>
+
+    </body>
+
+    </html>

@@ -1,25 +1,40 @@
-<%- include('./indexHeader') %>
+<%- include('./adminHeader') %>
 
-<section style="margin-top: -100px;" class="w3l-index3">
-  <div class="midd-w3 py-5">
-    <div class="container py-xl-5 py-lg-3">
-      <div class="row">
-        <div class="col-lg-6 left-wthree-img text-right">
-          <img src="assets/images/g5.jpg" alt="" class="img-fluid rounded" />
+<section class="w3l-index2" id="services">
+  <div class="features-main py-5 text-center">
+    <div class="container py-lg-3">
+      <div class="heading mx-auto">
+        <h3 class="head">Recruiter List</h3>
         </div>
-        <div class="col-lg-6 mt-lg-0 mt-5 about-right-faq">
-            <br><br>
-          <h3 class="text-da">Admin Login</h3>
-          <br>
-          <form action="/admin/adminLogin" method="post" class="form-group">
-            <input class="form-control" type="email" placeholder="Enter Email" id="email" name="email"> <br>
-            <input class="form-control" type="password" placeholder="Enter Password" id="password" name="password"> <br>
-            <input class="btn btn-primary btn-block" type="submit" value="Login"> 
-            <input class="btn btn-danger btn-block" type="reset" value="Reset">
-            <br>
-          </form>
-        </div>
-      </div>
+
+        <table border="1" cellpadding="10" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>Address</th>
+                    <th>Status</th>
+                    <th>Email Verify</th>
+                    <th>Admin Verify</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Email</th>
+                    <th>Contact</th>
+                    <th>Address</th>
+                    <th>Status</th>
+                    <th>Email Verify</th>
+                    <th>Admin Verify</th>
+                </tr>
+            </tfoot>
+        </table>
+
     </div>
   </div>
 </section>

@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser';
 import expresssession from 'express-session';
 import indexRouter from './routes/indexRouter.js';
 import recruiterRouter from './routes/recruiterRouter.js';
+import adminRouter from './routes/adminRouter.js';
 
 var app = express();
 
@@ -15,6 +16,7 @@ app.use(express.static('public'));
 app.use(expresssession({secret:'mysessionsecretkey',resave:true,saveUninitialized:true}));
 app.use(cookieParser());
 app.use("/",indexRouter);
+app.use("/admin",adminRouter);
 app.use("/recruiter",recruiterRouter);
 
 app.listen(3000,()=>{

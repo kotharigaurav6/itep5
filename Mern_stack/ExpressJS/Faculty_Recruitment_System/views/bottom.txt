@@ -1,3 +1,5 @@
+//admin password :   '$2b$10$.VrBq53yf6gTWJQqVOdPneqtNcmCh93ZlBYgeggPfPLyFhZvY5Uby'
+
 
     <!-- jQuery -->
     <script src="assets/js/jquery-3.4.1.slim.min.js"></script>

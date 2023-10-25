@@ -46,3 +46,30 @@ export const recruiterEmailController =async (request,response)=>{
   console.log("Email verified : "+res);
   response.render("recruiterLogin",{message:"Email Verified Succesfully | Please Wait for Admin Approval within 24 Hours"});
 };
+
+export const recruiterLoginController = async(request,response)=>{
+  const {email,password} = request.body;
+  try{
+      var expireTime = {expiresIn : '1d'};
+      var token = jwt.sign({_id:email},secret_key,expireTime); 
+      
+      if(!token)
+          response.render("error",{message:"Error while generating token inside recruiter login"});
+
+      response.cookie('jwt_token',token,{maxAge:24*60*60*1000,httpOnly:true});
+      var recruiterObj = await Recruiter.findOne({_id:email});
+      var recruiterPassword = recruiterObj.password;
+      var status = await bcrypt.compare(password,recruiterPassword);
+      console.log(status);
+      if(status){
+          response.render("recruiterHome",{recruiteremail:email});
+      }else{
+          response.render("recruiterLogin",{message:"Error while Login"});
+      }
+  }catch(err){
+      console.log("Error in recruiter login controller : "+err);
+  }
+};
+
+// email : kotharigaurav6@gmail.com
+// password : gaurav@123

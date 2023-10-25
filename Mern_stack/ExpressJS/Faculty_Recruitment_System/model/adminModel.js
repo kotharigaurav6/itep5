@@ -12,3 +12,7 @@ var adminSchema = mongoose.Schema({
 });
 
 export default mongoose.model('adminModel',adminSchema,'admin');
+/*
+Note : email : admin@gmail.com
+password : admin@123
+*/

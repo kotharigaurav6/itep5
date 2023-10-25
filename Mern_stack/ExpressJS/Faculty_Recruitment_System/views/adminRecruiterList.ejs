@@ -4,8 +4,9 @@
   <div class="features-main py-5 text-center">
     <div class="container py-lg-3">
       <div class="heading mx-auto">
-        <h3 class="head">Recruiter List</h3>
-        </div>
+        <h4 class="head">Recruiter List</h4>
+      <br>  
+      </div>
 
         <table border="1" cellpadding="10" cellspacing="0" width="100%">
             <thead>
@@ -20,7 +21,20 @@
                     <th>Admin Verify</th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+                <%result.forEach((recruiterList)=>{%>
+                  <tr>
+                    <td><%=recruiterList.name%></td>
+                    <td><%=recruiterList.type%></td>
+                    <td><%=recruiterList._id%></td>
+                    <td><%=recruiterList.contact%></td>
+                    <td><%=recruiterList.address%></td>
+                    <td><%=recruiterList.status%></td>
+                    <td><%=recruiterList.emailverify%></td>
+                    <td><a href="/admin/adminVerifyRecruiter?_id=<%=recruiterList._id%>"><%=recruiterList.adminverify%></a></td>
+                  </tr>  
+                <%})%>
+            </tbody>
             <tfoot>
                 <tr>
                     <th>Name</th>

@@ -1,6 +1,6 @@
-<%- include('./candidateHeader') %>
+<%- include('./recruiterHeader') %>
 <style>
-    input,select,textarea{
+    input,select,textarea,label{
         margin:5px;
     }
 </style>
@@ -12,31 +12,41 @@
           <img src="assets/images/g5.jpg" alt="" class="img-fluid rounded" />
         </div>
         <div class="col-lg-6 mt-lg-0 mt-5 about-right-faq">
-          <h3 class="text-da">Candidate Registration</h3>
-          <br>
-          <form action="/candidate/candidateRegistration" method="post" class="form-group">
-            <input required class="form-control" type="text" placeholder="Enter Candidate Name" id="name" name="name">
+          <h3 class="text-da">Add Vacancy</h3>
+          <h6><%=message%></h6>
+          <form action="/vacancy/addVacancy" method="post" class="form-group">
+            <input required class="form-control" type="text" placeholder="Enter Post" id="post" name="post">
             
-            <input required class="form-control" type="email" placeholder="Enter Email" id="email" name="email">
+            <select required name="subject" id="subject" class="form-control">
+                <option value="">Select Subject</option>
+                <option value="Primary Subjects">Primary Subjects</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Physics">Physics</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="Biology">Biology</option>
+                <option value="Accounts">Accounts</option>
+                <option value="Business Studies">Business Studies</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Data Structure">Data Structure</option>
+                <option value="IP">IP</option>
+                <option value="AI">AI</option>
+                <option value="Data Base">Data Base</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+                <option value="Computer Graphics">Computer Graphics</option>
+
+            </select>
             
-            <input required class="form-control" type="password" placeholder="Enter Password" id="password" name="password">
- 
-            <input required class="form-control" type="radio" id="male" name="gender">
-            <label for="male">Male</label>
-            <input required class="form-control" type="radio" id="female" name="gender">
-            <label for="female">Female</label>
- 
-            <label>DOB</label>
-            <input required class="form-control" type="date" id="date" name="date">
- 
-            <textarea required name="address" id="address" class="form-control" placeholder="Enter Address"></textarea>
- 
-            <input required class="form-control" type="text" placeholder="Enter 10-digit mobile number" id="contact" name="contact">
+            <input required class="form-control" type="text" placeholder="Enter Location" id="location" name="location">
+
+            <select required name="criteria" id="criteria" class="form-control">
+                <option value="">Select Criteria</option>
+                <option value="B.ED">B.ED</option>
+                <option value="D.ED">D.ED</option>
+                <option value="Graduate">Graduate</option>
+                <option value="Post Graduate">Post Graduate</option>
+                <option value="PHD">PHD</option>
+            </select>
             
-            <input required class="form-control" type="text" placeholder="Enter Qualification" id="qualification" name="qualification">
-             
-            <input required class="form-control" type="number" step="0.1" placeholder="Enter Percentage" id="percentage" name="percentage">
- 
             <select required name="experience" id="experience" class="form-control">
                 <option value="">Select Experience</option>
                 <option value="Fresher">Fresher</option>
@@ -48,13 +58,24 @@
                 <option value="5+ Year">5+ Year</option>
             </select>
 
-            <input class="btn btn-primary btn-block" type="submit" value="Register"> 
+            <select required name="duration" id="duration" class="form-control">
+                <option value="">Select Duration</option>
+                <option value="Part Time">Part Time</option>
+                <option value="Full Time">Full Time</option>
+            </select>
+
+            <input required class="form-control" type="number" min="1" placeholder="Enter No. of Vacancy" id="vacancy" name="vacancy">
+
+            <input required class="form-control" type="number" min="5000" placeholder="Enter salary" id="salary" name="salary">
+            <label>Advertisement Date</label>
+            <input required class="form-control" type="date" id="advdate" name="advdate">
+            <label>Last Date</label>
+            <input required class="form-control" type="date" id="lastdate" name="lastdate">
+            
+            <input class="btn btn-primary btn-block" type="submit" value="Add Vacancy"> 
             
             <input class="btn btn-danger btn-block" type="reset" value="Reset">
-            
-            
           </form>
-          <a href="/recruiter/recruiterLogin" class="btn btn-link">Already Registered ? Login Here</a>
         </div>
       </div>
     </div>

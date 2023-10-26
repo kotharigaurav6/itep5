@@ -1,12 +1,12 @@
 import express from 'express';
-import { recruiterRegistrationController,recruiterEmailController,recruiterLoginController } from '../controller/recruiterController.js';
+import { recruiterRegistrationController,recruiterEmailController,recruiterLoginController,recruiterLogoutController } from '../controller/recruiterController.js';
 import dotenv from 'dotenv';
 import jwt from 'jsonwebtoken';
 
 dotenv.config();
 var secret_key = process.env.SECRET_KEY;
 
-const authenticateJWT = (request,response,next)=>{
+export const authenticateJWT = (request,response,next)=>{
     var token = request.cookies.jwt_token;
     if(!token)
         response.render("recruiterLogin",{message:""});
@@ -37,4 +37,9 @@ recruiterRouter.get("/recruiterRegister",(request,response)=>{
 recruiterRouter.post("/recruiterRegistration",recruiterRegistrationController);
 recruiterRouter.get("/verifyemail",recruiterEmailController);
 recruiterRouter.post("/recruiterLogin",recruiterLoginController);
+recruiterRouter.get("/addVacancy",authenticateJWT,(request,response)=>{
+    response.render("addVacancy",{message:""});
+});
+recruiterRouter.get("/recruiterLogout",recruiterLogoutController);
+
 export default recruiterRouter;

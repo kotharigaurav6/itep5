@@ -71,5 +71,10 @@ export const recruiterLoginController = async(request,response)=>{
   }
 };
 
+export const recruiterLogoutController = (request,response)=>{
+   response.clearCookie('jwt_token');    
+   response.render("recruiterLogin",{message:"Successfully Logout"});
+};
+
 // email : kotharigaurav6@gmail.com
 // password : gaurav@123

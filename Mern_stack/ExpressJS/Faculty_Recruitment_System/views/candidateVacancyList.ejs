@@ -1,65 +1,73 @@
 <%- include('./candidateHeader') %>
-<style>
-    input,select,textarea,label{
-        margin:5px;
-    }
-</style>
-<section style="margin-top: -100px;" class="w3l-index3">
-  <div class="midd-w3 py-5">
-    <div class="container py-xl-5 py-lg-3">
-      <div class="row">
-        <div class="col-lg-6 left-wthree-img text-right">
-          <img src="assets/images/g5.jpg" alt="" class="img-fluid rounded" />
-        </div>
-        <div class="col-lg-6 mt-lg-0 mt-5 about-right-faq">
-          <h3 class="text-da">Candidate Registration</h3>
-          <br>
-          <form action="/candidate/candidateRegistration" method="post" class="form-group" enctype="multipart/form-data">
-            <input required class="form-control" type="text" placeholder="Enter Candidate Name" id="name" name="name">
-            
-            <input required class="form-control" type="email" placeholder="Enter Email" id="email" name="email">
-            
-            <input required class="form-control" type="password" placeholder="Enter Password" id="password" name="password">
 
-            <select required name="gender" id="gender" class="form-control">
-              <option value="">Select Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-             </select> 
- 
-            <label>DOB</label>
-            <input required class="form-control" type="date" id="date" name="date">
- 
-            <textarea required name="address" id="address" class="form-control" placeholder="Enter Address"></textarea>
- 
-            <input required class="form-control" type="text" placeholder="Enter 10-digit mobile number" id="contact" name="contact">
-            
-            <input required class="form-control" type="text" placeholder="Enter Qualification" id="qualification" name="qualification">
-             
-            <input required class="form-control" type="number" step="0.1" placeholder="Enter Percentage" id="percentage" name="percentage">
- 
-            <select required name="experience" id="experience" class="form-control">
-                <option value="">Select Experience</option>
-                <option value="Fresher">Fresher</option>
-                <option value="0-12 months">0-12 months</option>
-                <option value="1+ Year">1+ Year</option>
-                <option value="2+ Year">2+ Year</option>
-                <option value="3+ Year">3+ Year</option>
-                <option value="4+ Year">4+ Year</option>
-                <option value="5+ Year">5+ Year</option>
-            </select>
-            <label>Upload CV/Resume</label>
-            <input required type="file" id="docs" name="docs">
-
-            <input class="btn btn-primary btn-block" type="submit" value="Register"> 
-            
-            <input class="btn btn-danger btn-block" type="reset" value="Reset">
-            
-            
-          </form>
-          <a href="/recruiter/recruiterLogin" class="btn btn-link">Already Registered ? Login Here</a>
-        </div>
+<section class="w3l-index2" id="services">
+  <div class="features-main py-5 text-center">
+    <div class="container py-lg-3">
+      <div class="heading mx-auto">
+        <h4 class="head">Vacancy List</h4>
+        <center><h6><%=message%></h6></center>
+      <br>  
       </div>
+
+        <table border="1" style="font-size:11px" cellpadding="10" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Post</th>
+                    <th>Subject</th>
+                    <th>Location</th>
+                    <th>Criteria</th>
+                    <th>Experience</th>
+                    <th>Duration</th>
+                    <th>Vacancy</th>
+                    <th>Salary</th>
+                    <th>Adv.Date</th>
+                    <th>LastDate</th>
+                    <th>Recruiter <br> Email</th>
+                    <th>Recruiter <br> Type</th>
+                    <th>Recruiter <br> Name</th>
+                    <th>Apply</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%result.forEach((vacancyList)=>{%>
+                  <tr>
+                    <td><%=vacancyList.post%></td>
+                    <td><%=vacancyList.subject%></td>
+                    <td><%=vacancyList.location%></td>
+                    <td><%=vacancyList.criteria%></td>
+                    <td><%=vacancyList.experience%></td>
+                    <td><%=vacancyList.duration%></td>
+                    <td><%=vacancyList.vacancy%></td>
+                    <td><%=vacancyList.salary%></td>
+                    <td><%=vacancyList.advdate%></td>
+                    <td><%=vacancyList.lastdate%></td>
+                    <td><%=vacancyList.recruiteremail%></td>
+                    <td><%=vacancyList.recruitertype%></td>
+                    <td><%=vacancyList.recruitername%></td>
+                    <td><a href="/appliedVacancy/applyVacancy?_id=<%=vacancyList._id%>&candidateemail=<%=candidateemail%>&recruiteremail=<%=vacancyList.recruiteremail%>&post=<%=vacancyList.post%>">Apply</a></td>
+                  </tr>  
+                <%})%>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Post</th>
+                    <th>Subject</th>
+                    <th>Location</th>
+                    <th>Criteria</th>
+                    <th>Experience</th>
+                    <th>Duration</th>
+                    <th>Vacancy</th>
+                    <th>Salary</th>
+                    <th>Adv.Date</th>
+                    <th>LastDate</th>
+                    <th>Recruiter <br> Email</th>
+                    <th>Recruiter <br> Type</th>
+                    <th>Recruiter <br> Name</th>
+                    <th>Apply</th>
+                </tr>
+            </tfoot>
+        </table>
+
     </div>
   </div>
 </section>

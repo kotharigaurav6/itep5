@@ -1,5 +1,5 @@
 import express from 'express';
-import { addVacancyController,recruiterViewVacancyController,recruiterDeleteVacancyController,updateVacancyController,recruiterUpdateVacancyController } from '../controller/vacancyController.js';
+import { addVacancyController,recruiterViewVacancyController,recruiterDeleteVacancyController,updateVacancyController,recruiterUpdateVacancyController,appliedCandidateController } from '../controller/vacancyController.js';
 import dotenv from 'dotenv';
 //import jwt from 'jsonwebtoken';
 import {authenticateJWT} from './recruiterRouter.js';
@@ -31,4 +31,6 @@ vacancyRouter.get("/recruiterViewVacancy",authenticateJWT,recruiterViewVacancyCo
 vacancyRouter.get("/deleteVacancy",authenticateJWT,recruiterDeleteVacancyController);
 vacancyRouter.get("/updateVacancy",authenticateJWT,updateVacancyController);
 vacancyRouter.put("/updateVacancy",authenticateJWT,recruiterUpdateVacancyController);
+vacancyRouter.get("/appliedCandidate",authenticateJWT,appliedCandidateController);
+
 export default vacancyRouter;

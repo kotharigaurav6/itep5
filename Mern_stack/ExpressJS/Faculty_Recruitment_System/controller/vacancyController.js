@@ -1,5 +1,7 @@
 import Vacancy from '../model/vacancyModel.js';
 import Recruiter from '../model/recruiterModel.js';
+import AppliedVacancy from '../model/appliedVacancyModel.js';
+import Candidate from '../model/candidateModel.js';
 
 export const addVacancyController = async(request,response)=>{
      var recruiter_id = request.payload._id;
@@ -80,4 +82,19 @@ export const updateVacancyController = async (request,response)=>{
         console.log("Error while recruiter updating vacancy controller "+err);
         response.render("error",{message:"Error while recruiter updating vacancy controller"});
     }
+};
+
+export const appliedCandidateController = async (request,response)=>{
+    try{
+        var candidateList = await AppliedVacancy.find({recruiteremail:request.payload._id});
+        var candidateFile=[];
+        for(var i=0;i<candidateList.length;i++){
+            var filename = await Candidate.findOne({_id : candidateList[i].candidateemail});
+            candidateFile.push(filename.docs);
+        }
+        response.render("appliedCandidateList",{result:candidateList,candidateDocs:candidateFile});
+    }   catch(err){
+        console.log("Error in applied candidate Controller"+err);
+        response.render("error",{message:"Error in applied candidate Controller"});
+    } 
 };

@@ -6,6 +6,8 @@ import bcrypt from 'bcrypt';
 import dotenv from 'dotenv';
 import {fileURLToPath} from 'url';
 import path from 'path';
+import AppliedVacancy from '../model/appliedVacancyModel.js';
+
 dotenv.config();
 var secret_key = process.env.CANDIDATE_SECRET_KEY;
 
@@ -102,6 +104,15 @@ export const candidateViewVacancyController = async (request,response)=>{
     } 
 };
 
+export const candidateViewStatusController = async (request,response)=>{
+  try{
+      var candidateList = await AppliedVacancy.find({candidateemail:request.payload._id});
+      response.render("candidateStatus",{result:candidateList});
+  }   catch(err){
+      console.log("Error in candidate view status Controller"+err);
+      response.render("error",{message:"Error in candidate view status Controller"});
+  } 
+};
 
 export const candidateLogoutController = (request,response)=>{
    response.clearCookie('candidate_jwt_token');    

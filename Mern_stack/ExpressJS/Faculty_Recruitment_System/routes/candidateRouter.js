@@ -1,5 +1,5 @@
 import express from 'express';
-import { candidateRegistrationController,candidateEmailController,candidateLoginController,candidateLogoutController,candidateViewVacancyController } from '../controller/candidateController.js';
+import { candidateRegistrationController,candidateEmailController,candidateLoginController,candidateLogoutController,candidateViewVacancyController,candidateViewStatusController } from '../controller/candidateController.js';
 import dotenv from 'dotenv';
 import jwt from 'jsonwebtoken';
 
@@ -26,6 +26,10 @@ var candidateRouter = express.Router();
 
 candidateRouter.use(express.static('public'));
 
+candidateRouter.get("/",authenticateJWT,(request,response)=>{
+    response.render("candidateHome",{candidateemail:request.payload._id});
+});
+
 candidateRouter.get("/candidateLogin",(request,response)=>{
     response.render("candidateLogin",{message:""});
 });
@@ -38,6 +42,7 @@ candidateRouter.post("/candidateRegistration",candidateRegistrationController);
 candidateRouter.get("/verifyemail",candidateEmailController);
 candidateRouter.post("/candidateLogin",candidateLoginController);
 candidateRouter.get("/viewVacancy",authenticateJWT,candidateViewVacancyController);
+candidateRouter.get("/viewStatus",authenticateJWT,candidateViewStatusController);
 candidateRouter.get("/candidateLogout",candidateLogoutController);
 
 export default candidateRouter;

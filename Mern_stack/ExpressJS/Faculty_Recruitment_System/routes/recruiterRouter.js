@@ -1,5 +1,5 @@
 import express from 'express';
-import { recruiterRegistrationController,recruiterEmailController,recruiterLoginController,recruiterLogoutController } from '../controller/recruiterController.js';
+import { recruiterRegistrationController,recruiterEmailController,recruiterLoginController,recruiterLogoutController,recruiterUpdateCandidateStatusController } from '../controller/recruiterController.js';
 import dotenv from 'dotenv';
 import jwt from 'jsonwebtoken';
 
@@ -26,6 +26,10 @@ var recruiterRouter = express.Router();
 
 recruiterRouter.use(express.static('public'));
 
+recruiterRouter.get("/",authenticateJWT,(request,response)=>{
+    response.render("recruiterHome",{recruiteremail:request.payload._id});
+});
+
 recruiterRouter.get("/recruiterLogin",(request,response)=>{
     response.render("recruiterLogin",{message:""});
 });
@@ -40,6 +44,7 @@ recruiterRouter.post("/recruiterLogin",recruiterLoginController);
 recruiterRouter.get("/addVacancy",authenticateJWT,(request,response)=>{
     response.render("addVacancy",{message:""});
 });
+recruiterRouter.get("/updateCandidateStatus",authenticateJWT,recruiterUpdateCandidateStatusController);
 recruiterRouter.get("/recruiterLogout",recruiterLogoutController);
 
 export default recruiterRouter;

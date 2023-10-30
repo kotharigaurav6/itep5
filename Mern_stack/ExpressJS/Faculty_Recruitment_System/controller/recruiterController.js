@@ -3,6 +3,8 @@ import mailer from './mailer.js';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 import dotenv from 'dotenv';
+import AppliedCandidate from '../model/appliedVacancyModel.js';
+import Candidate from '../model/candidateModel.js';
 
 dotenv.config();
 var secret_key = process.env.SECRET_KEY;
@@ -69,6 +71,21 @@ export const recruiterLoginController = async(request,response)=>{
   }catch(err){
       console.log("Error in recruiter login controller : "+err);
   }
+};
+
+export const recruiterUpdateCandidateStatusController =async (request,response)=>{
+  var vid = request.query.vid;
+  var updateStatus = {$set:{status:"ShortListed"}};
+  var res = await AppliedCandidate.updateOne({vid:vid},updateStatus);
+  console.log("Status Updated : "+res);
+
+  var candidateList = await AppliedCandidate.find({recruiteremail:request.payload._id});
+  var candidateFile=[];
+  for(var i=0;i<candidateList.length;i++){
+      var filename = await Candidate.findOne({_id : candidateList[i].candidateemail});
+      candidateFile.push(filename.docs);
+  }
+  response.render("appliedCandidateList",{result:candidateList,candidateDocs:candidateFile});
 };
 
 export const recruiterLogoutController = (request,response)=>{

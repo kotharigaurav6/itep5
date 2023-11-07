@@ -1,0 +1,38 @@
+#nav{
+    position: sticky;
+    top:0;
+    height: 50px;
+    background-color: goldenrod;
+    z-index: 1;
+}
+#nav ul{
+    list-style: none;
+    padding: 12px;
+}
+#nav ul li{
+    display: inline;
+}
+#nav ul li a{
+    font-size: 22px;
+    font-family: candara;
+    color: white;
+    text-decoration: none;
+    margin-left: 85px;
+}
+#nav ul li a:hover{
+    color:black;
+}
+#nav ul li ul{
+    display: none;
+}
+#nav ul li:hover ul{
+    display: block;
+    position: absolute;
+    width:160px;
+    background-color: goldenrod;
+    margin-left: 350px;
+    text-align: center;
+}
+#nav ul li ul li{
+    margin-left: -80px;
+}

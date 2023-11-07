@@ -1,10 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
+import  './style.css';
 
-/*
-import CarFunctionalComponent from './CarFunctionalComponent';
-ReactDOM.render(<CarFunctionalComponent/>,document.getElementById("root"));
-*/
+class ClassComponent extends React.Component{
+    render(){
+        return (<>
+            <p>ClassComponent returned by FormComponent</p>
+        </>);
+    }
+}
+function FormComponent(){
+    return <ClassComponent/>;
+}
 
-import CarClassComponent from './CarClassComponent';
-ReactDOM.render(<CarClassComponent/>,document.getElementById("root"));
+createRoot(document.getElementById("root")).render(<FormComponent/>);
+

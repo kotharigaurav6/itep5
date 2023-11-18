@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "username": "Andrew Anderon",
+      "email": "andrew@gmail.com",
+      "password": "andrew@123",
+      "address": "indore",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": [
+    {
+      "username": "Andrew Anderson",
+      "email": "andrew@gmail.com",
+      "password": "andrew@123",
+      "address": "Indore"
+    },
+    {
+      "username": "Mathew Math",
+      "email": "mathew@gmail.com",
+      "password": "mathew",
+      "address": "Dewas"
+    },
+    {
+      "username": "Simon Sim",
+      "email": "simon@gmail.com",
+      "password": "siomn",
+      "address": "ujjain"
+    },
+    {
+      "username": "Jackson Jack",
+      "email": "jackson@gmail.com",
+      "password": "jackson",
+      "address": "Bhopal"
+    }
+  ]
+}

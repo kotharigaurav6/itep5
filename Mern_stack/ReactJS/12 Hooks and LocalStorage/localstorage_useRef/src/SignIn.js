@@ -1,23 +1,22 @@
-import {useState} from 'react';
+import {useRef} from 'react';
 import {useNavigate} from 'react-router-dom';
 
 function SignIn(){
-    const [data,setData] = useState({});
+    const email = useRef();
+    const password = useRef();
+
     const navigate = useNavigate();
-    const getData =(event)=>{
-        const {name,value} = event.target;
-        setData({...data,[name]:value});
-    }
     const checkLogin = (event)=>{
         event.preventDefault();
         var loginCred = {
-            email : data.email,
-            password : data.password
+            email : email.current.value,
+            password : password.current.value
         }
         var arr = JSON.parse(localStorage.getItem("mydata"));
         var res = arr.filter((d,i)=>{
            return d.email==loginCred.email && d.password==loginCred.password;           
         });
+        // filter returns an array of all the matched array element
         console.log(res);
         if(res.length==1){
             console.log("Login successfull");
@@ -44,9 +43,9 @@ function SignIn(){
    <h3>SignIn Form</h3>
    <form action="" onSubmit={checkLogin}>
   
-   <input type="email" required placeholder="Enter Email" name="email" onChange={getData}/><br/>
+   <input type="email" required placeholder="Enter Email" name="email" ref={email}/><br/>
   
-   <input type="password" required placeholder="Enter Password" name="password" onChange={getData}/><br/>
+   <input type="password" required placeholder="Enter Password" name="password" ref={password}/><br/>
   
    <input type="submit" value="Login"/>
    </form>

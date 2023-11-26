@@ -1,0 +1,80 @@
+Basics About Mounting and Unmounting : 
+
+In React, "component mount" and "component unmount" refer to specific points in the lifecycle of a component when it is added to or removed from the DOM (Document Object Model). Let's break down what these terms mean:
+
+1.  Component Mount: 
+   Component mount refers to the moment when a component is created and inserted into the DOM for the first time. It's the initial rendering of the component. During the mount phase, React calls the constructor (if you're using a class component), the `render` method, and the `componentDidMount` lifecycle method (or the `useEffect` hook if you're using functional components).
+
+   In a class component:
+     jsx
+   class MyComponent extends React.Component {
+     componentDidMount() {
+       // This is called after the component is added to the DOM
+     }
+
+     render() {
+       // Render your component's JSX
+     }
+   }
+     
+
+   In a functional component using hooks:
+     jsx
+   function MyComponent() {
+     useEffect(() => {
+       // This is called after the component is added to the DOM
+     }, []);
+
+     // Return your component's JSX
+   }
+     
+
+   The component's `render` method (or the function body in functional components) defines what the component's output will be when it's mounted.
+
+2.  Component Unmount: 
+   Component unmount refers to the moment when a component is removed from the DOM. This occurs when the component is no longer needed or is no longer part of the rendered UI. During the unmount phase, React calls the `componentWillUnmount` lifecycle method (for class components) or the cleanup function within the `useEffect` hook (for functional components).
+
+   In a class component:
+     jsx
+   class MyComponent extends React.Component {
+     componentWillUnmount() {
+       // This is called before the component is removed from the DOM
+     }
+
+     render() {
+       // Render your component's JSX
+     }
+   }
+     
+
+   In a functional component using hooks:
+     jsx
+   function MyComponent() {
+     useEffect(() => {
+       return () => {
+         // This is called before the component is removed from the DOM
+       };
+     }, []);
+
+     // Return your component's JSX
+   }
+     
+
+   The `componentWillUnmount` method (or the cleanup function) is your opportunity to perform any necessary cleanup, such as canceling timers, clearing intervals, or unsubscribing from subscriptions.
+
+ Where and When It Will Mount: 
+Components are mounted when they are included in the JSX of a parent component that renders them. For example, if you have a parent component that renders another component like this:
+
+  jsx
+function App() {
+  return (
+    <div>
+      <MyComponent />
+    </div>
+  );
+}
+  
+
+Here, `<MyComponent />` is mounted within the `App` component when `App` renders.
+
+Similarly, components are unmounted when they are removed from the JSX of their parent component, typically due to changes in state, props, or other factors that lead to a re-render. The `componentWillUnmount` method (or cleanup function) is called right before the component is removed from the DOM.

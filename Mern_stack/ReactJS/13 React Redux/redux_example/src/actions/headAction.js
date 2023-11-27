@@ -1,10 +1,10 @@
 import { SET_TAGLINE } from "./actionTypes";
 
-export const setTagline = (tagLine)=>{
+export const setTagline = (tagline)=>{
     return {
         type:SET_TAGLINE,
         payload:{
-            tagLine
+            tagline
         }
     }
 };

@@ -1,3 +1,27 @@
+#header{
+  height:100px;
+  background-color: teal;
+  font-family: candara;
+}
+#row{
+  display:flex;
+}
+#divleft{
+ height:400px;
+  width: 30%;
+  background-color: grey;
+}
+#divright{
+  height:400px;
+  width: 68%;
+  background-color: darkgrey;
+}
+#footer{
+  height:40px;
+  font-size: 20px;
+  font-family: candara;
+  background-color: teal;
+}
 .App {
   text-align: center;
 }

@@ -1,8 +1,9 @@
 import {createSlice} from '@reduxjs/toolkit';
+import { act } from 'react-dom/test-utils';
 const initialState = {
     students : [],
     selectedStudent : {},
-    i : -1
+    index : -1
 }
 
 const studSlice = createSlice({
@@ -10,16 +11,31 @@ const studSlice = createSlice({
     initialState,
     reducers : {
         addStudent : (state,action)=>{
-            state.students = [...state.students,action.payload];
+            console.log(action);
+            if(state.index==-1){
+                state.students = [...state.students,action.payload];
+                state.selectedStudent={};
+            }else{
+                state.students.splice(state.index,1,action.payload);
+                state.index=-1;
+            }    
         },
         updateStudent : (state,action)=>{
-            state.selectedStudent = action.payload;
+            
+            console.log(action);
+            console.log(action.payload);
+            console.log(action.payload.index);
+          
+            state.selectedStudent = action.payload.stud;
+            state.index = action.payload.index;             
+  
         },
-        deleteStudent : (state)=>{
-
+        deleteStudent : (state,action)=>{
+            state.students.splice(action.payload,1);
         }
     }
 });
 
 export const {addStudent,updateStudent,deleteStudent} = studSlice.actions;
+// above line will creates action creators automatically
 export default studSlice.reducer;

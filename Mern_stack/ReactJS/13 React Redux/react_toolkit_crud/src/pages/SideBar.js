@@ -1,5 +1,5 @@
 import {useSelector,useDispatch} from 'react-redux';
-import {updateStudent} from '../store/studSlice.js';
+import {updateStudent,deleteStudent} from '../store/studSlice.js';
 
 function SideBar(){
     const students = useSelector(state=>state.student.students);
@@ -8,7 +8,7 @@ function SideBar(){
         <div id="divright">
             <center>
                 <h2>Student Details</h2>
-                <table border="1" cellspacing="0" cellpadding="10">
+                <table border="1" cellSpacing="0" cellPadding="10">
                     <thead>
                     <tr>
                         <th>S.No</th>
@@ -22,15 +22,15 @@ function SideBar(){
                     </thead>
                     <tbody>
                         {
-                            students.map((stud,i)=>{
+                            students.map((stud,index)=>{
                                 return(<tr>
-                                    <td>{i+1}</td>
+                                    <td>{index+1}</td>
                                     <td>{stud.username}</td>
                                     <td>{stud.email}</td>
                                     <td>{stud.password}</td>
                                     <td>{stud.address}</td>
-                                    <td><button onClick={()=>{dispatch(updateStudent(stud))}}>Update</button></td>
-                                    <td><button >Delete</button></td>
+                                    <td><button onClick={()=>{dispatch(updateStudent({stud,index}))}}>Update</button></td>
+                                    <td><button onClick={()=>{dispatch(deleteStudent(index))}}>Delete</button></td>
                                 </tr>)
                             })
                         }

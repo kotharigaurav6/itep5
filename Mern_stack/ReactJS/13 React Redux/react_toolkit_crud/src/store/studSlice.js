@@ -14,7 +14,7 @@ const studSlice = createSlice({
             console.log(action);
             if(state.index==-1){
                 state.students = [...state.students,action.payload];
-                state.selectedStudent={};
+              //  state.selectedStudent={};
             }else{
                 state.students.splice(state.index,1,action.payload);
                 state.index=-1;

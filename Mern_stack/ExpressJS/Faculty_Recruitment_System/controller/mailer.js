@@ -3,12 +3,12 @@ var mailer = function(mailContent,email,callback){
     var transporter = nodemailer.createTransport({
         service:'gmail',
         auth:{
-            user : "onlinespareparts2019@gmail.com",
-            pass : "arlzkwacuuwocxrj"
+            user : "your_email@gmail.com",
+            pass : "your_password"
         }
     });
     var mailOption = {
-        from: "onlinespareparts2019@gmail.com",
+        from: "your_email@gmail.com",
         to:email,
         subject:"Verification Mail By Programming Stairs",
         html:mailContent
